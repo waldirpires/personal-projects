@@ -1,0 +1,22 @@
+Pacote (package): pedaço de SW reusável que pode ser baixado de um registro global para o ambiente local de desenvolvimento
+- Um pacote pode ou não depender de outros pacotes (reuse e dependência)
+Gerenciador de pacote (package manager): aplicativo ou SW que permite o gerenciamento de dependências necessárias para um determinado pacote ou projeto
+- Considerado um dos principais pontos na popularidade do ecosistema de linguagens de programação
+- Gerenciamento via código (i.e. require em JavaScript, import em Java e Python, include em C/C++)
+- Arquivo manifesto (manifest): armazena informações das dependências de pacotes ou projetos
+  - JavaScript: package.json
+Aplicativo: 
+- Java/Groovy: Apache Maven, Gradle
+- JavaScript: NPM (Node Package Manager), Yarn, Bower (FE), JSPM, Duo.js
+
+https://bower.io/
+
+http://jspm.io/
+
+http://duojs.org/
+
+
+mongod --dbpath c:\node\nodetest2\data
+
+Caminho padrão:
+/data/db
