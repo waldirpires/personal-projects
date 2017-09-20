@@ -2,9 +2,19 @@
 import socket
 import subprocess
 import sys
+import os
 from datetime import datetime
 import threading
-import multiprocessing
+from Queue import Queue
+
+def check_ping(hostname):
+    response = os.system("ping " + hostname)
+    # and then check the response...
+    if response == 0:
+        pingstatus = "Network Active"
+    else:
+        pingstatus = "Network Error"
+    return pingstatus
 
 def checkIpPort(IP, port, q):
     try:
@@ -55,7 +65,7 @@ t = datetime.now()
 ports = [20, 21, 22, 80, 443, 1494, 8080, 8443, 8444, 8081, 8888, 9090, 13080, 12742, 15000]
 threads = []
 
-q = multiprocessing.Queue()
+q = Queue()
 
 for port in ports:  
     print("Trying port " + str(port))
@@ -67,9 +77,14 @@ for t1 in threads:
     t1.join()
     
 # Checking the time again
+print "Checking PING . . .\n"
+print check_ping(remoteServerIP)
+
 total = datetime.now() - t
 
 # Calculates the difference of time, to see how long it took to run the script
+#q.join()
+print "Results: \n"
 while q.empty() is False:
     print("Port {}: 	 Open\n".format(q.get()))
 
