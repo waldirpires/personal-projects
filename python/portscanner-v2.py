@@ -52,7 +52,7 @@ t = datetime.now()
 
 # We also put in some error handling for catching errors
 
-ports = [20, 21, 22, 80, 443, 1494, 8080, 8443, 8444, 8081, 8888, 9090, 13080, 12742, 15000]
+ports = [20, 21, 22, 80, 443, 1494, 8080, 8443, 8444, 8081, 8686, 8888, 9090, 13080, 13180, 13443, 12742, 15000]
 threads = []
 
 q = multiprocessing.Queue()
