@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Fake System Servlet</title>
+  </head>
+
+  <body style="font-family:verdana;font-size=10pt" bgcolor="#E2F7FF">
+  	<p><img src="image/elogo.png"></p>
+    <h2>Welcome to the Fake System Servlet</h2>
+    <p>The servlet sends back SOAP messages to RighTV and CDN adapters according to the request.</p>
+    <p>It is useful for testing workflows bypassing the nodes that depends on RighTV and CDN systems and they are not available.</p>
+	<p>Use the following URLs:</p>
+	
+	<p>&nbsp;- RighTV (all APIs and RTV sites in the "scac-adapter-rightv.properties" file): http://<i>serverURL</i>/<i>WebServiceName</i>/RTVServlet</p>
+	<p>&nbsp;- CDN (connection string and heartbeat URLs in CMS UI): http://<i>serverURL</i>/<i>WebServiceName</i>/CDNServlet</p>
+   	
+  </body>
+</html>

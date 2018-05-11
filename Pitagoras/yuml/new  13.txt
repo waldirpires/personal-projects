@@ -1,0 +1,33 @@
+digraph G{
+ node [shape=rectangle]
+ rankdir=LR
+ 
+subgraph cluster_1{
+ label="/etc/" style=filled
+ "nsswitch.conf";
+ 
+ 
+ subgraph cluster_2{
+ label="/sssd/" style=filled
+ "sssd.conf";
+ 
+ 
+ }  
+ 
+ subgraph cluster_3{
+ label="/openldap/" style=filled
+ "ldap.conf";
+ 
+ 
+ }  
+ 
+ subgraph cluster_4{
+ label="/pam.d/" style=filled
+ "system-auth", "password-auth";
+ 
+ 
+ }  
+ 
+ }  
+ 
+}

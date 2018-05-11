@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ADI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Metadata>
+       <AMS Provider="WHATSON" Product="2424VIDEO" Asset_Name="Carlos_Test" Version_Major="1" Version_Minor="0" Description="PACKAGE_CERLOPES_TEST_000###_2424VIDEO asset package" Creation_Date="2###-01-17" Provider_ID="WON" Asset_ID="PACKAGE_CERLOPES_TEST_000###" Asset_Class="package"></AMS>
+       <App_Data App="MOD" Name="Metadata_Spec_Version" Value="CableLabsVOD1.1" />
+       <App_Data App="MOD" Name="Orange_ProductCode" Value="CERLOPES_TEST_000###" />
+       <App_Data App="MOD" Name="Orange_QCRequired" Value="N" />
+       <App_Data App="MOD" Name="Orange_Source" Value="TVOD" />
+       <App_Data App="MOD" Name="Orange_CatalogPriority" Value="4" />
+	   <App_Data App="MOD" Name="Orange_Date" Value="2###-11-09"/>
+       <App_Data App="MOD" Name="Orange_ScramblingRequired" Value="NewTV,true" />
+	   <App_Data App="MOD" Name="Orange_ScramblingRequired" Value="PFPC,false" />
+       <App_Data App="MOD" Name="Orange_TargetPlatform" Value="NewTV,PFPC" />
+       <App_Data App="MOD" Name="Orange_DateExpiration" Value="2###-04-12T00:59:59" />
+	   <App_Data App="MOD" Name="Orange_QCTestPlan" Value="307_QC_L3_MPEG2TS_SD_ZE"/>
+       <App_Data App="MOD" Name="Orange_Definition" Value="SD" />
+       <App_Data App="MOD" Name="Orange_FeedbackDirectory" Value="messageDirectory0" /> 
+	   <App_Data App="MOD" Name="Orange_RetentionPolicy" Value="PURGE"/>
+    </Metadata>
+    <Asset>
+        <Metadata>
+            <AMS Provider="WHATSON" Product="2424VIDEO" Asset_Name="Carlos_Test" Version_Major="1" Version_Minor="0" Description="TITLE_CERLOPES_TEST_000###_2424VIDEO title package" Creation_Date="2###-01-17" Provider_ID="WON" Asset_ID="TITLE_CERLOPES_TEST_000###" Asset_Class="title"></AMS>
+			<App_Data App="MOD" Name="Type" Value="title"/>
+			<App_Data App="MOD" Name="Maximum_Viewing_Length" Value="07:00:00"/>
+			<App_Data App="MOD" Name="Title_Brief" Value="Carlos Test 000###"/>
+			<App_Data App="MOD" Name="Title" Value="Carlos Test 000###"/>
+			<App_Data App="MOD" Name="Title_Language" Value="FRA"/>
+			<App_Data App="MOD" Name="Original_Title" Value="Carlos Test 000###"/>
+			<App_Data App="MOD" Name="Original_Title_Language" Value="ENG"/>
+			<App_Data App="MOD" Name="Episode_Index" Value="0"/>
+			<App_Data App="MOD" Name="Summary_Long" Value="DÃ©tective du FBI, Gracie Hart s'habille et se comporte comme ses collÃ¨gues hommes. Elle est cependant choisie pour une mission d'infiltration dans le concours Miss Etats-Unis, un mystÃ©rieux individu menaÃ§ant d'y faire exploser une bombe. Elle rechigne, mais se met au travail. Il lui faut d'abord devenir une Miss crÃ©dible. Ce Ã  quoi s'emploie son coach, Victor Melling."/>
+			<App_Data App="MOD" Name="Summary_Medium" Value="Parce que la dÃ©tective du titre s'appelait sympathie (&quot;Miss Congeniality&quot;) en VO."/>
+			<App_Data App="MOD" Name="Summary_Short" Value="Parce que la dÃ©tective du titre s'appelait sympathie (&quot;Miss Congeniality&quot;) en VO."/>
+			<App_Data App="MOD" Name="Rating" Value="CSA_1"/>
+			<App_Data App="MOD" Name="Label" Value="none"/>
+			<App_Data App="MOD" Name="Review_Text" Value="ReviewStd"/>
+			<App_Data App="MOD" Name="Review_Type" Value="2"/>
+			<App_Data App="MOD" Name="Review_Author" Value="Laststd,firststd,orgstd"/>
+			<App_Data App="MOD" Name="Run_Time" Value=""/>
+			<App_Data App="MOD" Name="Display_Run_Time" Value="00:04:15"/>
+			<App_Data App="MOD" Name="Year" Value="2001"/>
+			<App_Data App="MOD" Name="Country_of_Origin" Value="USA"/>
+			<App_Data App="MOD" Name="Actors" Value="Bratt,Benjamin,Eric Matthews,5"/>
+			<App_Data App="MOD" Name="Actors" Value="Bergen,Candice,Kathy Morningside,5"/>
+			<App_Data App="MOD" Name="Actors" Value="Caine,Michael,Victor Melling,5"/>
+			<App_Data App="MOD" Name="Actors" Value="Bullock,Sandra,Gracie Hart,5"/>
+			<App_Data App="MOD" Name="Actors" Value="Shatner,William,Stan Fields,5"/>
+			<App_Data App="MOD" Name="Director" Value="Petrie,Donald,.,5"/>
+			<App_Data App="MOD" Name="Producers" Value="Ford,Katie,.,5"/>
+			<App_Data App="MOD" Name="Producers" Value="Lawrence,Marc,.,5"/>
+			<App_Data App="MOD" Name="Producers" Value="Bullock,Sandra,.,5"/>
+			<App_Data App="MOD" Name="Producers" Value="Berman,Bruce,.,5"/>
+			<App_Data App="MOD" Name="Studio" Value=""/>
+			<App_Data App="MOD" Name="Genre" Value="Divers/Autres"/>
+			<App_Data App="MOD" Name="Keyword" Value="attentat,explosion,FBI,menace"/>
+			<App_Data App="MOD" Name="Propagation_Priority" Value="4"/>
+			<App_Data App="MOD" Name="Billing_ID" Value=""/>
+			<App_Data App="MOD" Name="Licensing_Window_Start" Value="2###-01-01T01:00:00"/>
+			<App_Data App="MOD" Name="Licensing_Window_End" Value="2###-08-22T00:59:59"/>
+			<App_Data App="MOD" Name="Studio_Code" Value="FLB"/>
+			<App_Data App="MOD" Name="Orange_AdsAllowed" Value="N"/>
+			<App_Data App="MOD" Name="Orange_Comment" Value="CMC"/>
+			<App_Data App="MOD" Name="Orange_Category" Value="NewTV,000-702-000"/>
+			<App_Data App="MOD" Name="Orange_Category" Value="PFPC,000-101-000"/>
+			<App_Data App="MOD" Name="Orange_PriceZone" Value="PRICE_ZONE_A"/>
+			<App_Data App="MOD" Name="Orange_Season_Number" Value="1"/>
+			<App_Data App="MOD" Name="Orange_SerieId" Value="FLOOC1319###474FMINI"/>
+			<App_Data App="MOD" Name="Orange_SerieLanguage" Value="FRA"/>
+			<App_Data App="MOD" Name="Orange_SerieLongSummary" Value="FÃ©minines et volontaires"/>
+			<App_Data App="MOD" Name="Orange_SeriePitch" Value="FÃ©minines et volontaires"/>
+			<App_Data App="MOD" Name="Orange_SerieShortSummary" Value="FÃ©minines et volontaires"/>
+			<App_Data App="MOD" Name="Orange_SerieTitle" Value="FÃ©minines et volontaires"/>
+			<App_Data App="MOD" Name="Orange_Review_Rating_1" Value="1"/>
+			<App_Data App="MOD" Name="Orange_Review_Text_1" Value="Review1,"/>
+			<App_Data App="MOD" Name="Orange_Review_Author_1" Value="Last1,first1,org1"/>
+			<App_Data App="MOD" Name="Orange_Review_Rating_2" Value="1"/>
+			<App_Data App="MOD" Name="Orange_Review_Text_2" Value="Review2,"/>
+			<App_Data App="MOD" Name="Orange_Review_Author_2" Value="Last2,first2,org2"/>
+			<App_Data App="MOD" Name="Orange_Review_Rating_3" Value="1"/>
+			<App_Data App="MOD" Name="Orange_Review_Text_3" Value="Review3,"/>
+			<App_Data App="MOD" Name="Orange_Review_Author_3" Value="Last3,first3,org3"/>
+		</Metadata>
+        <Asset>
+            <Metadata>
+                <AMS Provider="WHATSON" Product="2424VIDEO" Asset_Name="Carlos_Test_Movie" Version_Major="1" Version_Minor="0" Description="Carlos_Test_Movie" Creation_Date="2###-01-17" Provider_ID="WON" Asset_ID="MOVIE_CCERLOPES_TEST_000###" Asset_Class="movie"></AMS>
+				<App_Data App="" Name="Type" Value="movie"/>
+				<App_Data App="" Name="Run_Time" Value="00:04:15"/>
+				<App_Data App="" Name="Audio_PID" Value="0"/>
+				<App_Data App="" Name="Audio_Order" Value="0,0"/>
+				<App_Data App="" Name="Audio_Format" Value="MP1L2,0"/>
+				<App_Data App="" Name="Audio_Language" Value="FRA,0"/>
+				<App_Data App="" Name="Audio_Type" Value="STEREO,0"/>
+				<App_Data App="" Name="Audio_PID" Value="1"/>
+				<App_Data App="" Name="Audio_Order" Value="1,1"/>
+				<App_Data App="" Name="Audio_Format" Value="MP1L2,1"/>
+				<App_Data App="" Name="Audio_Language" Value="ENG,1"/>
+				<App_Data App="" Name="Audio_Type" Value="STEREO,1"/>
+				<App_Data App="" Name="Aspect_Ratio" Value="16:9"/>
+				<App_Data App="" Name="Stream_Format" Value="CBR"/>
+				<App_Data App="" Name="Bit_Rate" Value="2200000"/>
+				<App_Data App="" Name="Content_FileSize" Value="70838400"/>
+				<App_Data App="" Name="Profile" Value=""/>
+				<App_Data App="" Name="Content_Height" Value="1080"/>
+				<App_Data App="" Name="Content_Width" Value="1920"/>
+				<App_Data App="" Name="Orange_CodingProfile" Value="MPEG2TS_SD_ZE"/>
+			</Metadata>
+            <Content Value="movie-cerlopes-###.ts" />
+        </Asset>
+       <Asset>
+           <Metadata>
+              <AMS Provider="WHATSON" Product="2424VIDEO" Asset_Name="Carlos_Test_Preview" Version_Major="1" Version_Minor="0" Description="Carlos_Test_Preview" Creation_Date="2###-03-16" Provider_ID="WON" Asset_ID="PREVIEW_CERLOPES_TEST_000###" Asset_Class="preview"/>
+ 				<App_Data App="" Name="Type" Value="preview"/>
+				<App_Data App="" Name="Run_Time" Value="00:02:43"/>
+				<App_Data App="" Name="Audio_PID" Value="0"/>
+				<App_Data App="" Name="Audio_Order" Value="0,0"/>
+				<App_Data App="" Name="Audio_Format" Value="MP1L2,0"/>
+				<App_Data App="" Name="Audio_Language" Value="FRA,0"/>
+				<App_Data App="" Name="Audio_Type" Value="STEREO,0"/>
+				<App_Data App="" Name="Aspect_Ratio" Value="16:9"/>
+				<App_Data App="" Name="Stream_Format" Value="CBR"/>
+				<App_Data App="" Name="Bit_Rate" Value="2200000"/>
+				<App_Data App="" Name="Content_FileSize" Value="45503520"/>
+				<App_Data App="" Name="Content_Height" Value="1080"/>
+				<App_Data App="" Name="Content_Width" Value="1920"/>
+				<App_Data App="" Name="Orange_CodingProfile" Value="MPEG2TS_SD_ZE"/>
+			</Metadata>
+           <Content Value="preview-cerlopes-###.ts"/>
+        </Asset>
+		 <Asset>
+           <Metadata>
+               <AMS Provider="WHATSON" Product="2424VIDEO" Asset_Name="Carlos_Test_Poster" Version_Major="1" Version_Minor="0" Description="Carlos_Test_Poster" Creation_Date="2###-03-16" Provider_ID="WON" Asset_ID="POSTER_CERLOPES_TEST_000###" Asset_Class="poster"/>
+				<App_Data App="" Name="Type" Value="poster"/>
+				<App_Data App="" Name="Content_FileSize" Value="33516"/>
+				<App_Data App="" Name="Content_Height" Value="576"/>
+				<App_Data App="" Name="Content_Width" Value="768"/>
+				<App_Data App="" Name="Orange_ImageProfile" Value="576x768"/>
+           </Metadata>
+           <Content Value="poster-cerlopes-###.jpg"/>
+       </Asset>
+   </Asset>
+</ADI>
+ 

@@ -1,0 +1,171 @@
+<CMS_GRID xsi:noNamespaceSchemaLocation="SchemaW3CCMS_SC.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DINAT0000721" date="2012-04-25" progressionStatus="0" messageDirectory="messageDirectory0" providerCode="DIN">
+  <EditorialInformation opusCode="@DS-TOKEN@_DINAT0000721" opusSource="TVOD">
+    <CMS_EI:ContentDescription xmlns:CMS_EI="urn:CMS:EI:schema:20110526" lang="FRA">
+      <CMS_EI:Title>
+        Chili, les voix du d&amp;eacute;sert
+      </CMS_EI:Title>
+      <CMS_EI:VOTitle>
+        Chili, les voix du d&amp;eacute;sert
+      </CMS_EI:VOTitle>
+      <CMS_EI:Summary>
+        <CMS_EI:ShortSummary>
+          Le d&amp;eacute;sert le plus aride du monde abrite les paysages les plus &amp;eacute;poustouflants d&amp;rsquo;Am&amp;eacute;rique du Sud. Ecotourisme et tourisme d&amp;rsquo;aventure se sont d&amp;eacute;velopp&amp;eacute;s dans le d&amp;eacute;sert d&amp;rsquo;Atacama. La s&amp;eacute;cheresse exceptionnelle de ce site a notamment
+        </CMS_EI:ShortSummary>
+        <CMS_EI:LongSummary>
+          Le d&amp;eacute;sert le plus aride du monde abrite les paysages les plus &amp;eacute;poustouflants d&amp;rsquo;Am&amp;eacute;rique du Sud. Ecotourisme et tourisme d&amp;rsquo;aventure se sont d&amp;eacute;velopp&amp;eacute;s dans le d&amp;eacute;sert d&amp;rsquo;Atacama. La s&amp;eacute;cheresse exceptionnelle de ce site a notamment permis la conservation d&amp;rsquo;une multitude de tr&amp;eacute;sors arch&amp;eacute;ologiques.
+        </CMS_EI:LongSummary>
+        <CMS_EI:Pitch>
+          Le d&amp;eacute;sert le plus aride du monde abrite les paysages les plus &amp;eacute;poustouflants d&amp;rsquo;Am&amp;eacute;rique du
+        </CMS_EI:Pitch>
+      </CMS_EI:Summary>
+      <CMS_EI:Comment/>
+      <CMS_EI:Keywords>
+        <CMS_EI:Keyword>
+          disney
+        </CMS_EI:Keyword>
+        <CMS_EI:Keyword>
+          nature
+        </CMS_EI:Keyword>
+      </CMS_EI:Keywords>
+      <CMS_EI:ProductionNationality>
+        FRA
+      </CMS_EI:ProductionNationality>
+    </CMS_EI:ContentDescription>
+    <CMS_EI:ApproximateDuration xmlns:CMS_EI="urn:CMS:EI:schema:20110526">
+      PT00H31M35S
+    </CMS_EI:ApproximateDuration>
+    <CMS_EI:ParentalGuidance xmlns:CMS_EI="urn:CMS:EI:schema:20110526" countryCode="FRA" PGCode="CSA_1"/>
+    <CMS_EI:Adult xmlns:CMS_EI="urn:CMS:EI:schema:20110526">
+      false
+    </CMS_EI:Adult>
+    <CMS_EI:ProductionDate xmlns:CMS_EI="urn:CMS:EI:schema:20110526">
+      2008
+    </CMS_EI:ProductionDate>
+    <CMS_EI:GenreList xmlns:CMS_EI="urn:CMS:EI:schema:20110526">
+      <CMS_EI:Genre>
+        fiction
+      </CMS_EI:Genre>
+    </CMS_EI:GenreList>
+    <CMS_EI:Mute xmlns:CMS_EI="urn:CMS:EI:schema:20110526" titleCardsLanguage="FRA">
+      false
+    </CMS_EI:Mute>
+    <CMS_EI:voLangage xmlns:CMS_EI="urn:CMS:EI:schema:20110526">
+      FRA
+    </CMS_EI:voLangage>
+  </EditorialInformation>
+  <ExploitationInformation>
+    <GeneralAttributes>
+      <Template/>
+    </GeneralAttributes>
+    <Instructions serviceCode="SVODEXTRA" provisioningPriority="0" catalogPriority="1">
+      <CMS_VOD:ExploitationAttributes xmlns:CMS_VOD="urn:CMS:VOD:schema:20110526">
+        <CMS_VOD:DateCatalogStart>
+          2012-04-23T00:00:00Z
+        </CMS_VOD:DateCatalogStart>
+        <CMS_VOD:DateCatalogEnd>
+          2014-05-31T00:00:00Z
+        </CMS_VOD:DateCatalogEnd>
+        <CMS_VOD:PriceZone>
+          PRICE_ZONE_A
+        </CMS_VOD:PriceZone>
+      </CMS_VOD:ExploitationAttributes>
+      <CMS_VOD:TargetList xmlns:CMS_VOD="urn:CMS:VOD:schema:20110526">
+        <CMS_VOD:TargetCode>
+          NewTV
+        </CMS_VOD:TargetCode>
+      </CMS_VOD:TargetList>
+      <CMS_VOD:Definition xmlns:CMS_VOD="urn:CMS:VOD:schema:20110526">
+        HD
+      </CMS_VOD:Definition>
+      <CMS_VOD:LicenceInformation xmlns:CMS_VOD="urn:CMS:VOD:schema:20110526">
+        <CMS_VOD:MaxAvailabilityLicence>
+          P7D
+        </CMS_VOD:MaxAvailabilityLicence>
+      </CMS_VOD:LicenceInformation>
+      <CMS_VOD:RelatedMaterial xmlns:CMS_VOD="urn:CMS:VOD:schema:20110526">
+        <CMS_VOD:MainMovieCode>
+          DINAT0000721_MAIN_SD-1
+        </CMS_VOD:MainMovieCode>
+        <CMS_VOD:ImageCode>
+          DINAT0000721_COVER_SD-1
+        </CMS_VOD:ImageCode>
+      </CMS_VOD:RelatedMaterial>
+      <CMS_VOD:RightOwner xmlns:CMS_VOD="urn:CMS:VOD:schema:20110526" code="DIN"/>
+      <CMS_VOD:Scrambling xmlns:CMS_VOD="urn:CMS:VOD:schema:20110526">
+        true
+      </CMS_VOD:Scrambling>
+      <CMS_VOD:ExclusiveMetadata xmlns:CMS_VOD="urn:CMS:VOD:schema:20110526">
+        <CMS_VOD:PreHeadingList>
+          <CMS_VOD:preHeading>
+            000-070-001
+          </CMS_VOD:preHeading>
+          <CMS_VOD:preHeading>
+            000-070-010
+          </CMS_VOD:preHeading>
+        </CMS_VOD:PreHeadingList>
+        <CMS_VOD:Description>
+          <CMS_VOD:lang>
+            FRA
+          </CMS_VOD:lang>
+          <CMS_VOD:Title>
+            Chili, les voix du d&amp;eacute;sert
+          </CMS_VOD:Title>
+          <CMS_VOD:VOTitle>
+            Chili, les voix du d&amp;eacute;sert
+          </CMS_VOD:VOTitle>
+          <CMS_VOD:Pitch>
+            Le d&amp;eacute;sert le plus aride du monde abrite les paysages les plus &amp;eacute;poustouflants d&amp;rsquo;Am&amp;eacute;rique du
+          </CMS_VOD:Pitch>
+        </CMS_VOD:Description>
+      </CMS_VOD:ExclusiveMetadata>
+    </Instructions>
+  </ExploitationInformation>
+  <MaterialInformation>
+    <MainMovie code="DINAT0000721_MAIN_SD-1">
+      <Media>
+        <CMS_VOD:Filename xmlns:CMS_VOD="urn:CMS:VOD:schema:20110526">
+          DINAT0000721_MAIN_HD-1_MPEG4.TS
+        </CMS_VOD:Filename>
+        <CMS_VOD:FileSize xmlns:CMS_VOD="urn:CMS:VOD:schema:20110526">
+          1540259840
+        </CMS_VOD:FileSize>
+        <CMS_VOD:Duration xmlns:CMS_VOD="urn:CMS:VOD:schema:20110526">
+          PT00H31M35S
+        </CMS_VOD:Duration>
+        <CMS_VOD:Total_bitrate_s xmlns:CMS_VOD="urn:CMS:VOD:schema:20110526">
+          6500000
+        </CMS_VOD:Total_bitrate_s>
+        <CMS_VOD:RateControl xmlns:CMS_VOD="urn:CMS:VOD:schema:20110526">
+          CBR
+        </CMS_VOD:RateControl>
+        <CMS_VOD:CodingProfile xmlns:CMS_VOD="urn:CMS:VOD:schema:20110526" name="MPEG2TS_HD_ZE_6-5M_VBR"/>
+        <CMS_VOD:AVAttributes xmlns:CMS_VOD="urn:CMS:VOD:schema:20110526">
+          <CMS_VOD:VideoAttributes>
+            <CMS_EI:VideoFormat xmlns:CMS_EI="urn:CMS:EI:schema:20110526"/>
+            <CMS_EI:AspectRatio xmlns:CMS_EI="urn:CMS:EI:schema:20110526">
+              16:9
+            </CMS_EI:AspectRatio>
+          </CMS_VOD:VideoAttributes>
+          <CMS_VOD:AudioAttributes>
+            <CMS_EI:AudioTrack xmlns:CMS_EI="urn:CMS:EI:schema:20110526" index="0" order="0" audioFormat="MP1L2" audioMode="STEREO" language="FRA"/>
+          </CMS_VOD:AudioAttributes>
+        </CMS_VOD:AVAttributes>
+      </Media>
+    </MainMovie>
+    <Image code="DINAT0000721_COVER_SD-1">
+      <CMS_EI:FileName xmlns:CMS_EI="urn:CMS:EI:schema:20110526">
+        DINAT0000721_COVER_HD-1.JPG
+      </CMS_EI:FileName>
+      <CMS_EI:FileSize xmlns:CMS_EI="urn:CMS:EI:schema:20110526">
+        12288
+      </CMS_EI:FileSize>
+      <CMS_EI:WIdth xmlns:CMS_EI="urn:CMS:EI:schema:20110526">
+        352
+      </CMS_EI:WIdth>
+      <CMS_EI:Height xmlns:CMS_EI="urn:CMS:EI:schema:20110526">
+        272
+      </CMS_EI:Height>
+      <CMS_EI:ImageProfile xmlns:CMS_EI="urn:CMS:EI:schema:20110526" name="352x272"/>
+    </Image>
+  </MaterialInformation>
+</CMS_GRID>

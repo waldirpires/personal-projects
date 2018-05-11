@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Fake RighTV server</title>
+  </head>
+
+  <body style="font-family:verdana;font-size=10pt" bgcolor="#E2F7FF">
+  	<p><img src="elogo.png"></p>
+    <h2>Welcome to the Fake System Servlet</h2>
+    <br>
+    <p>The servlet sends back a SOAP message with the following format:</p>
+
+    <textarea readonly="readonly" style="width:100%;overflow: auto;background-color='#E2F7FF';" rows="10">
+      <?xml version='1.0' encoding='UTF-8'?>
+      <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+       <soapenv:Body>
+         <ns:elementNameResponse xmlns:ns="namespace">
+          <ns:return xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+         </ns:elementNameResponse>
+       </soapenv:Body>
+      </soapenv:Envelope>
+    </textarea>
+    
+    <p>Where "elementName" and "namespace" are captured from the received message</p>
+    <p>Fill the fields bellow and click in "Send" to see the SOAP message response</p>
+    <form action="SOAPServerServlet" target="new">
+    <p>Element Name: <input type="text" name="elementName"></p>
+    <p>Namespace: <input type="text" name="namespace"></p>  
+    <p><input type="submit" value="Send"></p>  
+    </form>
+
+	<p>Use the following URL in your application:</p>
+	
+	<p>http://<i>serverURL</i>/<i>WebServiceName</i>/SOAPServerServlet</p>
+   	
+  </body>
+</html>

@@ -1,0 +1,17 @@
+digraph G{
+ node [shape=rectangle]
+ rankdir=LR
+ 
+subgraph cluster_1{
+ style=filled
+ "Processador", "Memória";
+ 
+ }  
+ 
+subgraph cluster_2{
+ style=filled
+ "Processador", "Memória";
+ 
+ }  
+ 
+}

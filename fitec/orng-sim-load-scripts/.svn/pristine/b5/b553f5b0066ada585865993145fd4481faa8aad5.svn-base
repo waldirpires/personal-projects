@@ -1,0 +1,20 @@
+# amount of ingests to process
+load.test.ingest.limit=10
+
+# amount of packages to be selected for ingest
+load.test.packages.size=4
+
+# size of window (how many interval windows there are
+load.test.windows.size=4 
+
+# window start/end times: must have start and end intervals
+load.test.windows.times=0, 6, 12, 20, 24
+ 
+# amount of ingests per minute
+load.test.windows.rates=20, 60, 100, 10
+
+#package distribution probability intervals (up to 1.0 - 100%)
+load.test.selection.distribution=0.2, 0.5, 0.9, 1.0
+
+#ingest seed limit for random generated value
+load.test.seed.limit=20

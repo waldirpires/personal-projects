@@ -1,0 +1,27 @@
+digraph G{
+ compound=true;
+ node [shape=rectangle]
+ rankdir=TB
+ 
+ subgraph cluster_2{
+ label=Software style=filled
+ rankdir=LR
+ p[label=Programa style=filled color=orange]
+ d[label=Dados style=filled color=white]
+ } 
+
+ subgraph cluster_3{
+ label=Hardware style=filled
+
+ subgraph cluster_1{
+ label=UCP style=filled color=wheat
+ UAL, UC, Registradores;
+ } 
+"Dispositivos de Entrada", "Dispositivos de Saìda", "Memória Principal";
+ } 
+
+ "Dispositivos de Entrada"->UAL [lhead=cluster_1];
+ UAL->"Dispositivos de Saìda" [ltail=cluster_1];
+ "Memória Principal"->UC [lhead=cluster_1];
+ p->Registradores [ltail=cluster_2, lhead=cluster_1];
+}

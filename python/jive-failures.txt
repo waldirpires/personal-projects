@@ -1,0 +1,1313 @@
+
+2018-04-24 15:17:43,212 [INFO ]  2018-04-24 15:17:43,212 [INFO ]  The currently started test: post_searchBIsWithSearchLimitAsTwo_shouldReturnTwoBIs  
+2018-04-24 15:17:43,212 [INFO ]  2018-04-24 15:17:43,212 [INFO ] TC[00001753]  
+2018-04-24 15:17:43,212 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:43,213 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:17:43,213 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:43,701 [INFO ]  2018-04-24 15:17:43,701 [ERROR] TC[00001753]  
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  ----------------------------------------- 
+2018-04-24 15:17:43,701 [INFO ]  Sent Message: 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  URL [POST]: http://localhost:8081/cpi/holisticView/v1/search/biSearch/ 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  Header: User-Agent -&gt; Jive HTTP client 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  Header: Content-Type -&gt; application/json 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  Request payload: 
+2018-04-24 15:17:43,701 [INFO ]  {"customerId":"8040E9073BA348BFB373D6D5FB26D723"} 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]    
+2018-04-24 15:17:43,701 [INFO ]  2018-04-24 15:17:43,701 [ERROR] TC[00001753]  
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  ----------------------------------------- 
+2018-04-24 15:17:43,701 [INFO ]  Received Message: 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  Status code: 201 (Created) 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  Header: Content-Range -&gt; businessInteractions 1-6/6 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  Header: X-Content-Type-Options -&gt; nosniff 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  Header: Content-Length -&gt; 7830 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  Header: Content-Language -&gt; en 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  Header: Date -&gt; Tue, 24 Apr 2018 15:17:43 GMT 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  Header: Content-Type -&gt; application/json;profile="/cpi/schemas/BusinessInteraction.json#" 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  Response payload: 
+2018-04-24 15:17:43,701 [INFO ]  [{"id":"1-180424-3540-00001","href":"/cpi/orchestration/v1/bi/1-180424-3540-00001","createdBy":"Unknown\u003dUnknown","createdDate":"2018-04-24T15:17:43.562Z","updatedBy":"Unknown\u003dUnknown","lastUpdatedDate":"2018-04-24T15:17:43.562Z","interactionStatus":"OPEN.BUILD","interactionType":"Request","interactionSubType":"AccountManagement","requestedCompletionDate":"2117-05-21T14:49:09.713-03:00","biSpecificationRef":"/cpi/schemas/CPI-PaymentBI-1.0.0.spec","biContextParameters":[{"name":"com.ericsson.bss.cpi.bi.payment.paymentServiceBiId","value":"155"}],"characteristics":[{"name":"salesChannel","value":"operatorShop"}],"relatedPartyInteractionRoles":[{"role":"PaymentResponsible","entitySpecificationRef":"/cpi/schemas/Customer.json","entityRef":"/cpi/holisticView/v1/customer/8040E9073BA348BFB373D6D5FB26D723"}]},{"id":"1-180424-3539-00001","href":"/cpi/orchestration/v1/bi/1-180424-3539-00001","createdBy":"Unknown\u003dUnknown","createdDate":"2018-04-24T15:17:43.548Z","updatedBy":"Unknown\u003dUnknown","lastUpdatedDate":"2018-04-24T15:17:43.548Z","interactionStatus":"OPEN.BUILD","interactionType":"Request","interactionSubType":"AccountManagement","requestedCompletionDate":"2117-05-21T14:49:09.713-03:00","biSpecificationRef":"/cpi/schemas/CPI-PaymentBI-1.0.0.spec","biContextParameters":[{"name":"com.ericsson.bss.cpi.bi.payment.paymentServiceBiId","value":"154"}],"characteristics":[{"name":"salesChannel","value":"operatorShop"}],"relatedPartyInteractionRoles":[{"role":"PaymentResponsible","entitySpecificationRef":"/cpi/schemas/Customer.json","entityRef":"/cpi/holisticView/v1/customer/8040E9073BA348BFB373D6D5FB26D723"}]},{"id":"f752c832-2179-405f-92c1-1b69bc160001","href":"/cpi/orchestration/v1/bi/f752c832-2179-405f-92c1-1b69bc160001","externalId":"EXTERNAL_ID","createdBy":"system","createdDate":"2017-08-17T18:44:01.141-04:00","updatedBy":"system","lastUpdatedDate":"2017-08-17T18:44:01.437-04:00","interactionStatus":"CLOSED.CANCELLED","interactionType":"Request","interactionSubType":"AccountManagement","requestedCompletionDate":"2117-05-21T14:49:09.713-03:00","biSpecificationRef":"/cpi/schemas/CPI-PaymentBI-1.0.0.spec","biContextParameters":[{"name":"com.ericsson.bss.cpi.bi.payment.paymentServiceBiId","value":"19"}],"characteristics":[{"name":"salesChannel","value":"operatorShop"}],"notes":[{"text":"Cancel reason","author":"system","date":"2017-08-17T18:44:01.437-04:00"}],"biItems":[{"id":"5bd256c6-d1e7-48dc-a095-fe2dfdc55be2","href":"/cpi/orchestration/v1/bi/f752c832-2179-405f-92c1-1b69bc160001/biItem/5bd256c6-d1e7-48dc-a095-fe2dfdc55be2"}],"relatedBusinessInteractions":[{"role":"CustomerContract","entitySpecificationRef":"/cpi/schemas/CustomerContract-1.0.0.spec","entityRef":"/cpi/holisticView/v1/customer/CUSTOMER_ID/customerContract/4319F7C5C88E4FFD8E561259A5ED67551"},{"role":"PaymentOfOrder","entitySpecificationRef":"/cpi/schemas/CPI-ManageSubscriptionBI-1.0.0.spec","entityRef":"/cpi/orchestration/v1/bi/36116219-80d0-4f4f-b62b-dd38a4030001"}],"relatedPartyInteractionRoles":[{"role":"PaymentResponsible","entitySpecificationRef":"/cpi/schemas/Customer.json","entityRef":"/cpi/holisticView/v1/customer/CUSTOMER_ID"}]},{"id":"e99c0fad-fc03-4b86-9b82-f85cece00001","href":"/cpi/orchestration/v1/bi/e99c0fad-fc03-4b86-9b82-f85cece00001","externalId":"EXTERNAL_ID","createdBy":"system","createdByChannel":"system","createdDate":"2017-08-17T18:47:14.301-04:00","updatedBy":"system","lastUpdatedDate":"2017-08-17T18:47:14.775-04:00","interactionStatus":"CLOSED.CANCELLED","interactionType":"Request","interactionSubType":"OfferManagement","biSpecificationRef":"/cpi/schemas/CPI-PresentOfferBI-1.0.0.spec","biContextParameters":[{"name":"com.ericsson.bss.cpi.bi.subscription.catalogcontext","value":{"channel":"CSR","place":[{"country":"Canada","stateOrProvince":"Ontario","city":"Toronto","postcode":"A1B 2C3"}]}},{"name":"com.ericsson.bss.cpi.bi.catalogcontext","value":{"provideOnlyFeasible":true,"provideFeasibilityFailureReason":false,"relatedParty":[{"entityRef":"/cpi/holisticView/v1/customer/CUSTOMER_ID","profile":[{"name":"customerSegment","value":"myPartyRoleCategoryId1"},{"name":"age","value":"87"}]}]}},{"name":"com.ericsson.bss.cpi.bi.cartid","value":"150ffc33-23b5-4ce8-9cb3-cccf7a5a5539"}],"notes":[{"text":"Cancel reason","author":"system","date":"2017-08-17T18:47:14.775-04:00"}],"relatedPartyInteractionRoles":[{"role":"Customer","entitySpecificationRef":"/cpi/schemas/Customer.json","entityRef":"/cpi/holisticView/v1/customer/CUSTOMER_ID"}]},{"id":"99ecf8de-24a9-4895-aa84-ac87ce6d0001","href":"/cpi/orchestration/v1/bi/99ecf8de-24a9-4895-aa84-ac87ce6d0001","externalId":"EXTERNAL_ID","description":"This is a ManageCart BI","createdBy":"Unknown\u003dUnknown","createdByChannel":"IVR","createdDate":"2018-01-30T11:15:04.948-05:00","updatedBy":"Unknown\u003dUnknown","lastUpdatedDate":"2018-01-30T11:15:04.948-05:00","lastUpdatedByChannel":"IVR","interactionStatus":"CLOSED.CANCELLED","interactionType":"Request","interactionSubType":"SubscriptionManagement","requestedStartDate":"2017-11-30T12:00:01.600Z","requestedCompletionDate":"2027-12-25T12:00:01.600Z","biSpecificationRef":"/cpi/schemas/CPI-ManageCartBI-1.0.0.spec","biContextParameters":[{"name":"com.ericsson.bss.cpi.bi.catalogcontext","value":{"provideOnlyFeasible":true,"provideFeasibilityFailureReason":false,"relatedParty":[{"entityRef":"/cpi/holisticView/v1/customer/CUSTOMER_ID","profile":[{"name":"age","value":"30"},{"name":"customerSegment","value":"VIP"}]}],"channel":"IVR"}},{"name":"com.ericsson.bss.cpi.bi.cartid","value":"447714b6-5d5f-41b6-832f-3b2c5e00ab08"},{"name":"com.ericsson.bss.cpi.bi.info.lastupdateresult","value":[{"href":"/cpi/orchestration/v1/bi/99ecf8de-24a9-4895-aa84-ac87ce6d0001/biItem/92d83d55-b417-4dcd-ab19-dbbac2b98f9c","method":"POST","actor":"Client"},{"href":"/cpi/orchestration/v1/bi/99ecf8de-24a9-4895-aa84-ac87ce6d0001/biItem/273bd930-44f2-459e-81c2-96a9b009fad7","method":"POST","actor":"Server"}]}],"notes":[{"text":"a simple note"}],"biItems":[{"id":"92d83d55-b417-4dcd-ab19-dbbac2b98f9c","href":"/cpi/orchestration/v1/bi/99ecf8de-24a9-4895-aa84-ac87ce6d0001/biItem/92d83d55-b417-4dcd-ab19-dbbac2b98f9c"},{"id":"273bd930-44f2-459e-81c2-96a9b009fad7","href":"/cpi/orchestration/v1/bi/99ecf8de-24a9-4895-aa84-ac87ce6d0001/biItem/273bd930-44f2-459e-81c2-96a9b009fad7"}],"relatedPartyInteractionRoles":[{"role":"Customer","entitySpecificationRef":"/cpi/schemas/Customer.json","entityRef":"/cpi/holisticView/v1/customer/CUSTOMER_ID"}]},{"id":"4ca78817-72ab-46b3-9607-b05278da0001","href":"/cpi/orchestration/v1/bi/4ca78817-72ab-46b3-9607-b05278da0001","externalId":"EXTERNAL_ID","createdBy":"system","createdDate":"2018-02-27T17:05:15.142-03:00","updatedBy":"system","lastUpdatedDate":"2018-02-27T17:05:15.142-03:00","interactionStatus":"CLOSED.COMPLETED","interactionType":"Request","interactionSubType":"OrderManagement","requestedCompletionDate":"2018-03-06T17:05:15.152-03:00","biSpecificationRef":"/cpi/schemas/CPI-ManageOrderBI-1.0.0.spec","biContextParameters":[{"name":"com.ericsson.bss.cpi.bi.cartid","value":"a9921129-0b90-4a5e-8f7f-395d7cc5ed2e"}],"biItems":[{"id":"95d0244b-ca26-4b12-839d-419766dfaa7b","href":"/cpi/orchestration/v1/bi/4ca78817-72ab-46b3-9607-b05278da0001/biItem/95d0244b-ca26-4b12-839d-419766dfaa7b"},{"id":"55513cd0-0946-4e2b-8d6f-f09364981607","href":"/cpi/orchestration/v1/bi/4ca78817-72ab-46b3-9607-b05278da0001/biItem/55513cd0-0946-4e2b-8d6f-f09364981607"}],"relatedBusinessInteractions":[{"role":"ShoppingCartReference","entitySpecificationRef":"/cpi/schemas/CPI-ManageCartBI-1.0.0.spec","entityRef":"/cpi/orchestration/v1/bi/92ebc452-d91e-4ae9-af62-528805d70001"}],"relatedPartyInteractionRoles":[{"role":"Customer","entitySpecificationRef":"/cpi/schemas/Customer.json","entityRef":"/cpi/holisticView/v1/customer/CUSTOMER_ID"}]}] 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]    
+2018-04-24 15:17:43,701 [INFO ]  2018-04-24 15:17:43,701 [ERROR] TC[00001753]  
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  ----------------------------------------- 
+2018-04-24 15:17:43,701 [INFO ]  Expected Message: 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  Status code: 206 (Partial Content) 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  Header: Content-Range -&gt; businessInteractions 1-2/* 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]  Response payload: 
+2018-04-24 15:17:43,701 [INFO ]  [{"characteristics":[{"name":"salesChannel","value":"operatorShop"}],"updatedBy":"Unknown=Unknown","relatedPartyInteractionRoles":[{"role":"PaymentResponsible","entitySpecificationRef":"/cpi/schemas/Customer.json","entityRef":"/cpi/holisticView/v1/customer/8040E9073BA348BFB373D6D5FB26D723"}],"lastUpdatedDate":"2018-04-24T15:17:43.548Z","createdDate":"2018-04-24T15:17:43.548Z","createdBy":"Unknown=Unknown","interactionType":"Request","interactionSubType":"AccountManagement","biSpecificationRef":"/cpi/schemas/CPI-PaymentBI-1.0.0.spec","id":"1-180424-3539-00001","href":"/cpi/orchestration/v1/bi/1-180424-3539-00001","biContextParameters":[{"name":"com.ericsson.bss.cpi.bi.payment.paymentServiceBiId","value":"154"}],"interactionStatus":"OPEN.BUILD","requestedCompletionDate":"2117-05-21T14:49:09.713-03:00"},{"characteristics":[{"name":"salesChannel","value":"operatorShop"}],"updatedBy":"Unknown=Unknown","relatedPartyInteractionRoles":[{"role":"PaymentResponsible","entitySpecificationRef":"/cpi/schemas/Customer.json","entityRef":"/cpi/holisticView/v1/customer/8040E9073BA348BFB373D6D5FB26D723"}],"lastUpdatedDate":"2018-04-24T15:17:43.562Z","createdDate":"2018-04-24T15:17:43.562Z","createdBy":"Unknown=Unknown","interactionType":"Request","interactionSubType":"AccountManagement","biSpecificationRef":"/cpi/schemas/CPI-PaymentBI-1.0.0.spec","id":"1-180424-3540-00001","href":"/cpi/orchestration/v1/bi/1-180424-3540-00001","biContextParameters":[{"name":"com.ericsson.bss.cpi.bi.payment.paymentServiceBiId","value":"155"}],"interactionStatus":"OPEN.BUILD","requestedCompletionDate":"2117-05-21T14:49:09.713-03:00"}] 
+2018-04-24 15:17:43,701 [INFO ]   
+2018-04-24 15:17:43,701 [INFO ]    
+2018-04-24 15:17:43,782 [INFO ]  2018-04-24 15:17:43,782 [ERROR]  Unexpected JUnit failure: post_searchBIsWithSearchLimitAsTwo_shouldReturnTwoBIs(com.ericsson.bss.cpi.jive.tests.holisticview.SearchBusinessInteractionWithBIMaxResultCountTest):  
+2018-04-24 15:17:43,782 [INFO ]   
+2018-04-24 15:17:43,782 [INFO ]  Mismatch in the status code 
+2018-04-24 15:17:43,782 [INFO ]  Expected: &lt;206&gt; 
+2018-04-24 15:17:43,782 [INFO ]       but: was &lt;201&gt; 
+2018-04-24 15:17:43,782 [INFO ]   java.lang.AssertionError:  
+2018-04-24 15:17:43,782 [INFO ]   
+2018-04-24 15:17:43,782 [INFO ]  Mismatch in the status code 
+2018-04-24 15:17:43,782 [INFO ]  Expected: &lt;206&gt; 
+2018-04-24 15:17:43,782 [INFO ]       but: was &lt;201&gt; 
+2018-04-24 15:17:43,782 [INFO ]   
+2018-04-24 15:17:43,782 [INFO ]  	at com.ericsson.jive.core.execution.TestCaseExecutor.fail(TestCaseExecutor.java:294) 
+2018-04-24 15:17:43,782 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestCaseExecutor.fail(JiveTestCaseExecutor.java:66) 
+2018-04-24 15:17:43,782 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateResponse(AbstractTestBase.java:166) 
+2018-04-24 15:17:43,782 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponse(AbstractTestBase.java:101) 
+2018-04-24 15:17:43,782 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponse(AbstractTestBase.java:71) 
+2018-04-24 15:17:43,782 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.holisticview.SearchBusinessInteractionWithBIMaxResultCountTest.post_searchBIsWithSearchLimitAsTwo_shouldReturnTwoBIs(SearchBusinessInteractionWithBIMaxResultCountTest.java:92) 
+2018-04-24 15:17:43,782 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:17:43,782 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:17:43,782 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:17:43,782 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:17:43,782 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:17:43,782 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:17:43,782 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:17:43,782 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:17:43,782 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:17:43,782 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:17:43,782 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:17:43,782 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:17:43,782 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:17:43,782 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:17:43,782 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:17:43,782 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:17:43,782 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:17:43,782 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:17:43,782 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:17:43,782 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:17:43,782 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:17:43,782 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:17:43,783 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:17:43,783 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:17:43,783 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:17:43,783 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:17:43,783 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:17:43,783 [INFO ]   
+2018-04-24 15:17:43,783 [INFO ]  2018-04-24 15:17:43,782 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.holisticview.SearchBusinessInteractionWithBIMaxResultCountTest.post_searchBIsWithSearchLimitAsTwo_shouldReturnTwoBIs()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:17:43,801 [INFO ]  2018-04-24 15:17:43,801 [ERROR]  Exception occurred during test case 00001753 java.lang.AssertionError:  
+2018-04-24 15:17:43,802 [INFO ]   
+2018-04-24 15:17:43,802 [INFO ]  Mismatch in the status code 
+2018-04-24 15:17:43,802 [INFO ]  Expected: &lt;206&gt; 
+2018-04-24 15:17:43,802 [INFO ]       but: was &lt;201&gt; 
+2018-04-24 15:17:43,802 [INFO ]   
+2018-04-24 15:17:43,802 [INFO ]  	at com.ericsson.jive.core.execution.TestCaseExecutor.fail(TestCaseExecutor.java:294) 
+2018-04-24 15:17:43,802 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestCaseExecutor.fail(JiveTestCaseExecutor.java:66) 
+2018-04-24 15:17:43,802 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateResponse(AbstractTestBase.java:166) 
+2018-04-24 15:17:43,802 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponse(AbstractTestBase.java:101) 
+2018-04-24 15:17:43,802 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponse(AbstractTestBase.java:71) 
+2018-04-24 15:17:43,802 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.holisticview.SearchBusinessInteractionWithBIMaxResultCountTest.post_searchBIsWithSearchLimitAsTwo_shouldReturnTwoBIs(SearchBusinessInteractionWithBIMaxResultCountTest.java:92) 
+2018-04-24 15:17:43,802 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:17:43,802 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:17:43,802 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:17:43,802 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:17:43,802 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:17:43,802 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:17:43,802 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:17:43,802 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:17:43,802 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:17:43,802 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:17:43,802 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:17:43,802 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:17:43,802 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:17:43,802 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:17:43,802 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:17:43,802 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:17:43,802 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:17:43,802 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:17:43,802 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:17:43,802 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:17:43,802 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:17:43,802 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:17:43,802 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:17:43,802 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:17:43,802 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:17:43,802 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:17:43,802 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:17:43,802 [INFO ]   
+2018-04-24 15:17:43,815 [INFO ]  2018-04-24 15:17:43,814 [ERROR] TC[00001753] [ ASSERTION_ERROR ]  
+2018-04-24 15:17:43,815 [INFO ]   
+2018-04-24 15:17:43,815 [INFO ]  Mismatch in the status code 
+2018-04-24 15:17:43,815 [INFO ]  Expected: &lt;206&gt; 
+2018-04-24 15:17:43,815 [INFO ]       but: was &lt;201&gt; 
+2018-04-24 15:17:43,815 [INFO ]   java.lang.AssertionError:  
+2018-04-24 15:17:43,815 [INFO ]   
+2018-04-24 15:17:43,815 [INFO ]  Mismatch in the status code 
+2018-04-24 15:17:43,815 [INFO ]  Expected: &lt;206&gt; 
+2018-04-24 15:17:43,815 [INFO ]       but: was &lt;201&gt; 
+2018-04-24 15:17:43,815 [INFO ]   
+2018-04-24 15:17:43,815 [INFO ]  	at com.ericsson.jive.core.execution.TestCaseExecutor.fail(TestCaseExecutor.java:294) 
+2018-04-24 15:17:43,815 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestCaseExecutor.fail(JiveTestCaseExecutor.java:66) 
+2018-04-24 15:17:43,815 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateResponse(AbstractTestBase.java:166) 
+2018-04-24 15:17:43,815 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponse(AbstractTestBase.java:101) 
+2018-04-24 15:17:43,815 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponse(AbstractTestBase.java:71) 
+2018-04-24 15:17:43,815 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.holisticview.SearchBusinessInteractionWithBIMaxResultCountTest.post_searchBIsWithSearchLimitAsTwo_shouldReturnTwoBIs(SearchBusinessInteractionWithBIMaxResultCountTest.java:92) 
+2018-04-24 15:17:43,815 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:17:43,815 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:17:43,815 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:17:43,815 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:17:43,815 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:17:43,815 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:17:43,815 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:17:43,815 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:17:43,815 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:17:43,815 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:17:43,815 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:17:43,815 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:17:43,815 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:17:43,815 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:17:43,815 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:17:43,815 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:17:43,815 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:17:43,815 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:17:43,815 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:17:43,815 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:17:43,815 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:17:43,815 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:17:43,815 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:17:43,815 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:17:43,815 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:17:43,815 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:17:43,815 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:17:43,815 [INFO ]   
+2018-04-24 15:17:43,815 [INFO ]  2018-04-24 15:17:43,815 [INFO ] TC[00001753] FAILED  
+2018-04-24 15:17:43,815 [INFO ]  2018-04-24 15:17:43,815 [ERROR] TC[00001753] Number of events that failed: 1  
+2018-04-24 15:17:43,815 [INFO ]  2018-04-24 15:17:43,815 [INFO ] TC[00001753]  
+2018-04-24 15:17:43,815 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:43,815 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:17:43,815 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:44,821 [INFO ]  2018-04-24 15:17:44,821 [INFO ] TC[SearchBIMaxResultCountConfig.AFTER]  
+2018-04-24 15:17:44,822 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:44,822 [INFO ]  ================================= CONFIGURATION TEST CASE STARTED ================================== 
+2018-04-24 15:17:44,822 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:44,878 [INFO ]  2018-04-24 15:17:44,878 [INFO ] TC[SearchBIMaxResultCountConfig.AFTER]  
+2018-04-24 15:17:44,878 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:44,878 [INFO ]  ================================= CONFIGURATION TEST CASE FINISHED ================================= 
+2018-04-24 15:17:44,878 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:44,879 [INFO ]  2018-04-24 15:17:44,879 [INFO ] TC[CommitBAPaymentWhenSubmitConfig.BEFORE]  
+2018-04-24 15:17:44,879 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:44,879 [INFO ]  ================================= CONFIGURATION TEST CASE STARTED ================================== 
+2018-04-24 15:17:44,879 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:44,944 [INFO ]  2018-04-24 15:17:44,944 [INFO ] TC[CommitBAPaymentWhenSubmitConfig.BEFORE]  
+2018-04-24 15:17:44,944 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:44,944 [INFO ]  ================================= CONFIGURATION TEST CASE FINISHED ================================= 
+2018-04-24 15:17:44,944 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:44,945 [INFO ]  2018-04-24 15:17:44,945 [INFO ]  Switching to fixture: com.ericsson.bss.cpi.jive.common.configuration.CpiFixture  
+2018-04-24 15:17:44,954 [INFO ]  2018-04-24 15:17:44,954 [INFO ]  The currently started test: commitBaBasedPaymentBI_WhenBiStateIsOpenReserved_shouldReturnCreatedResponse  
+2018-04-24 15:17:44,955 [INFO ]  2018-04-24 15:17:44,955 [INFO ] TC[00001349]  
+2018-04-24 15:17:44,955 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:44,955 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:17:44,955 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:47,797 [INFO ]  2018-04-24 15:17:47,797 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.bi.managesubscription.ManageSubscriptionBIValidateAndSubmitWithCommitBAPaymentBITest.commitBaBasedPaymentBI_WhenBiStateIsOpenReserved_shouldReturnCreatedResponse()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:17:47,797 [INFO ]  2018-04-24 15:17:47,797 [INFO ] TC[00001349] OK  
+2018-04-24 15:17:47,797 [INFO ]  2018-04-24 15:17:47,797 [INFO ] TC[00001349]  
+2018-04-24 15:17:47,797 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:47,797 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:17:47,797 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:47,799 [INFO ]  2018-04-24 15:17:47,799 [INFO ]  The currently started test: commitBaBasedPaymentBI_withPurchaseChargeDeductionFailed_shouldReturnForbiddenResponse  
+2018-04-24 15:17:47,800 [INFO ]  2018-04-24 15:17:47,800 [INFO ] TC[00001367]  
+2018-04-24 15:17:47,800 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:47,800 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:17:47,800 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:51,330 [INFO ]  2018-04-24 15:17:51,330 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.bi.managesubscription.ManageSubscriptionBIValidateAndSubmitWithCommitBAPaymentBITest.commitBaBasedPaymentBI_withPurchaseChargeDeductionFailed_shouldReturnForbiddenResponse()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:17:51,331 [INFO ]  2018-04-24 15:17:51,331 [INFO ] TC[00001367] OK  
+2018-04-24 15:17:51,331 [INFO ]  2018-04-24 15:17:51,331 [INFO ] TC[00001367]  
+2018-04-24 15:17:51,331 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:51,331 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:17:51,331 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:51,333 [INFO ]  2018-04-24 15:17:51,333 [INFO ]  The currently started test: validateSubmitMSBI_WithCommitBAPaymentFalseAndNoBaItem_shouldSuccessWithPaymentBICLOSED  
+2018-04-24 15:17:51,334 [INFO ]  2018-04-24 15:17:51,334 [INFO ] TC[00001378]  
+2018-04-24 15:17:51,334 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:51,334 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:17:51,334 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:53,534 [INFO ]  2018-04-24 15:17:53,530 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.bi.managesubscription.ManageSubscriptionBIValidateAndSubmitWithCommitBAPaymentBITest.validateSubmitMSBI_WithCommitBAPaymentFalseAndNoBaItem_shouldSuccessWithPaymentBICLOSED()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:17:53,534 [INFO ]  2018-04-24 15:17:53,531 [INFO ] TC[00001378] OK  
+2018-04-24 15:17:53,534 [INFO ]  2018-04-24 15:17:53,531 [INFO ] TC[00001378]  
+2018-04-24 15:17:53,534 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:53,534 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:17:53,534 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:54,535 [INFO ]  2018-04-24 15:17:54,534 [INFO ]  The currently started test: complete_serviceOrderBi_withOpenPayment_shouldClosePaymentAndReturnCreatedResponse  
+2018-04-24 15:17:54,535 [INFO ]  2018-04-24 15:17:54,535 [INFO ] TC[00001774]  
+2018-04-24 15:17:54,535 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:54,535 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:17:54,535 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:56,402 [INFO ]  2018-04-24 15:17:56,402 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.bi.serviceorder.ServiceOrderBICompleteWithCommitBAPaymentTest.complete_serviceOrderBi_withOpenPayment_shouldClosePaymentAndReturnCreatedResponse()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:17:56,404 [INFO ]  2018-04-24 15:17:56,402 [INFO ] TC[00001774] OK  
+2018-04-24 15:17:56,404 [INFO ]  2018-04-24 15:17:56,402 [INFO ] TC[00001774]  
+2018-04-24 15:17:56,404 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:56,404 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:17:56,404 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:56,407 [INFO ]  2018-04-24 15:17:56,405 [INFO ]  The currently started test: complete_serviceOrderBi_withChannelHeader_shouldUpdateMsbiAndPaymentBiLastChannel  
+2018-04-24 15:17:56,407 [INFO ]  2018-04-24 15:17:56,407 [INFO ] TC[00001789]  
+2018-04-24 15:17:56,407 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:56,407 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:17:56,407 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:58,094 [INFO ]  2018-04-24 15:17:58,093 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.bi.serviceorder.ServiceOrderBICompleteWithCommitBAPaymentTest.complete_serviceOrderBi_withChannelHeader_shouldUpdateMsbiAndPaymentBiLastChannel()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:17:58,094 [INFO ]  2018-04-24 15:17:58,094 [INFO ] TC[00001789] OK  
+2018-04-24 15:17:58,094 [INFO ]  2018-04-24 15:17:58,094 [INFO ] TC[00001789]  
+2018-04-24 15:17:58,094 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:58,094 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:17:58,094 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:59,097 [INFO ]  2018-04-24 15:17:59,097 [INFO ] TC[CommitBAPaymentWhenSubmitConfig.AFTER]  
+2018-04-24 15:17:59,097 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:59,097 [INFO ]  ================================= CONFIGURATION TEST CASE STARTED ================================== 
+2018-04-24 15:17:59,097 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:59,154 [INFO ]  2018-04-24 15:17:59,154 [INFO ] TC[CommitBAPaymentWhenSubmitConfig.AFTER]  
+2018-04-24 15:17:59,155 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:59,155 [INFO ]  ================================= CONFIGURATION TEST CASE FINISHED ================================= 
+2018-04-24 15:17:59,155 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:59,155 [INFO ]  2018-04-24 15:17:59,155 [INFO ] TC[CPMLessConfig.BEFORE]  
+2018-04-24 15:17:59,156 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:59,156 [INFO ]  ================================= CONFIGURATION TEST CASE STARTED ================================== 
+2018-04-24 15:17:59,156 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:59,304 [INFO ]  2018-04-24 15:17:59,304 [INFO ] TC[CPMLessConfig.BEFORE]  
+2018-04-24 15:17:59,304 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:59,304 [INFO ]  ================================= CONFIGURATION TEST CASE FINISHED ================================= 
+2018-04-24 15:17:59,304 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:59,306 [INFO ]  2018-04-24 15:17:59,305 [INFO ]  Switching to fixture: com.ericsson.bss.cpi.jive.common.configuration.CpiFixture  
+2018-04-24 15:17:59,320 [INFO ]  2018-04-24 15:17:59,315 [INFO ]  The currently started test: loadInstalledbaseFromExternalSystem_withTwoCustomerContracts_shouldReturnSuccessResponse  
+2018-04-24 15:17:59,320 [INFO ]  2018-04-24 15:17:59,315 [INFO ] TC[00002041]  
+2018-04-24 15:17:59,320 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:59,320 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:17:59,320 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:59,478 [INFO ]  2018-04-24 15:17:59,478 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.bi.managecart.ManageCartBILoadInstalledBaseCPMLessTest.loadInstalledbaseFromExternalSystem_withTwoCustomerContracts_shouldReturnSuccessResponse()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:17:59,479 [INFO ]  2018-04-24 15:17:59,479 [INFO ] TC[00002041] OK  
+2018-04-24 15:17:59,479 [INFO ]  2018-04-24 15:17:59,479 [INFO ] TC[00002041]  
+2018-04-24 15:17:59,479 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:59,479 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:17:59,479 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:59,483 [INFO ]  2018-04-24 15:17:59,483 [INFO ]  The currently started test: loadInstalledBaseFromExternalSystem_whenInstallBaseIsAlreadyLoaded_shouldReturn403ErrorResponse  
+2018-04-24 15:17:59,483 [INFO ]  2018-04-24 15:17:59,483 [INFO ] TC[00002043]  
+2018-04-24 15:17:59,483 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:59,483 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:17:59,483 [INFO ]  ====================================================================================================  
+2018-04-24 15:17:59,572 [INFO ]  2018-04-24 15:17:59,571 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.bi.managecart.ManageCartBILoadInstalledBaseCPMLessTest.loadInstalledBaseFromExternalSystem_whenInstallBaseIsAlreadyLoaded_shouldReturn403ErrorResponse()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:17:59,572 [INFO ]  2018-04-24 15:17:59,572 [INFO ] TC[00002043] OK  
+2018-04-24 15:17:59,572 [INFO ]  2018-04-24 15:17:59,572 [INFO ] TC[00002043]  
+2018-04-24 15:17:59,572 [INFO ]  ==================================================================================================== 
+2018-04-24 15:17:59,572 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:17:59,572 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:00,576 [INFO ]  2018-04-24 15:18:00,576 [INFO ]  The currently started test: loadInstallBaseFromExternalSystem_withTwoCustomerContracts_shouldReturnCreatedResponse  
+2018-04-24 15:18:00,577 [INFO ]  2018-04-24 15:18:00,576 [INFO ] TC[00002168]  
+2018-04-24 15:18:00,577 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:00,577 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:18:00,577 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:00,706 [INFO ]  2018-04-24 15:18:00,706 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.shoppingcart.ShoppingCartLoadInstallBaseTest.loadInstallBaseFromExternalSystem_withTwoCustomerContracts_shouldReturnCreatedResponse()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:18:00,706 [INFO ]  2018-04-24 15:18:00,706 [INFO ] TC[00002168] OK  
+2018-04-24 15:18:00,707 [INFO ]  2018-04-24 15:18:00,706 [INFO ] TC[00002168]  
+2018-04-24 15:18:00,707 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:00,707 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:18:00,707 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:00,710 [INFO ]  2018-04-24 15:18:00,710 [INFO ]  The currently started test: loadInstallBaseFromExternalSystem_twice_shouldReturnForbiddenResponse  
+2018-04-24 15:18:00,710 [INFO ]  2018-04-24 15:18:00,710 [INFO ] TC[00002169]  
+2018-04-24 15:18:00,710 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:00,710 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:18:00,710 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:00,879 [INFO ]  2018-04-24 15:18:00,879 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.shoppingcart.ShoppingCartLoadInstallBaseTest.loadInstallBaseFromExternalSystem_twice_shouldReturnForbiddenResponse()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:18:00,879 [INFO ]  2018-04-24 15:18:00,879 [INFO ] TC[00002169] OK  
+2018-04-24 15:18:00,879 [INFO ]  2018-04-24 15:18:00,879 [INFO ] TC[00002169]  
+2018-04-24 15:18:00,879 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:00,879 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:18:00,879 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:01,883 [INFO ]  2018-04-24 15:18:01,882 [INFO ] TC[CPMLessConfig.AFTER]  
+2018-04-24 15:18:01,883 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:01,883 [INFO ]  ================================= CONFIGURATION TEST CASE STARTED ================================== 
+2018-04-24 15:18:01,883 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:01,958 [INFO ]  2018-04-24 15:18:01,957 [INFO ] TC[CPMLessConfig.AFTER]  
+2018-04-24 15:18:01,958 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:01,958 [INFO ]  ================================= CONFIGURATION TEST CASE FINISHED ================================= 
+2018-04-24 15:18:01,958 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:01,958 [INFO ]  2018-04-24 15:18:01,957 [INFO ]  Switching to fixture: com.ericsson.bss.cpi.jive.common.configuration.CpiFixture  
+2018-04-24 15:18:01,965 [INFO ]  2018-04-24 15:18:01,965 [INFO ] TC[GenericInterfaceParameterConfig.BEFORE]  
+2018-04-24 15:18:01,965 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:01,965 [INFO ]  ================================= CONFIGURATION TEST CASE STARTED ================================== 
+2018-04-24 15:18:01,965 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:01,977 [INFO ]  2018-04-24 15:18:01,977 [INFO ] TC[GenericInterfaceParameterConfig.BEFORE]  
+2018-04-24 15:18:01,977 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:01,977 [INFO ]  ================================= CONFIGURATION TEST CASE FINISHED ================================= 
+2018-04-24 15:18:01,977 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:01,986 [INFO ]  2018-04-24 15:18:01,986 [INFO ]  The currently started test: submit_VoucherBasedRefillBiWithGipInformation_shouldReturnCreatedAndCHAInstanceOnPps  
+2018-04-24 15:18:01,987 [INFO ]  2018-04-24 15:18:01,987 [INFO ] TC[00001667]  
+2018-04-24 15:18:01,987 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:01,987 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:18:01,987 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:02,034 [INFO ]  2018-04-24 15:18:02,034 [ERROR]  Unexpected JUnit failure: submit_VoucherBasedRefillBiWithGipInformation_shouldReturnCreatedAndCHAInstanceOnPps(com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest): &lt;BusinessInteractionCrud&gt; Fail to create a BI 
+2018-04-24 15:18:02,034 [INFO ]   
+2018-04-24 15:18:02,034 [INFO ]  {"messages":[{"code":"BusinessLogicFailure","message":"Business logic execution failed.","details":"CPM Service unavailable"}]} 
+2018-04-24 15:18:02,034 [INFO ]   
+2018-04-24 15:18:02,034 [INFO ]  {"biItems":[{"involvedEntity":{"entitySpecificationRef":"/cpi/schemas/RefillInformation.json","entity":{"voucherActivationCode":"VOUCHER_ACTIVATION_CODE_VALID","salesChannel":"IVR","communicationIdValue":"5143457900","communicationIdType":"E.164"}},"biItemSpecificationRef":"/cpi/schemas/VoucherBasedRefillBIItem-1.0.0.spec","action":"Add"}],"interactionType":"Request","biSpecificationRef":"/cpi/schemas/CPI-VoucherBasedRefillBI-1.0.0.spec","relatedPartyInteractionRoles":[{"entitySpecificationRef":"/cpi/schemas/Customer.json","role":"InvolvedCustomer","entityRef":"/cpi/holisticView/v1/customer/7219F7C5C77E4FFD8E561259A5ED67551"}],"requestedCompletionDate":"2018-04-24T16:18:01.986Z"} 
+2018-04-24 15:18:02,034 [INFO ]   
+2018-04-24 15:18:02,034 [INFO ]  Expected: &lt;Created&gt; 
+2018-04-24 15:18:02,034 [INFO ]       but: was &lt;Internal Server Error&gt; java.lang.AssertionError: &lt;BusinessInteractionCrud&gt; Fail to create a BI 
+2018-04-24 15:18:02,034 [INFO ]   
+2018-04-24 15:18:02,034 [INFO ]  {"messages":[{"code":"BusinessLogicFailure","message":"Business logic execution failed.","details":"CPM Service unavailable"}]} 
+2018-04-24 15:18:02,034 [INFO ]   
+2018-04-24 15:18:02,034 [INFO ]  {"biItems":[{"involvedEntity":{"entitySpecificationRef":"/cpi/schemas/RefillInformation.json","entity":{"voucherActivationCode":"VOUCHER_ACTIVATION_CODE_VALID","salesChannel":"IVR","communicationIdValue":"5143457900","communicationIdType":"E.164"}},"biItemSpecificationRef":"/cpi/schemas/VoucherBasedRefillBIItem-1.0.0.spec","action":"Add"}],"interactionType":"Request","biSpecificationRef":"/cpi/schemas/CPI-VoucherBasedRefillBI-1.0.0.spec","relatedPartyInteractionRoles":[{"entitySpecificationRef":"/cpi/schemas/Customer.json","role":"InvolvedCustomer","entityRef":"/cpi/holisticView/v1/customer/7219F7C5C77E4FFD8E561259A5ED67551"}],"requestedCompletionDate":"2018-04-24T16:18:01.986Z"} 
+2018-04-24 15:18:02,034 [INFO ]   
+2018-04-24 15:18:02,034 [INFO ]  Expected: &lt;Created&gt; 
+2018-04-24 15:18:02,034 [INFO ]       but: was &lt;Internal Server Error&gt; 
+2018-04-24 15:18:02,034 [INFO ]  	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20) 
+2018-04-24 15:18:02,034 [INFO ]  	at org.junit.Assert.assertThat(Assert.java:956) 
+2018-04-24 15:18:02,034 [INFO ]  	at com.ericsson.bss.cpi.jive.common.crud.BusinessInteractionCrud.createBusinessInteraction(BusinessInteractionCrud.java:71) 
+2018-04-24 15:18:02,034 [INFO ]  	at com.ericsson.bss.cpi.jive.common.crud.BusinessInteractionCrud.createBusinessInteraction(BusinessInteractionCrud.java:54) 
+2018-04-24 15:18:02,034 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.createVoucherBasedRefillBi(GenericInterfaceParameterTest.java:376) 
+2018-04-24 15:18:02,034 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.submit_VoucherBasedRefillBiWithGipInformation_shouldReturnCreatedAndCHAInstanceOnPps(GenericInterfaceParameterTest.java:324) 
+2018-04-24 15:18:02,034 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:18:02,034 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:18:02,034 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:18:02,034 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:18:02,034 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:18:02,034 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:18:02,034 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:18:02,034 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:18:02,034 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,034 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,034 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,034 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,034 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:18:02,034 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:18:02,034 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:18:02,034 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,034 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,034 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:18:02,034 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:18:02,034 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:18:02,034 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:18:02,034 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:18:02,034 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:18:02,034 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:18:02,034 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:18:02,034 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:18:02,034 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:18:02,034 [INFO ]   
+2018-04-24 15:18:02,034 [INFO ]  2018-04-24 15:18:02,034 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.submit_VoucherBasedRefillBiWithGipInformation_shouldReturnCreatedAndCHAInstanceOnPps()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:18:02,036 [INFO ]  2018-04-24 15:18:02,035 [ERROR]  Exception occurred during test case 00001667 java.lang.AssertionError: &lt;BusinessInteractionCrud&gt; Fail to create a BI 
+2018-04-24 15:18:02,036 [INFO ]   
+2018-04-24 15:18:02,036 [INFO ]  {"messages":[{"code":"BusinessLogicFailure","message":"Business logic execution failed.","details":"CPM Service unavailable"}]} 
+2018-04-24 15:18:02,036 [INFO ]   
+2018-04-24 15:18:02,036 [INFO ]  {"biItems":[{"involvedEntity":{"entitySpecificationRef":"/cpi/schemas/RefillInformation.json","entity":{"voucherActivationCode":"VOUCHER_ACTIVATION_CODE_VALID","salesChannel":"IVR","communicationIdValue":"5143457900","communicationIdType":"E.164"}},"biItemSpecificationRef":"/cpi/schemas/VoucherBasedRefillBIItem-1.0.0.spec","action":"Add"}],"interactionType":"Request","biSpecificationRef":"/cpi/schemas/CPI-VoucherBasedRefillBI-1.0.0.spec","relatedPartyInteractionRoles":[{"entitySpecificationRef":"/cpi/schemas/Customer.json","role":"InvolvedCustomer","entityRef":"/cpi/holisticView/v1/customer/7219F7C5C77E4FFD8E561259A5ED67551"}],"requestedCompletionDate":"2018-04-24T16:18:01.986Z"} 
+2018-04-24 15:18:02,036 [INFO ]   
+2018-04-24 15:18:02,036 [INFO ]  Expected: &lt;Created&gt; 
+2018-04-24 15:18:02,036 [INFO ]       but: was &lt;Internal Server Error&gt; 
+2018-04-24 15:18:02,036 [INFO ]  	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20) 
+2018-04-24 15:18:02,036 [INFO ]  	at org.junit.Assert.assertThat(Assert.java:956) 
+2018-04-24 15:18:02,036 [INFO ]  	at com.ericsson.bss.cpi.jive.common.crud.BusinessInteractionCrud.createBusinessInteraction(BusinessInteractionCrud.java:71) 
+2018-04-24 15:18:02,036 [INFO ]  	at com.ericsson.bss.cpi.jive.common.crud.BusinessInteractionCrud.createBusinessInteraction(BusinessInteractionCrud.java:54) 
+2018-04-24 15:18:02,036 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.createVoucherBasedRefillBi(GenericInterfaceParameterTest.java:376) 
+2018-04-24 15:18:02,036 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.submit_VoucherBasedRefillBiWithGipInformation_shouldReturnCreatedAndCHAInstanceOnPps(GenericInterfaceParameterTest.java:324) 
+2018-04-24 15:18:02,036 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:18:02,036 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:18:02,036 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:18:02,036 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:18:02,036 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:18:02,036 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:18:02,036 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:18:02,036 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:18:02,036 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,036 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,036 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,036 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,036 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:18:02,036 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:18:02,036 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:18:02,036 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,036 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,036 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:18:02,036 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:18:02,036 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:18:02,036 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:18:02,036 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:18:02,036 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:18:02,036 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:18:02,036 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:18:02,036 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:18:02,036 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:18:02,036 [INFO ]   
+2018-04-24 15:18:02,039 [INFO ]  2018-04-24 15:18:02,038 [ERROR] TC[00001667] [ ASSERTION_ERROR ] &lt;BusinessInteractionCrud&gt; Fail to create a BI 
+2018-04-24 15:18:02,039 [INFO ]   
+2018-04-24 15:18:02,039 [INFO ]  {"messages":[{"code":"BusinessLogicFailure","message":"Business logic execution failed.","details":"CPM Service unavailable"}]} 
+2018-04-24 15:18:02,039 [INFO ]   
+2018-04-24 15:18:02,039 [INFO ]  {"biItems":[{"involvedEntity":{"entitySpecificationRef":"/cpi/schemas/RefillInformation.json","entity":{"voucherActivationCode":"VOUCHER_ACTIVATION_CODE_VALID","salesChannel":"IVR","communicationIdValue":"5143457900","communicationIdType":"E.164"}},"biItemSpecificationRef":"/cpi/schemas/VoucherBasedRefillBIItem-1.0.0.spec","action":"Add"}],"interactionType":"Request","biSpecificationRef":"/cpi/schemas/CPI-VoucherBasedRefillBI-1.0.0.spec","relatedPartyInteractionRoles":[{"entitySpecificationRef":"/cpi/schemas/Customer.json","role":"InvolvedCustomer","entityRef":"/cpi/holisticView/v1/customer/7219F7C5C77E4FFD8E561259A5ED67551"}],"requestedCompletionDate":"2018-04-24T16:18:01.986Z"} 
+2018-04-24 15:18:02,039 [INFO ]   
+2018-04-24 15:18:02,039 [INFO ]  Expected: &lt;Created&gt; 
+2018-04-24 15:18:02,039 [INFO ]       but: was &lt;Internal Server Error&gt; java.lang.AssertionError: &lt;BusinessInteractionCrud&gt; Fail to create a BI 
+2018-04-24 15:18:02,039 [INFO ]   
+2018-04-24 15:18:02,039 [INFO ]  {"messages":[{"code":"BusinessLogicFailure","message":"Business logic execution failed.","details":"CPM Service unavailable"}]} 
+2018-04-24 15:18:02,039 [INFO ]   
+2018-04-24 15:18:02,039 [INFO ]  {"biItems":[{"involvedEntity":{"entitySpecificationRef":"/cpi/schemas/RefillInformation.json","entity":{"voucherActivationCode":"VOUCHER_ACTIVATION_CODE_VALID","salesChannel":"IVR","communicationIdValue":"5143457900","communicationIdType":"E.164"}},"biItemSpecificationRef":"/cpi/schemas/VoucherBasedRefillBIItem-1.0.0.spec","action":"Add"}],"interactionType":"Request","biSpecificationRef":"/cpi/schemas/CPI-VoucherBasedRefillBI-1.0.0.spec","relatedPartyInteractionRoles":[{"entitySpecificationRef":"/cpi/schemas/Customer.json","role":"InvolvedCustomer","entityRef":"/cpi/holisticView/v1/customer/7219F7C5C77E4FFD8E561259A5ED67551"}],"requestedCompletionDate":"2018-04-24T16:18:01.986Z"} 
+2018-04-24 15:18:02,039 [INFO ]   
+2018-04-24 15:18:02,039 [INFO ]  Expected: &lt;Created&gt; 
+2018-04-24 15:18:02,039 [INFO ]       but: was &lt;Internal Server Error&gt; 
+2018-04-24 15:18:02,039 [INFO ]  	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20) 
+2018-04-24 15:18:02,039 [INFO ]  	at org.junit.Assert.assertThat(Assert.java:956) 
+2018-04-24 15:18:02,039 [INFO ]  	at com.ericsson.bss.cpi.jive.common.crud.BusinessInteractionCrud.createBusinessInteraction(BusinessInteractionCrud.java:71) 
+2018-04-24 15:18:02,039 [INFO ]  	at com.ericsson.bss.cpi.jive.common.crud.BusinessInteractionCrud.createBusinessInteraction(BusinessInteractionCrud.java:54) 
+2018-04-24 15:18:02,039 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.createVoucherBasedRefillBi(GenericInterfaceParameterTest.java:376) 
+2018-04-24 15:18:02,039 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.submit_VoucherBasedRefillBiWithGipInformation_shouldReturnCreatedAndCHAInstanceOnPps(GenericInterfaceParameterTest.java:324) 
+2018-04-24 15:18:02,039 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:18:02,039 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:18:02,039 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:18:02,039 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:18:02,039 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:18:02,039 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:18:02,039 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:18:02,039 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:18:02,039 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,039 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,039 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,039 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,039 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:18:02,039 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:18:02,039 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:18:02,039 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,039 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,039 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:18:02,039 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:18:02,039 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:18:02,039 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:18:02,039 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:18:02,039 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:18:02,039 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:18:02,039 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:18:02,039 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:18:02,039 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:18:02,039 [INFO ]   
+2018-04-24 15:18:02,039 [INFO ]  2018-04-24 15:18:02,039 [INFO ] TC[00001667] FAILED  
+2018-04-24 15:18:02,039 [INFO ]  2018-04-24 15:18:02,039 [ERROR] TC[00001667] Number of events that failed: 1  
+2018-04-24 15:18:02,039 [INFO ]  2018-04-24 15:18:02,039 [INFO ] TC[00001667]  
+2018-04-24 15:18:02,039 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:02,039 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:18:02,039 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:02,042 [INFO ]  2018-04-24 15:18:02,042 [INFO ]  The currently started test: post_PartyWithGipWithOps_shouldReturnCreatedResponse  
+2018-04-24 15:18:02,042 [INFO ]  2018-04-24 15:18:02,042 [INFO ] TC[00001576]  
+2018-04-24 15:18:02,042 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:02,042 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:18:02,042 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:02,349 [INFO ]  2018-04-24 15:18:02,349 [ERROR] TC[00001576]  
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]  ----------------------------------------- 
+2018-04-24 15:18:02,349 [INFO ]  Sent Message: 
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]  URL [POST]: http://localhost:8081/cpi/orchestration/v1/bi/1-180424-3629-00001/submit 
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]  Header: ERICSSON.Generic-Interface-Parameters -&gt; H4sIAAAAAAAAAGVPuwoCMRD8l201somJSDrt7ATtxGK9WzViEkn2RDj8d6OtMM08YUbIJVxCIgnpsqVCkYXLjgX8CFIoVeok5LTpwQN2ziz7JSkkZ5U9IytyvFBOL8iydXPSJ5iChMg7ofhoFYPaKWwwe229QW9xphEnaDxiy4ZUhVLHv/1nfKnuSqhNc4bK5aeWnKXxwlRzanxN929j1d+GKpGTwHsKD6r178Hh+P4AfHoNPOAAAAA= 
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]  Header: User-Agent -&gt; Jive HTTP client 
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]  Header: Content-Type -&gt; application/json 
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]  Request payload: 
+2018-04-24 15:18:02,349 [INFO ]  null 
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]    
+2018-04-24 15:18:02,349 [INFO ]  2018-04-24 15:18:02,349 [ERROR] TC[00001576]  
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]  ----------------------------------------- 
+2018-04-24 15:18:02,349 [INFO ]  Received Message: 
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]  Status code: 500 (Internal Server Error) 
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]  Header: Content-Length -&gt; 126 
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]  Header: Content-Language -&gt; en 
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]  Header: Date -&gt; Tue, 24 Apr 2018 15:18:02 GMT 
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]  Header: Content-Type -&gt; application/json;profile="/cpi/schemas/Messages.json#" 
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]  Response payload: 
+2018-04-24 15:18:02,349 [INFO ]  {"messages":[{"code":"BusinessLogicFailure","message":"Business logic execution failed.","details":"CpmService unavailable"}]} 
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]    
+2018-04-24 15:18:02,349 [INFO ]  2018-04-24 15:18:02,349 [ERROR] TC[00001576]  
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]  ----------------------------------------- 
+2018-04-24 15:18:02,349 [INFO ]  Expected Message: 
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]  Status code: 201 (Created) 
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]  Response payload: 
+2018-04-24 15:18:02,349 [INFO ]  %ANY_ELEMENT% 
+2018-04-24 15:18:02,349 [INFO ]   
+2018-04-24 15:18:02,349 [INFO ]    
+2018-04-24 15:18:02,350 [INFO ]  2018-04-24 15:18:02,350 [ERROR]  Unexpected JUnit failure: post_PartyWithGipWithOps_shouldReturnCreatedResponse(com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest):  
+2018-04-24 15:18:02,350 [INFO ]   
+2018-04-24 15:18:02,350 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,350 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,350 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,350 [INFO ]   java.lang.AssertionError:  
+2018-04-24 15:18:02,350 [INFO ]   
+2018-04-24 15:18:02,350 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,350 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,350 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,350 [INFO ]   
+2018-04-24 15:18:02,350 [INFO ]  	at com.ericsson.jive.core.execution.TestCaseExecutor.fail(TestCaseExecutor.java:294) 
+2018-04-24 15:18:02,350 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestCaseExecutor.fail(JiveTestCaseExecutor.java:66) 
+2018-04-24 15:18:02,350 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateResponse(AbstractTestBase.java:166) 
+2018-04-24 15:18:02,350 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponseWithHeader(AbstractTestBase.java:115) 
+2018-04-24 15:18:02,350 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.post_PartyWithGipWithOps_shouldReturnCreatedResponse(GenericInterfaceParameterTest.java:132) 
+2018-04-24 15:18:02,350 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:18:02,350 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:18:02,350 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:18:02,350 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:18:02,350 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:18:02,350 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:18:02,350 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:18:02,350 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:18:02,350 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,350 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,350 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,350 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,350 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:18:02,350 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:18:02,350 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:18:02,350 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,350 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,350 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:18:02,350 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:18:02,350 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:18:02,350 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:18:02,350 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:18:02,350 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:18:02,350 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:18:02,350 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:18:02,350 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:18:02,350 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:18:02,350 [INFO ]   
+2018-04-24 15:18:02,351 [INFO ]  2018-04-24 15:18:02,350 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.post_PartyWithGipWithOps_shouldReturnCreatedResponse()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:18:02,351 [INFO ]  2018-04-24 15:18:02,351 [ERROR]  Exception occurred during test case 00001576 java.lang.AssertionError:  
+2018-04-24 15:18:02,351 [INFO ]   
+2018-04-24 15:18:02,351 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,351 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,351 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,351 [INFO ]   
+2018-04-24 15:18:02,351 [INFO ]  	at com.ericsson.jive.core.execution.TestCaseExecutor.fail(TestCaseExecutor.java:294) 
+2018-04-24 15:18:02,351 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestCaseExecutor.fail(JiveTestCaseExecutor.java:66) 
+2018-04-24 15:18:02,351 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateResponse(AbstractTestBase.java:166) 
+2018-04-24 15:18:02,351 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponseWithHeader(AbstractTestBase.java:115) 
+2018-04-24 15:18:02,351 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.post_PartyWithGipWithOps_shouldReturnCreatedResponse(GenericInterfaceParameterTest.java:132) 
+2018-04-24 15:18:02,351 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:18:02,351 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:18:02,351 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:18:02,351 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:18:02,351 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:18:02,351 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:18:02,351 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:18:02,351 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:18:02,351 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,351 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,351 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,351 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,351 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:18:02,351 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:18:02,351 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:18:02,351 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,351 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,351 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:18:02,351 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:18:02,351 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:18:02,351 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:18:02,351 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:18:02,351 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:18:02,351 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:18:02,351 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:18:02,351 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:18:02,351 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:18:02,351 [INFO ]   
+2018-04-24 15:18:02,353 [INFO ]  2018-04-24 15:18:02,353 [ERROR] TC[00001576] [ ASSERTION_ERROR ]  
+2018-04-24 15:18:02,353 [INFO ]   
+2018-04-24 15:18:02,353 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,353 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,353 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,353 [INFO ]   java.lang.AssertionError:  
+2018-04-24 15:18:02,353 [INFO ]   
+2018-04-24 15:18:02,353 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,353 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,353 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,353 [INFO ]   
+2018-04-24 15:18:02,353 [INFO ]  	at com.ericsson.jive.core.execution.TestCaseExecutor.fail(TestCaseExecutor.java:294) 
+2018-04-24 15:18:02,353 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestCaseExecutor.fail(JiveTestCaseExecutor.java:66) 
+2018-04-24 15:18:02,353 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateResponse(AbstractTestBase.java:166) 
+2018-04-24 15:18:02,353 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponseWithHeader(AbstractTestBase.java:115) 
+2018-04-24 15:18:02,353 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.post_PartyWithGipWithOps_shouldReturnCreatedResponse(GenericInterfaceParameterTest.java:132) 
+2018-04-24 15:18:02,353 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:18:02,353 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:18:02,353 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:18:02,353 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:18:02,353 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:18:02,353 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:18:02,353 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:18:02,353 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:18:02,353 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,353 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,353 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,353 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,353 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:18:02,353 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:18:02,353 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:18:02,353 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,353 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,353 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:18:02,353 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:18:02,353 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:18:02,354 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:18:02,354 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:18:02,354 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:18:02,354 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:18:02,354 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:18:02,354 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:18:02,354 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:18:02,354 [INFO ]   
+2018-04-24 15:18:02,354 [INFO ]  2018-04-24 15:18:02,353 [INFO ] TC[00001576] FAILED  
+2018-04-24 15:18:02,354 [INFO ]  2018-04-24 15:18:02,353 [ERROR] TC[00001576] Number of events that failed: 1  
+2018-04-24 15:18:02,354 [INFO ]  2018-04-24 15:18:02,353 [INFO ] TC[00001576]  
+2018-04-24 15:18:02,354 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:02,354 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:18:02,354 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:02,355 [INFO ]  2018-04-24 15:18:02,355 [INFO ]  The currently started test: post_PartyWithoutGip_shouldReturnCreatedResponse  
+2018-04-24 15:18:02,355 [INFO ]  2018-04-24 15:18:02,355 [INFO ] TC[00001575]  
+2018-04-24 15:18:02,355 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:02,355 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:18:02,355 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:02,384 [INFO ]  2018-04-24 15:18:02,384 [ERROR]  Unexpected JUnit failure: post_PartyWithoutGip_shouldReturnCreatedResponse(com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest):  
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,385 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,385 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,385 [INFO ]   java.lang.AssertionError:  
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,385 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,385 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  	at com.ericsson.jive.core.execution.TestCaseExecutor.fail(TestCaseExecutor.java:294) 
+2018-04-24 15:18:02,385 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestCaseExecutor.fail(JiveTestCaseExecutor.java:66) 
+2018-04-24 15:18:02,385 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateResponse(AbstractTestBase.java:166) 
+2018-04-24 15:18:02,385 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponseWithHeader(AbstractTestBase.java:115) 
+2018-04-24 15:18:02,385 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.post_PartyWithoutGip_shouldReturnCreatedResponse(GenericInterfaceParameterTest.java:111) 
+2018-04-24 15:18:02,385 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:18:02,385 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:18:02,385 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:18:02,385 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:18:02,385 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:18:02,385 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:18:02,385 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:18:02,385 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:18:02,385 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,385 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,385 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,385 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,385 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:18:02,385 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:18:02,385 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:18:02,385 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,385 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,385 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:18:02,385 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:18:02,385 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:18:02,385 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:18:02,385 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:18:02,385 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:18:02,385 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:18:02,385 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:18:02,385 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:18:02,385 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  2018-04-24 15:18:02,385 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.post_PartyWithoutGip_shouldReturnCreatedResponse()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:18:02,385 [INFO ]  2018-04-24 15:18:02,385 [ERROR] TC[00001575]  
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  ----------------------------------------- 
+2018-04-24 15:18:02,385 [INFO ]  Sent Message: 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  URL [POST]: http://localhost:8081/cpi/orchestration/v1/bi/1-180424-3630-00001/submit 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  Header: User-Agent -&gt; Jive HTTP client 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  Header: Content-Type -&gt; application/json 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  Request payload: 
+2018-04-24 15:18:02,385 [INFO ]  null 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]    
+2018-04-24 15:18:02,385 [INFO ]  2018-04-24 15:18:02,385 [ERROR] TC[00001575]  
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  ----------------------------------------- 
+2018-04-24 15:18:02,385 [INFO ]  Received Message: 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  Status code: 500 (Internal Server Error) 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  Header: Content-Length -&gt; 126 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  Header: Content-Language -&gt; en 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  Header: Date -&gt; Tue, 24 Apr 2018 15:18:02 GMT 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  Header: Content-Type -&gt; application/json;profile="/cpi/schemas/Messages.json#" 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  Response payload: 
+2018-04-24 15:18:02,385 [INFO ]  {"messages":[{"code":"BusinessLogicFailure","message":"Business logic execution failed.","details":"CpmService unavailable"}]} 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]    
+2018-04-24 15:18:02,385 [INFO ]  2018-04-24 15:18:02,385 [ERROR] TC[00001575]  
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  ----------------------------------------- 
+2018-04-24 15:18:02,385 [INFO ]  Expected Message: 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  Status code: 201 (Created) 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]  Response payload: 
+2018-04-24 15:18:02,385 [INFO ]  %ANY_ELEMENT% 
+2018-04-24 15:18:02,385 [INFO ]   
+2018-04-24 15:18:02,385 [INFO ]    
+2018-04-24 15:18:02,386 [INFO ]  2018-04-24 15:18:02,385 [ERROR]  Exception occurred during test case 00001575 java.lang.AssertionError:  
+2018-04-24 15:18:02,386 [INFO ]   
+2018-04-24 15:18:02,386 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,386 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,386 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,386 [INFO ]   
+2018-04-24 15:18:02,386 [INFO ]  	at com.ericsson.jive.core.execution.TestCaseExecutor.fail(TestCaseExecutor.java:294) 
+2018-04-24 15:18:02,386 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestCaseExecutor.fail(JiveTestCaseExecutor.java:66) 
+2018-04-24 15:18:02,386 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateResponse(AbstractTestBase.java:166) 
+2018-04-24 15:18:02,386 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponseWithHeader(AbstractTestBase.java:115) 
+2018-04-24 15:18:02,386 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.post_PartyWithoutGip_shouldReturnCreatedResponse(GenericInterfaceParameterTest.java:111) 
+2018-04-24 15:18:02,386 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:18:02,386 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:18:02,386 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:18:02,386 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:18:02,386 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:18:02,386 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:18:02,386 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:18:02,386 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:18:02,386 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,386 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,386 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,386 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,386 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:18:02,386 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:18:02,386 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:18:02,386 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,386 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,386 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:18:02,386 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:18:02,386 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:18:02,386 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:18:02,386 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:18:02,386 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:18:02,386 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:18:02,386 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:18:02,386 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:18:02,386 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:18:02,386 [INFO ]   
+2018-04-24 15:18:02,402 [INFO ]  2018-04-24 15:18:02,388 [ERROR] TC[00001575] [ ASSERTION_ERROR ]  
+2018-04-24 15:18:02,402 [INFO ]   
+2018-04-24 15:18:02,402 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,402 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,402 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,402 [INFO ]   java.lang.AssertionError:  
+2018-04-24 15:18:02,402 [INFO ]   
+2018-04-24 15:18:02,402 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,402 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,402 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,402 [INFO ]   
+2018-04-24 15:18:02,402 [INFO ]  	at com.ericsson.jive.core.execution.TestCaseExecutor.fail(TestCaseExecutor.java:294) 
+2018-04-24 15:18:02,402 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestCaseExecutor.fail(JiveTestCaseExecutor.java:66) 
+2018-04-24 15:18:02,402 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateResponse(AbstractTestBase.java:166) 
+2018-04-24 15:18:02,402 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponseWithHeader(AbstractTestBase.java:115) 
+2018-04-24 15:18:02,402 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.post_PartyWithoutGip_shouldReturnCreatedResponse(GenericInterfaceParameterTest.java:111) 
+2018-04-24 15:18:02,402 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:18:02,402 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:18:02,402 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:18:02,402 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:18:02,402 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:18:02,402 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:18:02,402 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:18:02,402 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:18:02,402 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,402 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,402 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,402 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,402 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:18:02,402 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:18:02,402 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:18:02,402 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,402 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,402 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:18:02,402 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:18:02,402 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:18:02,402 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:18:02,402 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:18:02,402 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:18:02,402 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:18:02,402 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:18:02,402 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:18:02,402 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:18:02,402 [INFO ]   
+2018-04-24 15:18:02,403 [INFO ]  2018-04-24 15:18:02,402 [INFO ] TC[00001575] FAILED  
+2018-04-24 15:18:02,403 [INFO ]  2018-04-24 15:18:02,403 [ERROR] TC[00001575] Number of events that failed: 1  
+2018-04-24 15:18:02,403 [INFO ]  2018-04-24 15:18:02,403 [INFO ] TC[00001575]  
+2018-04-24 15:18:02,403 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:02,403 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:18:02,403 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:02,404 [INFO ]  2018-04-24 15:18:02,404 [INFO ]  The currently started test: post_PartyWithGipWithEps_shouldReturnCreatedResponseWithoutGipInHeader  
+2018-04-24 15:18:02,405 [INFO ]  2018-04-24 15:18:02,405 [INFO ] TC[00001606]  
+2018-04-24 15:18:02,405 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:02,405 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:18:02,405 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:02,438 [INFO ]  2018-04-24 15:18:02,438 [ERROR]  Unexpected JUnit failure: post_PartyWithGipWithEps_shouldReturnCreatedResponseWithoutGipInHeader(com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest):  
+2018-04-24 15:18:02,438 [INFO ]   
+2018-04-24 15:18:02,438 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,438 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,438 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,438 [INFO ]   java.lang.AssertionError:  
+2018-04-24 15:18:02,438 [INFO ]   
+2018-04-24 15:18:02,438 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,438 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,438 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,438 [INFO ]   
+2018-04-24 15:18:02,438 [INFO ]  	at com.ericsson.jive.core.execution.TestCaseExecutor.fail(TestCaseExecutor.java:294) 
+2018-04-24 15:18:02,438 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestCaseExecutor.fail(JiveTestCaseExecutor.java:66) 
+2018-04-24 15:18:02,438 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateResponse(AbstractTestBase.java:166) 
+2018-04-24 15:18:02,438 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponseWithHeader(AbstractTestBase.java:115) 
+2018-04-24 15:18:02,438 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.post_PartyWithGipWithEps_shouldReturnCreatedResponseWithoutGipInHeader(GenericInterfaceParameterTest.java:160) 
+2018-04-24 15:18:02,438 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:18:02,438 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:18:02,438 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:18:02,438 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:18:02,438 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:18:02,438 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:18:02,438 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:18:02,438 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:18:02,438 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,438 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,438 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,438 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,438 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:18:02,438 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:18:02,438 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:18:02,438 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,438 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,438 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:18:02,438 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:18:02,438 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:18:02,438 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:18:02,438 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:18:02,438 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:18:02,438 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:18:02,438 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:18:02,438 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:18:02,438 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:18:02,438 [INFO ]   
+2018-04-24 15:18:02,438 [INFO ]  2018-04-24 15:18:02,438 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.post_PartyWithGipWithEps_shouldReturnCreatedResponseWithoutGipInHeader()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:18:02,439 [INFO ]  2018-04-24 15:18:02,438 [ERROR] TC[00001606]  
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  ----------------------------------------- 
+2018-04-24 15:18:02,439 [INFO ]  Sent Message: 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  URL [POST]: http://localhost:8081/cpi/orchestration/v1/bi/1-180424-3631-00003/submit 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  Header: ERICSSON.Generic-Interface-Parameters -&gt; H4sIAAAAAAAAAHVQy0oDQRD8lz5nwjyzcc5exEsg4iXkUO62OrA7CTMdiSz77465iIK3rldT1Ex8FS4Z4w4FE7d7z0JxJinIFb2kU34YKJLug90OWyiN4JV/1awQeKOC2cCzDw7mhVYkaeK9YDq3iNWmU7pT1jwZF72L5m5tu6C0i1o3b8pVkHu+/f+Yrqp/hza2KZfK5cYKV2m4MOop/2AMQ/puhvEeAoqH+Q/1yJ//uZ8xXriJxjpPy3FZ0Rm1pvz2e4HDcfkChY2q+R0BAAA= 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  Header: User-Agent -&gt; Jive HTTP client 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  Header: Content-Type -&gt; application/json 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  Request payload: 
+2018-04-24 15:18:02,439 [INFO ]  null 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]    
+2018-04-24 15:18:02,439 [INFO ]  2018-04-24 15:18:02,439 [ERROR] TC[00001606]  
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  ----------------------------------------- 
+2018-04-24 15:18:02,439 [INFO ]  Received Message: 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  Status code: 500 (Internal Server Error) 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  Header: Content-Length -&gt; 126 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  Header: Content-Language -&gt; en 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  Header: Date -&gt; Tue, 24 Apr 2018 15:18:02 GMT 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  Header: Content-Type -&gt; application/json;profile="/cpi/schemas/Messages.json#" 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  Response payload: 
+2018-04-24 15:18:02,439 [INFO ]  {"messages":[{"code":"BusinessLogicFailure","message":"Business logic execution failed.","details":"CpmService unavailable"}]} 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]    
+2018-04-24 15:18:02,439 [INFO ]  2018-04-24 15:18:02,439 [ERROR] TC[00001606]  
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  ----------------------------------------- 
+2018-04-24 15:18:02,439 [INFO ]  Expected Message: 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  Status code: 201 (Created) 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  Response payload: 
+2018-04-24 15:18:02,439 [INFO ]  %ANY_ELEMENT% 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]    
+2018-04-24 15:18:02,439 [INFO ]  2018-04-24 15:18:02,439 [ERROR]  Exception occurred during test case 00001606 java.lang.AssertionError:  
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,439 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,439 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,439 [INFO ]  	at com.ericsson.jive.core.execution.TestCaseExecutor.fail(TestCaseExecutor.java:294) 
+2018-04-24 15:18:02,439 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestCaseExecutor.fail(JiveTestCaseExecutor.java:66) 
+2018-04-24 15:18:02,439 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateResponse(AbstractTestBase.java:166) 
+2018-04-24 15:18:02,439 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponseWithHeader(AbstractTestBase.java:115) 
+2018-04-24 15:18:02,439 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.post_PartyWithGipWithEps_shouldReturnCreatedResponseWithoutGipInHeader(GenericInterfaceParameterTest.java:160) 
+2018-04-24 15:18:02,439 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:18:02,439 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:18:02,439 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:18:02,439 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:18:02,439 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:18:02,439 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:18:02,439 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:18:02,439 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:18:02,439 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,439 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,439 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,439 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,439 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:18:02,439 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:18:02,439 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:18:02,439 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,439 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,439 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:18:02,439 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:18:02,439 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:18:02,439 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:18:02,439 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:18:02,439 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:18:02,439 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:18:02,439 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:18:02,439 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:18:02,439 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:18:02,439 [INFO ]   
+2018-04-24 15:18:02,441 [INFO ]  2018-04-24 15:18:02,441 [ERROR] TC[00001606] [ ASSERTION_ERROR ]  
+2018-04-24 15:18:02,441 [INFO ]   
+2018-04-24 15:18:02,441 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,441 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,441 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,441 [INFO ]   java.lang.AssertionError:  
+2018-04-24 15:18:02,441 [INFO ]   
+2018-04-24 15:18:02,441 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,441 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,441 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,441 [INFO ]   
+2018-04-24 15:18:02,441 [INFO ]  	at com.ericsson.jive.core.execution.TestCaseExecutor.fail(TestCaseExecutor.java:294) 
+2018-04-24 15:18:02,441 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestCaseExecutor.fail(JiveTestCaseExecutor.java:66) 
+2018-04-24 15:18:02,441 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateResponse(AbstractTestBase.java:166) 
+2018-04-24 15:18:02,441 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponseWithHeader(AbstractTestBase.java:115) 
+2018-04-24 15:18:02,441 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.post_PartyWithGipWithEps_shouldReturnCreatedResponseWithoutGipInHeader(GenericInterfaceParameterTest.java:160) 
+2018-04-24 15:18:02,441 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:18:02,441 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:18:02,441 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:18:02,441 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:18:02,441 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:18:02,441 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:18:02,441 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:18:02,441 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:18:02,441 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,441 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,441 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,441 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,441 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:18:02,441 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:18:02,441 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:18:02,441 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,441 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,441 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:18:02,441 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:18:02,441 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:18:02,441 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:18:02,441 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:18:02,441 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:18:02,441 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:18:02,441 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:18:02,441 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:18:02,441 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:18:02,441 [INFO ]   
+2018-04-24 15:18:02,443 [INFO ]  2018-04-24 15:18:02,443 [INFO ] TC[00001606] FAILED  
+2018-04-24 15:18:02,443 [INFO ]  2018-04-24 15:18:02,443 [ERROR] TC[00001606] Number of events that failed: 1  
+2018-04-24 15:18:02,443 [INFO ]  2018-04-24 15:18:02,443 [INFO ] TC[00001606]  
+2018-04-24 15:18:02,443 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:02,443 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:18:02,443 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:02,446 [INFO ]  2018-04-24 15:18:02,446 [INFO ]  The currently started test: post_PartyWithGipWithOpsWithPps_shouldReturnCreatedResponseWithNewPpsWithoutOps  
+2018-04-24 15:18:02,447 [INFO ]  2018-04-24 15:18:02,447 [INFO ] TC[00001607]  
+2018-04-24 15:18:02,447 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:02,447 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:18:02,447 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:02,501 [INFO ]  2018-04-24 15:18:02,501 [ERROR] TC[00001607]  
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]  ----------------------------------------- 
+2018-04-24 15:18:02,501 [INFO ]  Sent Message: 
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]  URL [POST]: http://localhost:8081/cpi/orchestration/v1/bi/1-180424-3632-00001/submit 
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]  Header: ERICSSON.Generic-Interface-Parameters -&gt; H4sIAAAAAAAAAH1PPU8DMQz9L16pKyeXXKtssLEhtRtiMHempCJJlbgI6XT/ndARJCQvz35fXqDUeIqZNebTE1dOolIPohAW0Mq58aSx5McZAtDk7X7eMxJ7h+6NBNnLiN6M7MT5gc0rbEBjkoNyunSJJeOR+tijccFScLQ1RHdkA1HnxtyU8yQ3/8/0hdM7k7H9cm1Sb9tainZchVvJHT/wx4/ifj5fmybJCusGLtzanw+el99ddkg7tHQ0Y48PNGwdDUjD/13Wl/UbfwpDNCcBAAA= 
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]  Header: User-Agent -&gt; Jive HTTP client 
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]  Header: Content-Type -&gt; application/json 
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]  Request payload: 
+2018-04-24 15:18:02,501 [INFO ]  null 
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]    
+2018-04-24 15:18:02,501 [INFO ]  2018-04-24 15:18:02,501 [ERROR] TC[00001607]  
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]  ----------------------------------------- 
+2018-04-24 15:18:02,501 [INFO ]  Received Message: 
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]  Status code: 500 (Internal Server Error) 
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]  Header: Content-Length -&gt; 126 
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]  Header: Content-Language -&gt; en 
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]  Header: Date -&gt; Tue, 24 Apr 2018 15:18:02 GMT 
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]  Header: Content-Type -&gt; application/json;profile="/cpi/schemas/Messages.json#" 
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]  Response payload: 
+2018-04-24 15:18:02,501 [INFO ]  {"messages":[{"code":"BusinessLogicFailure","message":"Business logic execution failed.","details":"CpmService unavailable"}]} 
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]    
+2018-04-24 15:18:02,501 [INFO ]  2018-04-24 15:18:02,501 [ERROR] TC[00001607]  
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]  ----------------------------------------- 
+2018-04-24 15:18:02,501 [INFO ]  Expected Message: 
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]  Status code: 201 (Created) 
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]  Response payload: 
+2018-04-24 15:18:02,501 [INFO ]  %ANY_ELEMENT% 
+2018-04-24 15:18:02,501 [INFO ]   
+2018-04-24 15:18:02,501 [INFO ]    
+2018-04-24 15:18:02,503 [INFO ]  2018-04-24 15:18:02,503 [ERROR]  Unexpected JUnit failure: post_PartyWithGipWithOpsWithPps_shouldReturnCreatedResponseWithNewPpsWithoutOps(com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest):  
+2018-04-24 15:18:02,503 [INFO ]   
+2018-04-24 15:18:02,503 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,503 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,503 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,503 [INFO ]   java.lang.AssertionError:  
+2018-04-24 15:18:02,503 [INFO ]   
+2018-04-24 15:18:02,503 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,503 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,503 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,503 [INFO ]   
+2018-04-24 15:18:02,503 [INFO ]  	at com.ericsson.jive.core.execution.TestCaseExecutor.fail(TestCaseExecutor.java:294) 
+2018-04-24 15:18:02,503 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestCaseExecutor.fail(JiveTestCaseExecutor.java:66) 
+2018-04-24 15:18:02,503 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateResponse(AbstractTestBase.java:166) 
+2018-04-24 15:18:02,503 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponseWithHeader(AbstractTestBase.java:115) 
+2018-04-24 15:18:02,503 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.post_PartyWithGipWithOpsWithPps_shouldReturnCreatedResponseWithNewPpsWithoutOps(GenericInterfaceParameterTest.java:183) 
+2018-04-24 15:18:02,503 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:18:02,503 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:18:02,503 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:18:02,503 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:18:02,503 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:18:02,503 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:18:02,503 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:18:02,503 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:18:02,503 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,503 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,503 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,503 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,503 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:18:02,503 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:18:02,503 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:18:02,503 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,503 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,503 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:18:02,503 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:18:02,503 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:18:02,503 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:18:02,503 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:18:02,503 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:18:02,503 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:18:02,503 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:18:02,503 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:18:02,503 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:18:02,503 [INFO ]   
+2018-04-24 15:18:02,503 [INFO ]  2018-04-24 15:18:02,503 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.post_PartyWithGipWithOpsWithPps_shouldReturnCreatedResponseWithNewPpsWithoutOps()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:18:02,504 [INFO ]  2018-04-24 15:18:02,504 [ERROR]  Exception occurred during test case 00001607 java.lang.AssertionError:  
+2018-04-24 15:18:02,504 [INFO ]   
+2018-04-24 15:18:02,504 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,504 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,504 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,504 [INFO ]   
+2018-04-24 15:18:02,504 [INFO ]  	at com.ericsson.jive.core.execution.TestCaseExecutor.fail(TestCaseExecutor.java:294) 
+2018-04-24 15:18:02,504 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestCaseExecutor.fail(JiveTestCaseExecutor.java:66) 
+2018-04-24 15:18:02,504 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateResponse(AbstractTestBase.java:166) 
+2018-04-24 15:18:02,504 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponseWithHeader(AbstractTestBase.java:115) 
+2018-04-24 15:18:02,504 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.post_PartyWithGipWithOpsWithPps_shouldReturnCreatedResponseWithNewPpsWithoutOps(GenericInterfaceParameterTest.java:183) 
+2018-04-24 15:18:02,504 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:18:02,504 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:18:02,504 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:18:02,504 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:18:02,504 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:18:02,504 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:18:02,504 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:18:02,504 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:18:02,504 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,504 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,504 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,504 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,504 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:18:02,504 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:18:02,504 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:18:02,504 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,504 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,504 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:18:02,504 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:18:02,504 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:18:02,504 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:18:02,504 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:18:02,504 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:18:02,504 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:18:02,504 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:18:02,504 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:18:02,504 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:18:02,504 [INFO ]   
+2018-04-24 15:18:02,507 [INFO ]  2018-04-24 15:18:02,507 [ERROR] TC[00001607] [ ASSERTION_ERROR ]  
+2018-04-24 15:18:02,507 [INFO ]   
+2018-04-24 15:18:02,507 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,507 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,507 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,507 [INFO ]   java.lang.AssertionError:  
+2018-04-24 15:18:02,507 [INFO ]   
+2018-04-24 15:18:02,507 [INFO ]  Mismatch in the status code 
+2018-04-24 15:18:02,507 [INFO ]  Expected: &lt;201&gt; 
+2018-04-24 15:18:02,507 [INFO ]       but: was &lt;500&gt; 
+2018-04-24 15:18:02,507 [INFO ]   
+2018-04-24 15:18:02,507 [INFO ]  	at com.ericsson.jive.core.execution.TestCaseExecutor.fail(TestCaseExecutor.java:294) 
+2018-04-24 15:18:02,507 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestCaseExecutor.fail(JiveTestCaseExecutor.java:66) 
+2018-04-24 15:18:02,507 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateResponse(AbstractTestBase.java:166) 
+2018-04-24 15:18:02,507 [INFO ]  	at com.ericsson.bss.cpi.jive.common.AbstractTestBase.validateAndGetResponseWithHeader(AbstractTestBase.java:115) 
+2018-04-24 15:18:02,507 [INFO ]  	at com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.post_PartyWithGipWithOpsWithPps_shouldReturnCreatedResponseWithNewPpsWithoutOps(GenericInterfaceParameterTest.java:183) 
+2018-04-24 15:18:02,507 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+2018-04-24 15:18:02,507 [INFO ]  	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) 
+2018-04-24 15:18:02,507 [INFO ]  	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+2018-04-24 15:18:02,507 [INFO ]  	at java.lang.reflect.Method.invoke(Method.java:498) 
+2018-04-24 15:18:02,507 [INFO ]  	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) 
+2018-04-24 15:18:02,507 [INFO ]  	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) 
+2018-04-24 15:18:02,507 [INFO ]  	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) 
+2018-04-24 15:18:02,507 [INFO ]  	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) 
+2018-04-24 15:18:02,507 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,507 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,507 [INFO ]  	at com.ericsson.jive.core.execution.SpecificExternalResource$1.evaluate(SpecificExternalResource.java:24) 
+2018-04-24 15:18:02,507 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,507 [INFO ]  	at com.ericsson.jive.core.execution.PersistTestCaseStaticDataStatement.evaluate(PersistTestCaseStaticDataStatement.java:86) 
+2018-04-24 15:18:02,507 [INFO ]  	at com.ericsson.jive.core.execution.JiveTestClassFinderStatement.evaluate(JiveTestClassFinderStatement.java:96) 
+2018-04-24 15:18:02,507 [INFO ]  	at com.ericsson.jive.core.execution.LifeCycleAndErrorReporter$TestReporterRuleStatement.evaluate(LifeCycleAndErrorReporter.java:59) 
+2018-04-24 15:18:02,507 [INFO ]  	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55) 
+2018-04-24 15:18:02,507 [INFO ]  	at com.ericsson.jive.core.execution.SpecificVerifier$1.evaluate(SpecificVerifier.java:19) 
+2018-04-24 15:18:02,507 [INFO ]  	at org.junit.rules.RunRules.evaluate(RunRules.java:20) 
+2018-04-24 15:18:02,507 [INFO ]  	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) 
+2018-04-24 15:18:02,507 [INFO ]  	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) 
+2018-04-24 15:18:02,507 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner.access$100(JiveClassRunner.java:39) 
+2018-04-24 15:18:02,507 [INFO ]  	at com.ericsson.jive.core.execution.JiveClassRunner$2.run(JiveClassRunner.java:152) 
+2018-04-24 15:18:02,507 [INFO ]  	at com.ericsson.jive.core.execution.threading.SequentialRunnableAdapter.call(SequentialRunnableAdapter.java:40) 
+2018-04-24 15:18:02,507 [INFO ]  	at java.util.concurrent.FutureTask.run(FutureTask.java:266) 
+2018-04-24 15:18:02,507 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) 
+2018-04-24 15:18:02,507 [INFO ]  	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) 
+2018-04-24 15:18:02,507 [INFO ]  	at java.lang.Thread.run(Thread.java:748) 
+2018-04-24 15:18:02,507 [INFO ]   
+2018-04-24 15:18:02,509 [INFO ]  2018-04-24 15:18:02,508 [INFO ] TC[00001607] FAILED  
+2018-04-24 15:18:02,509 [INFO ]  2018-04-24 15:18:02,508 [ERROR] TC[00001607] Number of events that failed: 1  
+2018-04-24 15:18:02,509 [INFO ]  2018-04-24 15:18:02,508 [INFO ] TC[00001607]  
+2018-04-24 15:18:02,509 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:02,509 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:18:02,509 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:02,511 [INFO ]  2018-04-24 15:18:02,511 [INFO ]  The currently started test: patch_PresentOfferBIWithGIPAndMSISDN_shouldReturnOkWithNUMInstanceOnPps  
+2018-04-24 15:18:02,512 [INFO ]  2018-04-24 15:18:02,512 [INFO ] TC[00001661]  
+2018-04-24 15:18:02,512 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:02,512 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:18:02,512 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:03,812 [INFO ]  2018-04-24 15:18:03,812 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.patch_PresentOfferBIWithGIPAndMSISDN_shouldReturnOkWithNUMInstanceOnPps()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:18:03,815 [INFO ]  2018-04-24 15:18:03,815 [INFO ] TC[00001661] OK  
+2018-04-24 15:18:03,815 [INFO ]  2018-04-24 15:18:03,815 [INFO ] TC[00001661]  
+2018-04-24 15:18:03,815 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:03,815 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:18:03,815 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:03,820 [INFO ]  2018-04-24 15:18:03,820 [INFO ]  The currently started test: submit_NewSubscriptionBIWithGip_shouldReturnCreatedAndOMInstanceOnPps  
+2018-04-24 15:18:03,822 [INFO ]  2018-04-24 15:18:03,820 [INFO ] TC[00001662]  
+2018-04-24 15:18:03,822 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:03,822 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:18:03,822 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:05,219 [INFO ]  2018-04-24 15:18:05,219 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.submit_NewSubscriptionBIWithGip_shouldReturnCreatedAndOMInstanceOnPps()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:18:05,219 [INFO ]  2018-04-24 15:18:05,219 [INFO ] TC[00001662] OK  
+2018-04-24 15:18:05,219 [INFO ]  2018-04-24 15:18:05,219 [INFO ] TC[00001662]  
+2018-04-24 15:18:05,219 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:05,219 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:18:05,219 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:05,222 [INFO ]  2018-04-24 15:18:05,222 [INFO ]  The currently started test: submit_NewSubscriptionBIWithGip_shouldReturnCreatedAndCPMInstanceOnPps  
+2018-04-24 15:18:05,223 [INFO ]  2018-04-24 15:18:05,223 [INFO ] TC[00001675]  
+2018-04-24 15:18:05,223 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:05,223 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:18:05,223 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:06,386 [INFO ]  2018-04-24 15:18:06,377 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.submit_NewSubscriptionBIWithGip_shouldReturnCreatedAndCPMInstanceOnPps()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:18:06,386 [INFO ]  2018-04-24 15:18:06,382 [INFO ] TC[00001675] OK  
+2018-04-24 15:18:06,386 [INFO ]  2018-04-24 15:18:06,382 [INFO ] TC[00001675]  
+2018-04-24 15:18:06,386 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:06,386 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:18:06,386 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:06,386 [INFO ]  2018-04-24 15:18:06,384 [INFO ]  The currently started test: submit_NewSubscriptionBIWithGip_shouldReturnCreatedAndCHAInstanceOnPps  
+2018-04-24 15:18:06,386 [INFO ]  2018-04-24 15:18:06,384 [INFO ] TC[00001676]  
+2018-04-24 15:18:06,386 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:06,386 [INFO ]  ======================================== TEST CASE STARTED ========================================= 
+2018-04-24 15:18:06,386 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:07,688 [INFO ]  2018-04-24 15:18:07,688 [WARN ]  Failed to register test finish [com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest.submit_NewSubscriptionBIWithGip_shouldReturnCreatedAndCHAInstanceOnPps()]. Could not find test in current suite. Most likely due to other exception.  
+2018-04-24 15:18:07,698 [INFO ]  2018-04-24 15:18:07,688 [INFO ] TC[00001676] OK  
+2018-04-24 15:18:07,698 [INFO ]  2018-04-24 15:18:07,689 [INFO ] TC[00001676]  
+2018-04-24 15:18:07,698 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:07,698 [INFO ]  ======================================== TEST CASE FINISHED ======================================== 
+2018-04-24 15:18:07,698 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:08,699 [INFO ]  2018-04-24 15:18:08,698 [INFO ] TC[GenericInterfaceParameterConfig.AFTER]  
+2018-04-24 15:18:08,699 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:08,699 [INFO ]  ================================= CONFIGURATION TEST CASE STARTED ================================== 
+2018-04-24 15:18:08,699 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:08,702 [INFO ]  2018-04-24 15:18:08,702 [INFO ] TC[GenericInterfaceParameterConfig.AFTER]  
+2018-04-24 15:18:08,702 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:08,702 [INFO ]  ================================= CONFIGURATION TEST CASE FINISHED ================================= 
+2018-04-24 15:18:08,702 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:09,702 [INFO ]  2018-04-24 15:18:09,702 [INFO ]   
+2018-04-24 15:18:09,702 [INFO ]  ==================================================================================================== 
+2018-04-24 15:18:09,702 [INFO ]  ======================================= TEST SUITE FINISHED ======================================== 
+2018-04-24 15:18:09,702 [INFO ]  ====================================================================================================  
+2018-04-24 15:18:09,786 [INFO ]   
+2018-04-24 15:18:09,788 [INFO ]  Time: 824.2 
+2018-04-24 15:18:09,789 [INFO ]   
+2018-04-24 15:18:09,789 [INFO ]  FAILURES!!! 
+2018-04-24 15:18:09,789 [INFO ]     1) submit_VoucherBasedRefillBiWithGipInformation_shouldReturnCreatedAndCHAInstanceOnPps(com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest) 
+2018-04-24 15:18:09,789 [INFO ]     2) post_PartyWithGipWithOps_shouldReturnCreatedResponse(com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest) 
+2018-04-24 15:18:09,789 [INFO ]     3) post_PartyWithoutGip_shouldReturnCreatedResponse(com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest) 
+2018-04-24 15:18:09,789 [INFO ]     4) post_PartyWithGipWithEps_shouldReturnCreatedResponseWithoutGipInHeader(com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest) 
+2018-04-24 15:18:09,789 [INFO ]     5) post_PartyWithGipWithOpsWithPps_shouldReturnCreatedResponseWithNewPpsWithoutOps(com.ericsson.bss.cpi.jive.tests.gip.GenericInterfaceParameterTest) 
+2018-04-24 15:18:09,789 [INFO ]     6) post_searchBIsWithSearchLimitAsTwo_shouldReturnTwoBIs(com.ericsson.bss.cpi.jive.tests.holisticview.SearchBusinessInteractionWithBIMaxResultCountTest) 
+2018-04-24 15:18:09,789 [INFO ]   
+2018-04-24 15:18:09,790 [INFO ]  Tests run: 1054,  Failures: 6, Warnings: 0 
+PID=952 /tmp/build/80754af9/ci.git/common/scripts/runJive.sh exiting with RC 6 Tue
+Postbuild script does not exist, will not execute postbuild steps
+/tmp/build/80754af9
+
+notifykeyboard shortcutshlprevious/next buildjkscroll down/upTtrigger a new buildAabort buildggscroll to the topGscroll to the bottom?hide/show help
+
+

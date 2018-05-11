@@ -1,0 +1,23 @@
+load.version=0.1
+
+load.index.start=5
+load.index.limit=
+
+# window configuration
+#number of windows
+load.window.size=4
+# window start and end times (separated by semicolon)
+load.window.times=0:6;6:12;12:20;20:24
+# number of package ingests per minute for each window  (separated by semicolon)
+load.window.rate=2;6;10;4
+
+#number of packages to distribute
+load.package.numPackages=3
+#probabilistic distribution for each package (total = 10)
+load.package.selectionDistribution=0.2;0.5;1.0
+
+#total time to execute (in minutes)
+load.time.total=2
+
+#CMS configuration
+cms.watchfolder.path=/content/watchFolder01

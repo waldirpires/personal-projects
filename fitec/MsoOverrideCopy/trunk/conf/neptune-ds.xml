@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+        The data source used by the components in the Neptune application framew
+ork (and possibly by
+        other components in the application).
+-->
+<datasources>
+        <local-tx-datasource>
+                <!-- jndi properties -->
+                <jndi-name>neptune/datasource</jndi-name>
+
+                <!-- connection properties -->
+                <connection-url>jdbc:oracle:thin:@DBSERVER:1521:ttv</connection-url>
+                <driver-class>oracle.jdbc.OracleDriver</driver-class>
+                <user-name>wfs</user-name>
+                <password>Wf$1234</password>
+
+                <!-- pool size properties -->
+                <min-pool-size>20</min-pool-size>
+                <max-pool-size>350</max-pool-size>
+
+                <!-- connection validation -->
+                <valid-connection-checker-class-name>com.ericsson.cms.resource.adaptor.jdbc.vendor.CMSValidConnectionChecker</valid-connection-checker-class-name>
+                <exception-sorter-class-name>org.jboss.resource.adapter.jdbc.vendor.OracleExceptionSorter</exception-sorter-class-name>
+                <stale-connection-checker-class-name>org.jboss.resource.adapter.jdbc.vendor.OracleStaleConnectionChecker</stale-connection-checker-class-name>
+
+                <!-- type-mapping in the standardjbosscmp-jdbc.xml -->
+                <metadata>
+                        <type-mapping>Oracle9i</type-mapping>
+                </metadata>
+        </local-tx-datasource>
+
+
+</datasources>

@@ -1,0 +1,3 @@
+command line to execute the CMS package creator: 
+
+java -cp .:commons-io-1.4.jar:sample-generate.jar com.ericsson.cms.orng.sim.sample.SampleGenerateMain 1 17 /content/watchFolder01

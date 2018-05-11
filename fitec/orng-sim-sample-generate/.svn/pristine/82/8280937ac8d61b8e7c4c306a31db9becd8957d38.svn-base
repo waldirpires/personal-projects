@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+org.jboss.ide.eclipse.as.core.singledeployable.deployableList=test/com/viaccess/www/tdr/cmsi/ws/cvod/CVODServiceTest.java\ntest/catalogapiws/CatalogAPIWSTest.java\n

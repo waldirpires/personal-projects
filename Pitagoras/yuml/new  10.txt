@@ -1,0 +1,18 @@
+digraph G{
+ compound=true;
+ node [shape=rectangle]
+ rankdir=TB
+ 
+ subgraph cluster_1{
+ label=UCP style=filled color=wheat
+ UAL, UC, Registradores;
+ } 
+"Dispositivos de Entrada", "Dispositivos de Saìda", "Memória Principal";
+
+ "Dispositivos de Entrada"->UAL [lhead=cluster_1];
+ UAL->"Dispositivos de Saìda" [ltail=cluster_1];
+ "Memória Principal"->UC [lhead=cluster_1]; 
+}
+
+Aula 0: Apresentação da disciplina
+Aula 1: WWW, Hipermídia e Hipertexto

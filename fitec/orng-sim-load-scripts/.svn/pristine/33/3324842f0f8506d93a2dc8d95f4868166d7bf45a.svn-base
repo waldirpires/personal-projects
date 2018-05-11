@@ -1,0 +1,142 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use POSIX;
+use DateTime;
+use Time::Localtime;
+
+require 'load_functions.pl';
+
+my $dt   = DateTime->now;
+my $start = time;
+
+logit("ORNG load test script at $start -> $dt\n");
+
+my $prop = "orng-load-test.properties"; # properties file
+my %propertiesHash; # properties hash
+
+logit("ORNG loading properties file\n");
+returnPropertyHash( $prop, \%propertiesHash );
+logit("ORNG loading properties file: DONE!\n");
+my $key = "";
+my $value = "";
+while ( ($key, $value) = each %propertiesHash )
+{
+  logit("Properties key: $key, value: $propertiesHash{$key}\n");
+}
+
+# amount of ingests to process
+my $limit =  $propertiesHash{"load.test.ingest.limit"};
+
+# amount of packages to be selected for ingest 
+my $numPackages = $propertiesHash{"load.test.packages.size"}; 
+
+# size of window (how many interval windows there are
+my $windowSize = $propertiesHash{"load.test.windows.size"}; 
+
+# window start/end times
+my @windowTime = split ',', $propertiesHash{"load.test.windows.times"};
+logit("Window time: @windowTime\n"); 
+my @windowRate = split ',', $propertiesHash{"load.test.windows.rates"};
+ logit("Window rate: @windowRate\n");
+#(20, 60, 40, 10); # amount of ingests per minute
+my @selectionDistribution = split ',', $propertiesHash{"load.test.selection.distribution"};
+logit("Window selection distribution: @selectionDistribution\n"); 
+#(0.2, 0.5, 0.9, 1.0);
+
+#print "$dt: $dt\n";
+my $hour = getHour();
+logit("$dt: hour: $hour\n");
+
+my $rate = 0;
+my $sleepTime = 0;
+my $selectedPkgId = -1;
+my $perc = 0;
+
+my @selectedPkgStats = (0, 0, 0, 0);
+# index counter
+my $count = 0;
+my $i = 0;
+for ($count = 0; $count < $limit; $count++) {
+  $perc = $count/$limit * 100;
+  logit("[$count] Done: $perc %\n");
+  my $hour = getHour();
+  $sleepTime = getSleepTime($hour, $windowSize, \@windowTime, \@windowRate);
+  my $formatted = sprintf("%2.3f", $sleepTime);
+  logit("Sleep time (s): $formatted\n");
+  
+  $selectedPkgId = getSelectedPackageId($numPackages, \@selectionDistribution);
+  logit("Selected package ID: $selectedPkgId\n");
+  $selectedPkgStats[$selectedPkgId]++;
+  showSelectedPackagesStats();
+  logit("\n");
+  logit("INGEST!!!!!\n");
+  logit("=========================================\n");
+  executeAdiIngestCmd($selectedPkgId);
+  logit("=========================================\n");
+  logit("Sleeping . . . - ");
+  sleep $sleepTime;  
+  logit("Awake!\n");
+}
+
+$dt   = DateTime->now;
+logit("done!\n");
+my $done   = time - $start;
+
+logit("Ran for $done s -> $dt\n");
+showSelectedPackagesStats();
+
+sub executeAdiIngestCmd
+{
+  my $pkgId = $_[0];
+  my $content = "/opt/tandbergtv/cms/scripts/adi/content/ldTst/$pkgId";
+  my $param1 = "-pkgId=$selectedPkgId";
+  my $param2 = "-content=$content";
+  logit("Executing auto ingest script: $param1, $param2\n");
+  #system("./autoIngestAdi.sh ", $param1, $param2);
+  # /opt/tandbergtv/cms/scripts/tools/adiGen.pl -seed=$counter -pkgId=$1 -content=/opt/tandbergtv/cms/scripts/adi/content/ldTst
+	
+}
+
+sub returnPropertyHash  {
+    my $propertiesInputFile = $_[0];
+    my $propertiesHashRef   = $_[1];
+    
+    
+    my ($line) = "";
+    my @propArray = ();
+    
+    
+    unless (open (FILE2, "<$propertiesInputFile"))   { die "cannot open properties file $propertiesInputFile $!"; }
+    @propArray   = <FILE2>;
+    close FILE2;
+    
+    my $propertyName = "";
+    my $propertyValue = "";
+    foreach $line (@propArray) {
+        chomp ($line);
+        if ( $line =~ /^#/ )    { next; }
+        if ( $line =~ /^\s*$/ ) { next; }
+        if ( $line =~ /^.*=/i ) {
+             ( $propertyName, $propertyValue ) = $line =~ /^(.*)\s*=\s*(.*)$/; 
+             $$propertiesHashRef{$propertyName} = $propertyValue;
+        }
+    }
+    return;
+}
+
+sub showSelectedPackagesStats
+{
+  my $i = 0;
+  my $sumPackages = 0;
+  for ($i = 0; $i < $numPackages; $i++) {
+  	$sumPackages+= $selectedPkgStats[$i];
+  }
+  my $percPkg = 0;
+  print "Selected Packages: Total=$sumPackages  | ";
+  for ($i = 0; $i < $numPackages; $i++) {
+  	$percPkg = $selectedPkgStats[$i]/$sumPackages * 100;
+  	print "$i=$selectedPkgStats[$i] $percPkg % |";
+  }
+  print "\n";
+}

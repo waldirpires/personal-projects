@@ -1,0 +1,12 @@
+digraph G{
+ node [shape=rectangle]
+ d1 [label=Dados, style=filled, color=orange]
+ d2 [label=Dados, style=filled, color=orange]
+ d3 [label=Dados, style=filled, color=orange]
+ p [label=Processamento, style=filled, color=red]
+ c [label=Informação, style=filled, color=green]
+ d1->p;
+ d2->p;
+ d3->p;
+ p->c;
+}

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ADI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Metadata>
+		<AMS Provider="WHATSON" Product="2424VIDEO" Asset_Name="WONP_LASSAUTXXXXWGTO0279_VOD_LOC_45414651000_package" Version_Major="1" Version_Minor="0" Description="LASSAUTXXXXWGTO0279_VOD_LOC asset package" Creation_Date="2013-04-08" Provider_ID="WON" Asset_ID="WONPLASSAUTXXGTO0279" Asset_Class="package"/>
+		<App_Data App="MOD" Name="Metadata_Spec_Version" Value="CableLabsVOD1.1" />
+		<App_Data App="MOD" Name="Orange_TargetPlatform" Value="NewTV,TV"/>
+		<App_Data App="MOD" Name="Orange_ProductCode" Value="LASSAUTXXXXWGTO0279" />
+		<App_Data App="MOD" Name="Orange_Definition" Value="SD" />
+		<App_Data App="MOD" Name="Orange_ScramblingRequired" Value="NewTV,true" />
+		<App_Data App="MOD" Name="Orange_ScramblingRequired" Value="TV,true" />
+		<App_Data App="MOD" Name="Orange_CatalogPriority" Value="4" />
+		<App_Data App="MOD" Name="Orange_Source" Value="VOD" />
+		<App_Data App="MOD" Name="Orange_Macrovision" Value="true" />
+		<App_Data App="MOD" Name="Orange_Mute" Value="false" />
+	</Metadata>
+	<Asset>
+		<Metadata>
+			<AMS Provider="WHATSON" Product="2424VIDEO" Asset_Name="LASSAUTXXXXWGTO0279_VOD_LOC_45414651000_title" Version_Major="1" Version_Minor="0" Description="LASSAUTXXXXWGTO0279_VOD_LOC title package" Creation_Date="2013-04-08" Provider_ID="WON" Asset_ID="WONTLASSAUTXXGTO0279" Asset_Class="title"/>
+			<App_Data App="MOD" Name="Type" Value="title" />
+			<App_Data App="MOD" Name="TvId_CallSign" Value="" />
+			<App_Data App="MOD" Name="Programmer_Call_Letters" Value="" />
+			<App_Data App="MOD" Name="Title" Value="GTO0279 SD encodé par LOVELL" />
+			<App_Data App="MOD" Name="Title_Brief" Value="GTO0279 L'Assaut" />
+			<App_Data App="MOD" Name="Summary_Long" Value="Samedi 24 décembre 1994. Quatre terroristes du GIA prennent en otage à Alger l'Airbus A-300 d'Air France reliant la capitale algérienne à Paris et les 227 personnes présentes à bord. Personne ne connaît leurs intentions : ils sont armés et apparaissent extrêmement déterminés. Trois personnages, Thierry, un soldat du GIGN, Carole Jeanton, une technocrate ambitieuse et Yahia Abdallah, un Djihadiste déterminé sont au cour de l'événement... Julien Leclerq n'a que trente ans au moment de la sortie de L'assaut. Il avait quatorze ans lors des évènements relatés dans le film, les a suivis en direct et a été très marqué par eux. Là où de nombreux réalisateurs ont vu passer le projet et l'ont abandonné du fait de ses différentes difficultés, le jeune réalisateur est allé jusqu'au bout." />
+			<App_Data App="MOD" Name="Summary_Medium" Value="Noël 1994, prise d'otage à Marignane. L'opération musclée du GIGN décrite dans ses moindres détails... Percutant !" />
+			<App_Data App="MOD" Name="Summary_Short" Value="Samedi 24 décembre 1994. Quatre terroristes du GIA prennent en o" />
+			<App_Data App="MOD" Name="Rating" Value="CSA_2" />
+			<App_Data App="MOD" Name="Label" Value="none" />
+			<App_Data App="MOD" Name="Run_Time" Value="01:27:21"/>
+			<App_Data App="MOD" Name="Display_Run_Time" Value="01:27"/>
+			<App_Data App="MOD" Name="Year" Value="2010" />
+			<App_Data App="MOD" Name="Country_of_Origin" Value="FRA" />
+			<App_Data App="MOD" Name="Original_Title_Language" Value="FRA" />
+			<App_Data App="MOD" Name="Actors" Value="Elbaz,Vincent" />
+			<App_Data App="MOD" Name="Actors" Value="Derangère,Grégori" />
+			<App_Data App="MOD" Name="Actors" Value="Bernier,Mélanie" />
+			<App_Data App="MOD" Name="Actors" Value="Guillard,Marie" />
+			<App_Data App="MOD" Name="Actors" Value="Saïdi,Aymen" />
+			<App_Data App="MOD" Name="Actors_Display" Value="Vincent Elbaz" />
+			<App_Data App="MOD" Name="Actors_Display" Value="Grégori Derangère" />
+			<App_Data App="MOD" Name="Actors_Display" Value="Mélanie Bernier" />
+			<App_Data App="MOD" Name="Actors_Display" Value="Marie Guillard" />
+			<App_Data App="MOD" Name="Actors_Display" Value="Aymen Saïdi" />
+			<App_Data App="MOD" Name="Director" Value="Leclercq,Julien" />
+			<App_Data App="MOD" Name="Original_Title" Value="" />
+			<App_Data App="MOD" Name="Orange_Review_Rating_1" Value="" />
+			<App_Data App="MOD" Name="Orange_Review_Author_1" Value="Vermelin,Jérôme,Métro" />
+			<App_Data App="MOD" Name="Orange_Review_Text_1" Value="Un rush d'adrénaline qui fait réfléchir." />
+			<App_Data App="MOD" Name="Orange_Review_Rating_2" Value="" />
+			<App_Data App="MOD" Name="Orange_Review_Author_2" Value="Barcilon,Julien,Télé 7 jours" />
+			<App_Data App="MOD" Name="Orange_Review_Text_2" Value="Hallucinant : on en ressort sous le choc. Dans ce véritable témoignage (...), doublé d'un hommage à ces héros anonymes, la frime n'a pas sa place. " />
+			<App_Data App="MOD" Name="Keyword" Value="alger,terrorisme,aéroport,marignage,noël,télévision,retransimission,direct,attaque,GIGN" />
+			<App_Data App="MOD" Name="Orange_Category" Value="NewTV,000-104-000,000-702-000,000-703-000"/>
+			<App_Data App="MOD" Name="Orange_Category" Value="TV,000-703-000,000-104-000,000-702-000"/>
+			<App_Data App="MOD" Name="Show_Type" Value="film" />
+			<App_Data App="MOD" Name="Propagation_Priority" Value="" />
+			<App_Data App="MOD" Name="Licensing_Window_Start" Value="2011-09-09T00:00:00Z"/>
+			<App_Data App="MOD" Name="Licensing_Window_End" Value="2014-01-08T22:59:00Z"/>
+			<App_Data App="MOD" Name="Maximum_Viewing_Length" Value="02:00:00" />
+			<App_Data App="MOD" Name="Billing_ID" Value="TFV" />
+			<App_Data App="MOD" Name="Provider_QA_Contact" Value="" />
+			<App_Data App="MOD" Name="Contract_Name" Value="VOD_TVI_2010" />
+			<App_Data App="MOD" Name="Studio_Code" Value="TFV" />
+			<App_Data App="MOD" Name="Orange_PriceZone" Value="PRICE_ZONE_I" />
+			<App_Data App="MOD" Name="Suggested_Price" Value="4.99" />
+			<App_Data App="MOD" Name="Orange_Remuneration_Category" Value="CAT30" />
+			<App_Data App="MOD" Name="Distributor_Royalty_Percent" Value="0.00" />
+		</Metadata>
+		<Asset>
+			<Metadata>
+				<AMS Provider="WHATSON" Product="2424VIDEO" Asset_Name="LASSAUTXXXXWGTO0279_movie" Version_Major="1" Version_Minor="0" Description="LASSAUTXXXXWGTO0279_VOD_LOC_Movie" Creation_Date="2013-04-08" Provider_ID="WON" Asset_ID="WONMLASSAUTXXGTO0279" Asset_Class="movie"/>
+				<App_Data App="MOD" Name="Type" Value="movie" />
+				<App_Data App="MOD" Name="Aspect_Ratio" Value="16:9" />
+				<App_Data App="MOD" Name="HDContent" Value="N" />
+				<App_Data App="MOD" Name="Audio_PID" Value="1" />
+				<App_Data App="MOD" Name="Audio_Language" Value="FRA,1" />
+				<App_Data App="MOD" Name="Audio_Type" Value="STEREO,1" />
+				<App_Data App="MOD" Name="Audio_Format" Value="MP1L2,1" />
+				<App_Data App="MOD" Name="Audio_Order" Value="1,1" />
+				<App_Data App="MOD" Name="Bit_Rate" Value="2200000" />
+				<App_Data App="MOD" Name="Run_Time" Value="01:27:00"/>
+				<App_Data App="MOD" Name="Orange_CodingProfile" Value="MPEG2TS_SD_ZE_VBR" />
+				<App_Data App="MOD" Name="Orange_Color" Value="Color" />
+			</Metadata>
+			<Content Value="M_LASSAUTXXXXWGTO0279_ENCODED_MPEG2SD.ts" />
+		</Asset>
+		<Asset>
+			<Metadata>
+				<AMS Provider="WHATSON" Product="2424 Vidéo LOC" Asset_Name="LASSAUTXXXXWGTO0279_VOD_LOC_poster" Version_Major="1" Version_Minor="0" Description="LASSAUTXXXXWGTO0279_VOD_LOC_poster_package" Creation_Date="2013-04-08" Provider_ID="WON" Asset_ID="WO72LASSAUTXXGTO0279" Asset_Class="poster"/>
+				<App_Data App="MOD" Name="Type" Value="poster" />
+				<App_Data App="MOD" Name="Orange_ImageProfile" Value="352x469" />
+			</Metadata>
+			<Content Value="LASSAUTXXXXWGTO0279v-cover.jpg" />
+		</Asset>
+		<Asset>
+			<Metadata>
+				<AMS Provider="WHATSON" Product="2424 Vidéo LOC" Asset_Name="LASSAUTXXXXWGTO0279_VOD_LOC_poster" Version_Major="1" Version_Minor="0" Description="LASSAUTXXXXWGTO0279_VOD_LOC_poster_package" Creation_Date="2013-04-08" Provider_ID="WON" Asset_ID="WO82LASSAUTXXGTO0279" Asset_Class="poster"/>
+				<App_Data App="MOD" Name="Type" Value="poster" />
+				<App_Data App="MOD" Name="Orange_ImageProfile" Value="225x300" />
+			</Metadata>
+			<Content Value="LASSAUTXXXXWGTO0279_COV_2424_TV_SD.jpg" />
+		</Asset>
+	</Asset>
+</ADI>

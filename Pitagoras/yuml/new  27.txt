@@ -1,0 +1,17 @@
+Arquiteturas de sistemas distribuídos
+
+- Introdução
+- Modelos de arquitetura
+- Escalabilidade
+- Modelos fundamentais
+- Projeto 
+- Sincronização
+- Conclusões
+
+forma de computação onde várias operações são executadas em tempos sobrepostos ao invés de sequencialmente
+ is a form of computing in which several computations are executing during overlapping time periods—concurrently—instead of sequentially (one completing before the next starts). 
+ 
+computation can make progress without waiting for all other computations to complete—where more than one computation can make progress at "the same time"
+
+A computação pode ser realizada sem a necessidade de esperar por outras computações serem completadas
+Mais de uma computação pode ser realizada ao mesmo tempo 

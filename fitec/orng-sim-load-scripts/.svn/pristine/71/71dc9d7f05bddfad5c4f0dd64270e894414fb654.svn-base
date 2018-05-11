@@ -1,0 +1,283 @@
+#!/usr/bin/perl
+
+# PERL script used to run the load test within CMS
+# xwalrib 2013.11.05 added count to seed
+
+use strict;
+use warnings;
+use POSIX;
+use Time::HiRes qw(gettimeofday);
+
+require 'load_functions.pl';
+
+my $start = gettimeofday;
+
+print "==========================================================================================\n";
+logit("ORNG load test script \n");
+print "==========================================================================================\n";
+
+my $prop = "orng-load-test.properties"; # properties file
+my %propertiesHash; # properties hash
+
+logit("ORNG loading properties file\n");
+returnPropertyHash( $prop, \%propertiesHash );
+logit("ORNG loading properties file: DONE!\n");
+my $key = "";
+my $value = "";
+while ( ($key, $value) = each %propertiesHash )
+{
+  logit("Properties key: $key, value: $propertiesHash{$key}\n");
+}
+
+# amount of ingests to process
+my $limit =  $propertiesHash{"load.test.ingest.limit"};
+
+my $limitTime = $propertiesHash{"load.test.ingest.time.limit"};
+
+# amount of packages to be selected for ingest 
+my $numPackages = $propertiesHash{"load.test.packages.size"}; 
+
+# size of window (how many interval windows there are
+my $windowSize = $propertiesHash{"load.test.windows.size"}; 
+
+# window start/end times
+my @windowTime = split ',', $propertiesHash{"load.test.windows.times"};
+logit("Window time: @windowTime\n"); 
+my @windowRate = split ',', $propertiesHash{"load.test.windows.rates"};
+ logit("Window rate: @windowRate\n");
+my @selectionDistribution = split ',', $propertiesHash{"load.test.selection.distribution"};
+logit("Window selection distribution: @selectionDistribution\n"); 
+
+my $hour = getHour();
+logit("hour: $hour\n");
+
+my $rate = 0;
+my $sleepTime = 0;
+my $selectedPkgId = -1;
+my $perc = 0;
+
+my @selectedPkgStats = (0, 0, 0, 0);
+# index counter
+my $count = 0;
+my $i = 0;
+my $seed = 0;
+my $ingest_time = 0;
+my $total_ingest_time = 0;
+my $avg_ingest_time = 0;
+my $rate_ingest_time = 0;
+my $loop_cycle_time = 0;
+my $total_loop_cycle_time = 0;
+my $avg_loop_cycle_time = 0;
+my $rate_loop_cycle_time = 0;
+my $perc_done = 0;
+my $total_time_min = 0;
+my $num_ingested_packages = 0;
+my $num_not_ingested_packages = 0;
+
+#logit("Starting in 10 seconds . . .\n");
+#for ($count = 10; $count >=0; $count--)
+#{
+#  logit("$count . . . \n");
+#  sleep 1;
+#}
+#WaitForKey();
+#if the script is running based on time limit
+if ($limitTime ne '')
+{
+  do{
+	executeCycle($count);
+	$count++;
+	$perc_done = ($total_ingest_time/60)/$limitTime;
+	$total_time_min = ($total_ingest_time/60);
+	logit("$count | Percent done: $perc_done | $total_time_min minutes\n");
+  } while (($total_ingest_time/60) < $limitTime)  
+} else 
+{
+  for ($count = 0; $count < $limit; $count++) {
+    executeCycle($count);
+  }
+}
+
+logit("done!\n");
+my $done   = gettimeofday - $start;
+
+logit("Ran for $done s \n");
+my $ingestRate = $count/($done/60);
+logit("INGESTS: Total: $count | rate: ($ingestRate) i/m\n");
+showSelectedPackagesStats();
+
+sub executeAdiIngestCmd
+{
+  my $pkgId = $_[0];
+  my $seed = $_[1];
+ # my $content = $propertiesHash{'load.test.ingest.dataset.location'};
+ # $content = "${content}${pkgId}";
+  my $content = "/opt/tandbergtv/cms/scripts/adi/content/orng-cl11/$pkgId";
+#"/opt/tandbergtv/cms/scripts/adi/content/ldTst/$pkgId";
+#$propertiesHash{"load.test.ingest.dataset.location"};
+#  $content = "$content$pkgId";
+#"/opt/tandbergtv/cms/scripts/adi/content/ldTst/$pkgId";
+  my $param1 = "-seed=$seed"; 
+  my $param2 = "-pkgId=$pkgId";
+  my $param3 = "-content=$content";
+  my $randId = floor(rand(10000));
+  my $param4 = "-idnumber=$randId";
+  my $name = getTimestamp();
+  my $param5 = "-name=$name";
+  my $keySelectedPkg = "load.test.ingest.dataset.name.$pkgId";
+  my $param6 = "-fullname=$propertiesHash{$keySelectedPkg}";
+  logit("Executing auto ingest script:\n");
+  logit("1: $param1\n");
+  logit("2: $param2\n");
+  logit("3: $param3\n");
+  logit("4: $param4\n");
+  logit("5: $param5\n");
+  logit("6: $param6\n");
+  if ($propertiesHash{"load.test.execute.autoIngest"} =~ /yes/i){
+
+    logit("Executing auto ingest script: $param1, $param2, $param3, $param4, $param5, $param6\n");
+    system("./autoIngestAdi_2.sh", $param1, $param2, $param3, $param4, $param5, $param6, "&");
+  
+    logit("Done executing script.\n");  
+  }
+	
+}
+
+sub returnPropertyHash  {
+    my $propertiesInputFile = $_[0];
+    my $propertiesHashRef   = $_[1];
+    
+    
+    my ($line) = "";
+    my @propArray = ();
+    
+    
+    unless (open (FILE2, "<$propertiesInputFile"))   { die "cannot open properties file $propertiesInputFile $!"; }
+    @propArray   = <FILE2>;
+    close FILE2;
+    
+    my $propertyName = "";
+    my $propertyValue = "";
+    foreach $line (@propArray) {
+        chomp ($line);
+        if ( $line =~ /^#/ )    { next; }
+        if ( $line =~ /^\s*$/ ) { next; }
+        if ( $line =~ /^.*=/i ) {
+             ( $propertyName, $propertyValue ) = $line =~ /^(.*)\s*=\s*(.*)$/; 
+             $$propertiesHashRef{$propertyName} = $propertyValue;
+        }
+    }
+    return;
+}
+
+sub showSelectedPackagesStats
+{
+  my $i = 0;
+  my $sumPackages = 0;
+  for ($i = 0; $i < $numPackages; $i++) {
+  	$sumPackages+= $selectedPkgStats[$i];
+  }
+  my $percPkg = 0;
+  print "Selected Packages: Total=$sumPackages  | ";
+  for ($i = 0; $i < $numPackages; $i++) {
+  	$percPkg = $selectedPkgStats[$i]/$sumPackages * 100;
+  	print "$i=$selectedPkgStats[$i] $percPkg % |";
+  }
+  print "\n";
+}
+
+sub executeCycle
+{
+  $count = $_[0];
+  $seed = getTimestampForSeed($count);
+  $seed = "$seed-$ARGV[0]";
+  $ingest_time = gettimeofday; 
+  $loop_cycle_time = gettimeofday;
+  if ($limit ne '')
+  {
+    $perc = $count/$limit * 100;
+  }
+  logit("$seed | Done: $perc %\n");
+  my $hour = getHour();
+  $sleepTime = getSleepTime($hour, $windowSize, \@windowTime, \@windowRate);
+  my $formatted = sprintf("%2.3f", $sleepTime);
+  logit("$seed | Sleep time (s): $formatted\n");
+  
+  $selectedPkgId = getSelectedPackageId($numPackages, \@selectionDistribution);
+  logit("$seed | Selected package ID: $selectedPkgId\n");
+  $selectedPkgStats[$selectedPkgId]++;
+  showSelectedPackagesStats();
+  logit("$seed | INGEST!!!!!\n");
+  if($propertiesHash{"load.test.ingest"} =~ /yes/i) {
+    sleep 1;
+    $num_not_ingested_packages++;
+  } else {
+    executeAdiIngestCmd($selectedPkgId, $seed);
+    $num_ingested_packages++;
+  }
+  $ingest_time = gettimeofday - $ingest_time;
+  $total_ingest_time += $ingest_time;
+  $avg_ingest_time = $total_ingest_time / ($count + 1);
+  $rate_ingest_time = 1/($avg_ingest_time/60); 
+  logit("$seed | =========================================\n");
+  logit("$seed | $limit |  $perc% done - ingest time [ current: $ingest_time s | total: $total_ingest_time s | avg: $avg_ingest_time s | rate = $rate_ingest_time i/m]\n");
+  my $timeSleep = 0;
+  logit("$seed | Sleeping for $sleepTime s. . . \n");
+  if ($sleepTime > $ingest_time)
+  { $timeSleep = $sleepTime - $ingest_time;
+    logit("$seed | Sleeping for $timeSleep\n");
+    my $i = 0;
+    for ($i = 0; $i < $timeSleep; $i++){
+      logit("$seed | Sleep $i s/ $timeSleep s. . . \n");
+      sleep 1;
+    }
+  } else {
+    my $diffSleep = $ingest_time - $sleepTime;
+    logit("$seed | WARNING: ingest time was longer than sleep time in $diffSleep s\n");
+  }
+  logit("$seed | Awake!\n");
+  $loop_cycle_time = gettimeofday - $loop_cycle_time;
+  $total_loop_cycle_time += $loop_cycle_time;
+  logit("$seed | Loop cycle time: $loop_cycle_time s | total: $total_loop_cycle_time\n");
+  $avg_loop_cycle_time = $total_loop_cycle_time / ($count + 1);
+  $rate_loop_cycle_time = 1/($avg_loop_cycle_time/60);
+  logit("$seed | Loop cycle: [current: $loop_cycle_time s | total: $total_loop_cycle_time s | avg: $avg_loop_cycle_time s | rate: $rate_loop_cycle_time i/m]\n");
+  logit("$seed | INGESTS: done: $num_ingested_packages | not done: $num_not_ingested_packages\n");
+
+}
+
+sub WaitForKey() {
+    print "\nPress any key to continue...";
+    chomp($key = <STDIN>);
+}
+
+sub loadPropertiesFromFile
+{
+
+  logit("ORNG loading properties file\n");
+  returnPropertyHash( $prop, \%propertiesHash );
+  logit("ORNG loading properties file: DONE!\n");
+  my $key = "";
+  my $value = "";
+  while ( ($key, $value) = each %propertiesHash )
+  {
+    logit("Properties key: $key, value: $propertiesHash{$key}\n");
+  }
+  
+# # amount of packages to be selected for ingest
+  $numPackages = $propertiesHash{"load.test.packages.size"};
+#
+# # size of window (how many interval windows there are
+  $windowSize = $propertiesHash{"load.test.windows.size"};
+#
+# # window start/end times
+  @windowTime = split ',', $propertiesHash{"load.test.windows.times"};
+  logit("Window time: @windowTime\n");
+  @windowRate = split ',', $propertiesHash{"load.test.windows.rates"};
+  logit("Window rate: @windowRate\n");
+  @selectionDistribution = split ',', $propertiesHash{"load.test.selection.distribution"};
+  logit("Window selection distribution: @selectionDistribution\n");
+
+
+}
+
