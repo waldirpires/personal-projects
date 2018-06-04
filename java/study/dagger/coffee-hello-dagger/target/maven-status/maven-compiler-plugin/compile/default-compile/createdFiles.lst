@@ -1,0 +1,15 @@
+com\wpjr2\study\dagger2\CoffeeApp$CoffeeShop.class
+com\wpjr2\study\dagger2\CoffeeApp.class
+com\wpjr2\study\dagger2\Pump.class
+com\wpjr2\study\dagger2\Thermosiphon.class
+com\wpjr2\study\dagger2\Heater.class
+com\wpjr2\study\dagger2\CoffeeMaker_Factory.class
+com\wpjr2\study\dagger2\Thermosiphon_Factory.class
+com\wpjr2\study\dagger2\DaggerCoffeeApp_CoffeeShop$Builder.class
+com\wpjr2\study\dagger2\DaggerCoffeeApp_CoffeeShop$1.class
+com\wpjr2\study\dagger2\DripCoffeeModule.class
+com\wpjr2\study\dagger2\CoffeeMaker.class
+com\wpjr2\study\dagger2\PumpModule.class
+com\wpjr2\study\dagger2\DaggerCoffeeApp_CoffeeShop.class
+com\wpjr2\study\dagger2\DripCoffeeModule_ProvideHeaterFactory.class
+com\wpjr2\study\dagger2\ElectricHeater.class
