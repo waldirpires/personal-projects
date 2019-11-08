@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewAlunosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewAlunosLabel_id}"/>
+                    <h:outputText value="#{alunosController.selected.id}" title="#{bundle.ViewAlunosTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewAlunosLabel_matricula}"/>
+                    <h:outputText value="#{alunosController.selected.matricula}" title="#{bundle.ViewAlunosTitle_matricula}"/>
+                    <h:outputText value="#{bundle.ViewAlunosLabel_nome}"/>
+                    <h:outputText value="#{alunosController.selected.nome}" title="#{bundle.ViewAlunosTitle_nome}"/>
+                    <h:outputText value="#{bundle.ViewAlunosLabel_curso}"/>
+                    <h:outputText value="#{alunosController.selected.curso}" title="#{bundle.ViewAlunosTitle_curso}"/>
+                    <h:outputText value="#{bundle.ViewAlunosLabel_semestre}"/>
+                    <h:outputText value="#{alunosController.selected.semestre}" title="#{bundle.ViewAlunosTitle_semestre}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{alunosController.destroyAndView}" value="#{bundle.ViewAlunosDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewAlunosEditLink}"/>
+                <br />
+                <h:commandLink action="#{alunosController.prepareCreate}" value="#{bundle.ViewAlunosCreateLink}" />
+                <br />
+                <h:commandLink action="#{alunosController.prepareList}" value="#{bundle.ViewAlunosShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewAlunosIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

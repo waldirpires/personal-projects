@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateAlunosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateAlunosLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{alunosController.selected.id}" title="#{bundle.CreateAlunosTitle_id}" required="true" requiredMessage="#{bundle.CreateAlunosRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateAlunosLabel_matricula}" for="matricula" />
+                    <h:inputText id="matricula" value="#{alunosController.selected.matricula}" title="#{bundle.CreateAlunosTitle_matricula}" />
+                    <h:outputLabel value="#{bundle.CreateAlunosLabel_nome}" for="nome" />
+                    <h:inputText id="nome" value="#{alunosController.selected.nome}" title="#{bundle.CreateAlunosTitle_nome}" />
+                    <h:outputLabel value="#{bundle.CreateAlunosLabel_curso}" for="curso" />
+                    <h:inputText id="curso" value="#{alunosController.selected.curso}" title="#{bundle.CreateAlunosTitle_curso}" />
+                    <h:outputLabel value="#{bundle.CreateAlunosLabel_semestre}" for="semestre" />
+                    <h:inputText id="semestre" value="#{alunosController.selected.semestre}" title="#{bundle.CreateAlunosTitle_semestre}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{alunosController.create}" value="#{bundle.CreateAlunosSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{alunosController.prepareList}" value="#{bundle.CreateAlunosShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateAlunosIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

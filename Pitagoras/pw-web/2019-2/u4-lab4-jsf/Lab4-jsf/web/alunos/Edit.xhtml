@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditAlunosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditAlunosLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{alunosController.selected.id}" title="#{bundle.EditAlunosTitle_id}" required="true" requiredMessage="#{bundle.EditAlunosRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditAlunosLabel_matricula}" for="matricula" />
+                    <h:inputText id="matricula" value="#{alunosController.selected.matricula}" title="#{bundle.EditAlunosTitle_matricula}" />
+                    <h:outputLabel value="#{bundle.EditAlunosLabel_nome}" for="nome" />
+                    <h:inputText id="nome" value="#{alunosController.selected.nome}" title="#{bundle.EditAlunosTitle_nome}" />
+                    <h:outputLabel value="#{bundle.EditAlunosLabel_curso}" for="curso" />
+                    <h:inputText id="curso" value="#{alunosController.selected.curso}" title="#{bundle.EditAlunosTitle_curso}" />
+                    <h:outputLabel value="#{bundle.EditAlunosLabel_semestre}" for="semestre" />
+                    <h:inputText id="semestre" value="#{alunosController.selected.semestre}" title="#{bundle.EditAlunosTitle_semestre}" />
+                </h:panelGrid>
+                <h:commandLink action="#{alunosController.update}" value="#{bundle.EditAlunosSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditAlunosViewLink}"/>
+                <br />
+                <h:commandLink action="#{alunosController.prepareList}" value="#{bundle.EditAlunosShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditAlunosIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
