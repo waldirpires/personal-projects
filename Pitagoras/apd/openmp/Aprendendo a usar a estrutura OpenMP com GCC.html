@@ -1,0 +1,828 @@
+
+
+
+<!DOCTYPE html>
+
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>	
+<meta name="viewport" content="width=device-width, initial-scale=1"/>      
+<link rel="icon" href="//www.ibm.com/favicon.ico"/>
+<link rel="canonical" href="http://www.ibm.com/developerworks/br/aix/library/au-aix-openmp-framework/index.html"/>
+<meta name="geo.country" content="BR"/>
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2012"/>
+<meta name="dcterms.date" content="2012-10-08"/>
+<meta name="description" content="A estrutura Open Multiprocessing (OpenMP) é uma especificação extremamente eficiente, que ajuda a aproveitar os benefícios de sistemas com mais de um processador com aplicativos C, C++ e Fortran. Este artigo explica como usar os recursos do OpenMP em código C++ e traz exemplos que podem ajudar o leitor a começar a usar o OpenMP."/>	
+<meta name="keywords" content="openmp, c, c++, gcc, arpan_sen, tttosca"/>
+<meta name="robots" content="index,follow"/>
+<title>Aprendendo a usar a estrutura OpenMP com GCC</title>
+    
+<script> 
+    digitalData = {
+        "page":{
+            "category":{
+                "primaryCategory":"SOFDCOSRBR"
+            },
+            "pageInfo":{
+                "effectiveDate":"2012-10-08",
+                "language":"pt-BR",
+                "publishDate":"2012-10-08",
+                "publisher":"IBM Corporation",
+                "version":"v18",
+                "ibm":{ 
+                    "contentDelivery":"IBM developerWorks template",
+                    "contentProducer":"IBM developerWorks",
+                    "country":"BR",
+                    "owner":"Developer Works/Brazil/IBM",
+                    "subject":"TT400",
+                    "type":"CT316",
+                    "topic":"AIX",
+                    "topicId":"372",
+                    "contentArea":"opensource",
+                    "contentAreaId":"7",
+                    "contentType":"article",
+                    "contentId":"839212",
+                },
+                "keywords":"openmp, c, c++, gcc, arpan_sen, tttosca",
+                "description":"A estrutura Open Multiprocessing (OpenMP) é uma especificação extremamente eficiente, que ajuda a aproveitar os benefícios de sistemas com mais de um processador com aplicativos C, C++ e Fortran. Este artigo explica como usar os recursos do OpenMP em código C++ e traz exemplos que podem ajudar o leitor a começar a usar o OpenMP."
+            }
+        }
+    };
+    window._analytics = {
+        "coremetrics": false,
+        "optimizely": false,
+        "googleAddServices": false,
+        "addRoll": false,
+        "intercom": false,
+        "fullStory": false,
+        "hotjar": false,
+        "tealeaf": false,
+        "nps": false,
+        "segment_key": 'HU3dbkAG5wE0F1IkRf9S1RexlAqo3jby'
+    };
+</script>
+	
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@developerworks"/>
+<meta property="og:title" content="Aprendendo a usar a estrutura OpenMP com GCC"/>
+<meta property="og:description" content="A estrutura Open Multiprocessing (OpenMP) é uma especificação extremamente eficiente, que ajuda a aproveitar os benefícios de sistemas com mais de um processador com aplicativos C, C++ e Fortran. Este artigo explica como usar os recursos do OpenMP em código C++ e traz exemplos que podem ajudar o leitor a começar a usar o OpenMP."/>
+    <meta property="og:image" content="http://www.ibm.com/developerworks/i/dw-social-201508.png"/>
+<!-- Segment meta tag -->
+<meta name="segment" property="(developerWorks)" productTitle="developerWorks" value="Open Source Portuguese (developerWorks)"/>      
+<!-- SITE MON : START (DO NOT DELETE) -->
+<!-- developerWorks monitoring token -->
+<!-- SITE MON : END (DO NOT DELETE) -->
+
+<!-- HEADER_SCRIPTS_AND_CSS_INCLUDE -->
+<!-- <script src="//cdn.optimizely.com/js/5399420604.js"></script> -->
+<!-- BEGIN: Use this section to set page specific variables for the Page Tag -->
+<script language="JavaScript">var NTPT_PGEXTRA="ibmSkillLevel=3&ibmCmaId=839212&ibmContentAreas=opensource";</script>
+<!--END -->
+<script src="//1.www.s81c.com/common/stats/ida_stats.js"></script>
+<link href="//1.www.s81c.com/common/v18/css/www.css" rel="stylesheet">
+<link href="//1.www.s81c.com/common/v18/css/syntaxhighlighter.css" rel="stylesheet">
+<script src="//1.www.s81c.com/common/v18/js/www.js"></script>
+<script src="//1.www.s81c.com/common/v18/js/syntaxhighlighter.js"></script>    
+<link href="//1.www.s81c.com/common/v18/css/tables.css" rel="stylesheet">
+<script src="//1.www.s81c.com/common/v18/js/tables.js"></script>   
+<!--  Masthead/footer  -->
+<link href="//dw1.s81c.com/developerworks/css/dw-mf/v18/dw-mf-v18.css?v=102317" rel="stylesheet">
+<!-- <link href="//dw1.s81c.com/developerworks/css/dw-mf/v18/alt-signedin-ux.css" rel="stylesheet" /> -->   
+<!--[if lt IE 9]>
+    <link href="//dw1.s81c.com/developerworks/css/dw-mf/v18/dw-mf-ie8fix.css?v=022216" rel="stylesheet" />
+<![endif]-->
+<link href="//dw1.s81c.com/developerworks/css/v18/dw-article.css?v=073117" rel="stylesheet">
+<script src="//dw1.s81c.com/developerworks/js/v18/dw-auth-properties.js?v=041017"></script>
+<script src="//dw1.s81c.com/developerworks/js/v18/dw-auth.js?v=062717"></script>
+<script src="//dw1.s81c.com/developerworks/js/dw-mf/v18/dw-mf.js?v=110316"></script>
+<script src="//dw1.s81c.com/developerworks/js/v18/dw-include.js"></script>     
+<script src="//dw1.s81c.com/developerworks/js/v18/dw-article.js?v=101417"></script>
+<script src="//dw1.s81c.com/developerworks/js/v18/dw-auto-links.js?v=101017"></script>     
+<script src="//www.ibm.com/software/info/js/tactic.js"></script>
+<script src="//www.ibm.com/software/info/js/tacticbindlinks.js"></script>
+ <!-- Segment -->
+<script src="//console-regional.cdn.us-south.s-bluemix.net/analytics/build/bluemix-analytics.min.js"></script>    
+
+<!-- 
+<PageMap>
+    <DataObject type="document">
+        <Attribute name="topic">AIX</Attribute>
+        <Attribute name="topicId">372</Attribute>
+        <Attribute name="contentArea">opensource</Attribute>
+        <Attribute name="contentAreaId">7</Attribute>
+        <Attribute name="abstract">A estrutura Open Multiprocessing (OpenMP) é uma especificação extremamente eficiente, que ajuda a aproveitar os benefícios de sistemas com mais de um processador com aplicativos C, C++ e Fortran. Este artigo explica como usar os recursos do OpenMP em código C++ e traz exemplos que podem ajudar o leitor a começar a usar o OpenMP.</Attribute>
+        <Attribute name="pub.date">2012-10-08</Attribute>
+        <Attribute name="contentType">article</Attribute>
+    </DataObject>
+</PageMap>
+-->        
+
+</head>
+<body id="ibm-com" class="ibm-type dw-js-disabled">
+	
+<div id="ibm-top" class="ibm-landing-page">
+
+<!-- MASTHEAD_BEGIN -->
+<div id="ibm-masthead" role="banner" aria-label="IBM">
+    <div id="ibm-universal-nav">    
+  
+        <nav role="navigation" aria-label="IBM">
+            <div id="ibm-home"><a href="https://www.ibm.com/br/pt/">IBM®</a></div>
+            <ul id="ibm-menu-links" role="toolbar" aria-label="Site map">
+                <li><a href="https://www.ibm.com/sitemap/br/pt/">Mapa do Site</a></li>
+            </ul> 
+        </nav>
+  
+        <div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead">
+            <form id="ibm-search-form" action="https://www.ibm.com/Search/" method="get">
+                <p>
+                    <label for="q">IBM</label>
+                    <input type="text" maxlength="100" value="" placeholder="Procurar" name="q" id="q" aria-label="Pesquisa developerWorks"/>
+                    <input type="hidden" value="18" name="v"/>
+                    <input type="hidden" value="utf" name="en"/>
+                    <input type="hidden" value="pt" name="lang"/>
+                    <input type="hidden" value="br" name="cc"/>
+                    <input type="hidden" name="sn" value="dw" />
+                    <input type="hidden" name="dws" value="brdw" />
+                    <input type="hidden" name="hpp" value="20" />
+                    <input type="submit" id="ibm-search" class="ibm-btn-search" value="Enviar"/>
+                </p>
+            </form>
+        </div>
+       
+    </div>
+</div><!-- MASTHEAD_END -->
+	    
+<!-- LAYOUT -->
+<div id="ibm-content-wrapper">
+    <!-- LEADSPACE_BEGIN -->
+    <header role="banner" aria-labelledby="ibm-pagetitle-h1">
+        
+        <!-- MASTHEAD_SITENAV_BEGIN -->
+        <div class="ibm-sitenav-menu-container">
+    <div class="ibm-sitenav-menu-name">
+        <a href="//www.ibm.com/developerworks/br/">
+            <img width="186" height="24" alt="developerWorks®" src="//dw1.s81c.com/developerworks/i/mf/dw-mf-wordmark.svg"/>
+        </a>
+    </div>
+    <div class="ibm-sitenav-menu-list">
+        <ul role="menubar">
+                            <li class="dw-navpage-learn" role="presentation">
+                    <a href="//www.ibm.com/developerworks/br/topics/" role="menuitem">Aprenda</a>
+                </li>
+                    
+                <li class="dw-navpage-develop" role="presentation">
+                    <a href="//www.ibm.com/developerworks/br/downloads/" role="menuitem">Desenvolva</a>
+                </li>                    
+
+                <li class="dw-navpage-connect" role="presentation">
+                    <a href="//developer.ibm.com/br/community/" role="menuitem">Conecte-se</a>
+                </li>  
+        </ul>
+    </div>
+</div>        <!-- MASTHEAD_SITENAV_END -->
+        
+        <!-- NAVIGATION_TRAIL_BEGIN -->
+        <div id="ibm-leadspace-head" class="ibm-alternate">
+            <div id="ibm-leadspace-body">
+                <nav aria-label="Breadcrumb" role="navigation">                     
+                                <ul id="dw-navigation-trail" itemscope="" itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href="http://www.ibm.com/developerworks/br/topics/"><span itemprop="name">Aprenda</span></a><meta itemprop="position" content="1"/></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href="http://www.ibm.com/developerworks/br/opensource/"><span itemprop="name">Software livre</span></a><meta itemprop="position" content="2"/></li></ul>
+                </nav>
+            </div>
+        </div>
+        <!-- NAVIGATION_TRAIL_END -->
+        
+    </header>
+    <!-- LEADSPACE_END -->
+    
+    <!-- MAIN_CONTENT_BEGIN -->
+    <main role="main" aria-labelledby="ibm-pagetitle-h1"> 
+        <div id="ibm-pcon">
+            <!-- BEGIN_IBM-CONTENT -->
+            <div id="ibm-content">
+                <!-- BEGIN_IBM-CONTENT-BODY -->
+                <div id="ibm-content-body">
+                    <!-- BEGIN_IBM-CONTENT-MAIN -->
+                    <div id="ibm-content-main" class="dw-article">                        
+                        <!-- BEGIN_INTERIOR-COLUMNS -->
+                                <div class="ibm-columns dw-article-toc">
+                                    <!-- LEFT_6_2_CONTENT_COLUMN_BEGIN -->  
+                                    <div id="dw-article-toc-container" class="ibm-col-6-2">
+                                        <div id="dw-article-toc-body">
+                                            <h2>Conteúdo</h2><div class="ibm-alternate-rule"><hr/></div><ul role="directory" aria-label="Índice" class="ibm-plain-list"><li><a href="#ibm-pagetitle-h1">Introdução</a></li><li><a href="#first_program">O seu primeiro programa de OpenMP</a></li><li><a href="#omp_parallel">Brincando com OpenMP paralelo</a></li><li><a href="#critical">Seções críticas com OpenMP</a></li><li><a href="#control">Controle de baixa granularidade sobre a execução de tarefas</a></li><li><a href="#directives">Entendendo as diretivas <code>firstprivate</code> e <code>lastprivate</code> em conjunto com loops paralelos</a></li><li><a href="#merge">Ordenação por intercalação (merge sort) com OpenMP</a></li><li><a href="#conclusion">Conclusão</a></li><li><a href="#artdownload">Recursos para download</a></li><li><a href="#artrelatedtopics">Temas relacionados</a></li><li><a href="#icomments">Comentários</a></li></ul>
+                                        </div>
+                                    </div>
+                                    <!-- LEFT_6_2_CONTENT_COLUMN_END -->
+                                    
+                                    <!-- CENTER_6_4_CONTENT_COLUMN_BEGIN -->
+                                    <div class="ibm-col-6-4">
+                                        <h1 id="ibm-pagetitle-h1" class="ibm-h1">Aprendendo a usar a estrutura OpenMP com GCC</h1>
+                                        <!-- Article Top Bar -->
+                                                <div class="ibm-columns dw-article-topbar">
+                                                    <!-- Author and article info. -->
+                                                    <div class="ibm-col-6-2 ibm-col-medium-6-4 dw-article-metadata">
+                                                        <div class="dw-article-avatar"><img width="42" height="42" src="//dw1.s81c.com/developerworks/i/v18/article/dw-author.png" alt=""/></div><div class="dw-article-authordate">Arpan Sen<br /><span class="dw-article-pubdate">Publicado em 08/Out/2012</span></div>
+                                                    </div>
+                                                    <!-- Social -->
+                                                    <div class="ibm-col-6-2 ibm-col-medium-6-4 ibm-col-small-6-2 dw-article-social">
+                                                        <!-- Sharing links -->
+                                                        <div id="dw-article-share-inline">
+                                                            <div class="dw-article-sharelink-inline">
+                                                                <div class="ibm-sharethispage"></div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Number of comments and link to comments -->
+                                                        <div id="dw-article-cmts">
+                                                            <div class="dw-article-cmtslink">
+                                                                <a onclick="tocLink('#icomments')" href="#icomments" role="link" tabindex="0" aria-label="Comments">
+                                                                    <img src="//dw1.s81c.com/developerworks/i/v18/article/dw-article-cmt-icon.png" width="29" height="29" alt="Comments"/>
+                                                                </a>
+                                                            </div>
+                                                            <div class="dw-article-cmtslink">
+                                                                <a onclick="tocLink('#icomments')" href="#icomments" role="link" tabindex="0">
+                                                                    <div id="nCmts"></div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                        <!-- Article Body -->
+                                        
+                                        <p>A estrutura OpenMP é uma maneira eficiente de fazer programação simultânea em C, C++ e Fortran. O GNU Compiler Collection (GCC) versão 4.2 tem suporte para o padrão OpenMP 2.5, enquanto o 4.4 tem suporte para o padrão OpenMP 3, mais recente. Outros compiladores, como o Microsoft&#174; Visual Studio, também têm suporte para OpenMP. Neste artigo, você aprenderá a usar pragmas de compilador da estrutura OpenMP, a encontrar suporte para algumas das interfaces de programação de aplicativos (APIs) que ela fornece e a testá-la com alguns algoritmos paralelos. Este artigo usa GCC 4.2 como o compilador preferencial.
+	</p><div class="dw-article-sidebar ibm-background-cool-white-20"><h5 id="get_started">Introdução</h5><p>Um ótimo recurso do OpenMP é que não é necessário nada além da instalação padrão do GCC. Programas com OpenMP devem ser compilados com a opção <code>-fopenmp</code>.
+		</p></div><h2 id="first_program" class="ibm-h2">O seu primeiro programa de OpenMP</h2><p>Vamos começar com um simples programa para exibir a frase <strong>Hello, World!</strong>, que inclui um pragma adicional. <a href="#list1">A Listagem 1</a> mostra o código.
+		</p><h5 id="list1" class="ibm-h5">Lista 1. Hello World com OpenMP</h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">#include &lt;iostream&gt;
+int main()
+{
+  #pragma omp parallel
+  {
+    std::cout &lt;&lt; "Hello World!\n";
+  }
+}</pre></span><p>Quando o código da Listagem 1 é compilado e executado com g++, uma única mensagem <strong>Hello, World!</strong>	deve ser exibida no console. Agora, recompile o código com a opção <code>-fopenmp</code>. <a href="#list2">A Listagem 2</a> mostra a saída.	</p><h5 id="list2" class="ibm-h5">Lista 2. Compilando e executando o código com o comando <code>-fopenmp</code></h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">tintin$ g++ test1.cpp -fopenmp
+tintin$ ./a.out 
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!</pre></span><p>O que aconteceu? A mágica de <code>#pragma omp parallel</code>
+funciona apenas quando a opção <code>-fopenmp</code> do compilador é especificada. Internamente, durante a compilação, o GCC gera o código para criar o máximo número de encadeamentos possível no tempo de execução, com base no hardware e na configuração do sistema operacional. A rotina de início de cada encadeamento é o código no bloco após o pragma. Esse comportamento chama-se <em>paralelização implícita</em>. Na sua essência, OpenMP consiste em um conjunto de pragmas eficientes que livram o desenvolvedor da obrigação de incluir muitos códigos repetidos. (Para comparação, confira como seria uma implementação do que você acaba de fazer em [pthreads], os encadeamentos da Interface de Sistema Operacional Portátil (POSIX).) Como eu estou usando um computador com um processador Intel&#174; Core i7, com quatro núcleos físicos e dois núcleos lógicos por núcleo físico, a saída da Listagem 2 parece adequada (8 encadeamentos = 8 núcleos lógicos).</p><p>Agora vamos ver mais detalhes sobre pragmas paralelos.</p><h2 id="omp_parallel" class="ibm-h2">Brincando com OpenMP paralelo</h2><p>Para controlar o número de encadeamentos, basta usar o argumento <code>num_threads</code>	do pragma. Aqui está novamente o código da <a href="#list1">Listagem 1</a> com o número de encadeamentos disponíveis especificados como 5 (como mostra a <a href="#list3">Listagem 3</a>).
+		</p><h5 id="list3" class="ibm-h5">Lista 3. Controlando o número de encadeamentos com <code>num_threads</code></h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">#include &lt;iostream&gt;
+int main()
+{
+  #pragma omp parallel num_threads(5) 
+  {
+    std::cout &lt;&lt; "Hello World!\n";
+  }
+}</pre></span><p>Em vez da abordagem <code>num_threads</code>, aqui está uma alternativa para alterar o número de encadeamentos executando o código. Essa também é a primeira API do OpenMP que você irá usar: <code>omp_set_num_threads</code>. Essa função é definida no arquivo de cabeçalho omp.h. Não é necessário vincular outras bibliotecas para que o código na <a href="#list4">Listagem 4</a> funcione &#8212; apenas	<code>-fopenmp</code>.
+		</p><h5 id="list4" class="ibm-h5">Lista 4. Uso de <code>omp_set_num_threads</code> para ajuste fino da criação de encadeamentos</h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">#include &lt;omp.h&gt;
+#include &lt;iostream&gt;
+int main()
+{
+  omp_set_num_threads(5); 
+  #pragma omp parallel 
+  {
+    std::cout &lt;&lt; "Hello World!\n";
+  }
+}</pre></span><p>O OpenMP também usa variáveis de ambiente externas para controlar seu comportamento. É possível alterar o código na <a href="#list2">Listagem 2</a> para imprimir apenas <strong>Hello World!</strong> seis vezes, definindo a variável <code>OMP_NUM_THREADS</code> para <code>6</code>. <a href="#list5">A Listagem 5</a> mostra a execução.	</p><h5 id="list5" class="ibm-h5">Lista 5. Usando variáveis de ambiente para ajustar o comportamento do OpenMP</h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">tintin$ export OMP_NUM_THREADS=6
+tintin$ ./a.out 
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!</pre></span><p>Você já descobriu todas as três facetas do OpenMP: pragmas do compilador, APIs do tempo de execução e variáveis de ambiente. O que acontece se usarmos a variável de ambiente e a API do tempo de execução? A API tem precedência mais alta.</p><h3 id="example" class="ibm-h3">Um exemplo prático</h3><p>O OpenMP usa técnicas de paralelização implícita, e é possível usar pragmas, funções explícitas e variáveis de ambiente para instruir o compilador. Vamos examinar um exemplo no qual OpenMP pode ser de grande ajuda. Considere o código da <a href="#list6">Listagem 6</a>.
+			</p><h5 id="list6" class="ibm-h5">Lista 6. Processamento sequencial em um loop <code>for</code></h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">int main( )
+{
+int a[1000000], b[1000000]; 
+// ... some initialization code for populating arrays a and b; 
+int c[1000000];
+for (int i = 0; i &lt; 1000000; ++i)
+  c[i] = a[i] * b[i] + a[i-1] * b[i+1];
+// ... now do some processing with array c
+ }</pre></span><p>Claramente, é possível dividir o loop <code>for</code> e executar em mais de um núcleo. O cálculo de qualquer <code>c[k]</code> é independente dos outros elementos do array <code>c</code>.
+				<a href="#list7">A Listagem 7</a> mostra como o OpenMP ajuda a fazer isso.
+			</p><h5 id="list7" class="ibm-h5">Lista 7. Processamento paralelo em um loop <code>for</code> com o pragma <code>parallel for</code></h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">int main( )
+{
+int a[1000000], b[1000000]; 
+// ... some initialization code for populating arrays a and b; 
+int c[1000000];
+#pragma omp parallel for 
+for (int i = 0; i &lt; 1000000; ++i)
+  c[i] = a[i] * b[i] + a[i-1] * b[i+1];
+// ... now do some processing with array c
+ }</pre></span><p>O pragma <code>parallel for</code> ajuda a dividir a carga de trabalho do loop <code>for</code> em mais de um encadeamento. Cada encadeamento pode ser executado em um núcleo diferente, o que reduz significativamente o tempo total de cálculo. 				<a href="#list8">A Listagem 8</a> prova isso.
+			</p><h5 id="list8" class="ibm-h5">Lista 8. Entendendo omp_get_wtime</h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">#include &lt;omp.h&gt;
+#include &lt;math.h&gt;
+#include &lt;time.h&gt;
+#include &lt;iostream&gt;
+
+int main(int argc, char *argv[]) {
+    int i, nthreads;
+    clock_t clock_timer;
+    double wall_timer;
+    double c[1000000]; 
+    for (nthreads = 1; nthreads &lt;=8; ++nthreads) {
+        clock_timer = clock();
+        wall_timer = omp_get_wtime();
+        #pragma omp parallel for private(i) num_threads(nthreads)
+        for (i = 0; i &lt; 1000000; i++) 
+          c[i] = sqrt(i * 4 + i * 2 + i); 
+        std::cout &lt;&lt; "threads: " &lt;&lt; nthreads &lt;&lt;  " time on clock(): " &lt;&lt; 
+            (double) (clock() - clock_timer) / CLOCKS_PER_SEC
+           &lt;&lt; " time on wall: " &lt;&lt;  omp_get_wtime() - wall_timer &lt;&lt; "\n";
+    }
+}</pre></span><p>Na <a href="#list8">Listagem 8</a>, o código aumenta continuamente o número de encadeamentos para medir quanto tempo o loop <code>for</code> interno leva para ser executado. A API <code>omp_get_wtime</code> retorna o tempo em segundos a partir de algum ponto arbitrário, porém consistente. Portanto, <code>omp_get_wtime() - wall_timer</code> retorna o tempo real para execução do loop <code>for</code>. A chamada do sistema <code>clock()</code> é usada para estimar o tempo de uso do processador para todo o programa &#8212; ou seja, o tempo de uso de processador dos encadeamentos individuais é somado antes de a chamada informar o número final. No meu computador Intel Core i7, a <a href="#list9">Listagem 9</a> mostra as informações exibidas.
+			</p><h5 id="list9" class="ibm-h5">Lista 9. Números para a execução do loop <code>for</code> interno</h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">threads: 1 time on clock(): 0.015229 time on wall: 0.0152249
+threads: 2 time on clock(): 0.014221 time on wall: 0.00618792
+threads: 3 time on clock(): 0.014541 time on wall: 0.00444412
+threads: 4 time on clock(): 0.014666 time on wall: 0.00440478
+threads: 5 time on clock(): 0.01594 time on wall: 0.00359988
+threads: 6 time on clock(): 0.015069 time on wall: 0.00303698
+threads: 7 time on clock(): 0.016365 time on wall: 0.00258303
+threads: 8 time on clock(): 0.01678 time on wall: 0.00237703</pre></span><p>Embora o tempo de processador seja quase o mesmo em todas as execuções (como deveriam ser, exceto por algum tempo adicional para criar os encadeamentos e o comutador de contexto), o que nos interessa é o tempo real. Ele é reduzido progressivamente à medida que o número de encadeamentos aumenta, dando a entender que os dados estão sendo calculados pelos núcleos em paralelo. Uma nota final sobre a sintaxe do pragma: <code>#pragma parallel for private(i)</code>
+significa que a variável de loop <code>i</code> deve ser tratada como um armazenamento local de encadeamento, com cada encadeamento tendo uma cópia da variável. A variável local do encadeamento não é inicializada.
+			</p><h2 id="critical" class="ibm-h2">Seções críticas com OpenMP</h2><p>Você não achou que o OpenMP ia cuidar das seções críticas sozinhos, achou? Claro, não é necessário criar explicitamente uma mutex, mas ainda é preciso especificar a seção crítica. Aqui está a sintaxe:	</p><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">#pragma omp critical (optional section name)
+{
+// no 2 threads can execute this code block concurrently
+}</pre></span><p>O código que vem depois de <code>pragma omp critical</code> pode apenas ser executado por um único encadeamento em um dado momento. Além disso, <code>optional section name</code> é um identificador global, e dois encadeamentos não podem executar seções críticas com o mesmo identificador global ao mesmo tempo. Considere o código da <a href="#list10">Listagem 10</a>.
+		</p><h5 id="list10" class="ibm-h5">Lista 10. Mais de uma seção crítica com o mesmo nome</h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">#pragma omp critical (section1)
+{
+myhashtable.insert("key1", "value1");
+} 
+// ... other code follows
+#pragma omp critical (section1)
+{
+myhashtable.insert("key2", "value2");
+}</pre></span><p>Com base nesse código, podemos supor com segurança que as duas inserções de hashtable nunca acontecerão simultaneamente, pois os nomes da seção crítica são os mesmos. Isso é um pouco diferente da maneira com que você está acostumado a lidar com seções críticas usando pthreads, que são, em grande parte, caracterizadas pelo uso (ou abuso) de bloqueios.</p><h3 id="lock_mutex" class="ibm-h3">Bloqueios e mutexes com OpenMP</h3><p>Curiosamente, OpenMP tem suas próprias versões de mutexes (então não se trata apenas de pragmas). Seja bem-vindo ao <code>omp_lock_t</code>, definido como parte do arquivo de cabeçalho omp.h. As operações de mutex no estilo pthread são iguais &#8212; até os nomes das APIs são semelhantes. Há cinco APIs que o desenvolvedor deve conhecer:</p><ul class="ibm-bullet-list"><li><strong><code>omp_init_lock</code></strong>: Essa deve ser a primeira API a acessar <code>omp_lock_t</code>. É usada para inicialização. Observe que, logo após a inicialização, considera-se que o bloqueio não foi definido.
+					</li><li><strong><code>omp_destroy_lock</code></strong>: Essa API destrói o bloqueio. O bloqueio deve estar no estado não definido para que essa API seja chamada, o que significa que não é possível chamar <code>omp_set_lock</code> e depois fazer uma chamada para destruir o bloqueio.
+					</li><li><strong><code>omp_set_lock</code></strong>: Essa API define <code>omp_lock_t</code>&#8212; ou seja, o mutex é adquirido. Se um encadeamento não puder definir o bloqueio, ele continuará a aguardar até que possa.
+					</li><li><strong><code>omp_test_lock</code></strong>: Essa API tenta bloquear se o bloqueio estiver disponível, e retorna <code>1</code>
+em caso de sucesso e <code>0</code> em caso de fracasso. Essa é uma	<em>API sem bloqueio </em>&#8212; ou seja, essa função não faz o encadeamento aguardar para definir o bloqueio.
+					</li><li><strong><code>omp_unset_lock</code></strong>: Essa API libera o bloqueio.
+					</li></ul><p><a href="#list11">A Listagem 11</a> mostra uma implementação trivial de uma fila legada de um encadeamento estendida para lidar com multiencadeamento usando bloqueios do OpenMP. Observe que isso pode não ser o ideal para todas as situações. O exemplo é apenas uma ilustração rápida.
+			</p><h5 id="list11" class="ibm-h5">Lista 11. Usando OpenMP para estender uma fila de um encadeamento</h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">#include &lt;openmp.h&gt; 
+#include "myqueue.h"
+
+class omp_q : public myqueue&lt;int&gt; { 
+public: 
+   typedef myqueue&lt;int&gt; base; 
+   omp_q( ) { 
+      omp_init_lock(&amp;lock);
+   }
+   ~omp_q() { 
+       omp_destroy_lock(&amp;lock);
+   }
+   bool push(const int&amp; value) { 
+      omp_set_lock(&amp;lock);
+      bool result = this-&gt;base::push(value);
+      omp_unset_lock(&amp;lock);
+      return result;
+   }
+   bool trypush(const int&amp; value) 
+   { 
+       bool result = omp_test_lock(&amp;lock);
+       if (result) {
+          result = result &amp;&amp; this-&gt;base::push(value);
+          omp_unset_lock(&amp;lock);
+      } 
+      return result;
+   }
+   // likewise for pop 
+private: 
+   omp_lock_t lock;
+};</pre></span><h3 id="nested_lock" class="ibm-h3">Bloqueios aninhados</h3><p>Outros tipos de bloqueios fornecidos pelo OpenMP são variações do <code>omp_nest_lock_t</code>. São semelhantes a <code>omp_lock_t</code>, com a vantagem de que podem ser bloqueados várias vezes pelo encadeamento que já está realizando o bloqueio. Cada vez que o bloqueio aninhado é readquirido pelo encadeamento que o contém usando <code>omp_set_nest_lock</code>, um contador interno é aumentado. O bloqueio é liberado pelo encadeamento quando uma ou mais chamadas para <code>omp_unset_nest_lock</code> finalmente reconfiguram o contador do bloqueio interno para <code>0</code>. Aqui estão as APIs usadas para <code>omp_nest_lock_t</code>:
+			</p><ul class="ibm-bullet-list"><li><strong><code>omp_init_nest_lock(omp_nest_lock_t* )</code></strong>: Essa API inicializa o contador de aninhamento interno para <code>0</code>.
+					</li><li><strong><code>omp_destroy_nest_lock(omp_nest_lock_t* )</code></strong>: Essa API destrói o bloqueio. Um chamado para essa API em um bloqueio com contagem de aninhamento interno diferente de zero resulta em comportamento indefinido.
+					</li><li><strong><code>omp_set_nest_lock(omp_nest_lock_t* )</code></strong>: Essa API é semelhante a <code>omp_set_lock</code>, mas o encadeamento pode chamar a função mais de uma vez enquanto mantém o bloqueio.
+					</li><li><strong><code>omp_test_nest_lock(omp_nest_lock_t* )</code></strong>: Essa API é uma versão sem bloqueio de <code>omp_set_nest_lock</code>.
+					</li><li><strong><code>omp_unset_nest_lock(omp_nest_lock_t* )</code></strong>: Essa API libera o bloqueio quando o contador interno é <code>0</code>.
+Do contrário, o contador é diminuído com cada chamada para esse método.
+					</li></ul><h2 id="control" class="ibm-h2">Controle de baixa granularidade sobre a execução de tarefas</h2><p>Você já viu que todos os encadeamentos executam o bloco de códigos após <code>pragma omp parallel</code> em paralelo. É possível categorizar ainda mais o código dentro desse bloco para ser executado por encadeamentos selecionados. Considere o código da <a href="#list12">Listagem 12</a>.
+		</p><h5 id="list12" class="ibm-h5">Lista 12. Aprendendo a usar o pragma de seções paralelas</h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">int main( )
+{
+  #pragma omp parallel
+  {
+    cout &lt;&lt; "All threads run this\n";
+    #pragma omp sections
+    {
+      #pragma omp section
+      {
+        cout &lt;&lt; "This executes in parallel\n";
+      }
+      #pragma omp section
+      {
+        cout &lt;&lt; "Sequential statement 1\n";
+        cout &lt;&lt; "This always executes after statement 1\n";
+      }
+      #pragma omp section
+      {
+        cout &lt;&lt; "This also executes in parallel\n";
+      }
+    }
+  }
+}</pre></span><p>O código que vem antes de <code>pragma omp sections</code>, mas logo após	<code>pragma omp parallel</code>, é executado por todos os encadeamentos em paralelo. O bloco que vem depois de <code>pragma omp sections</code> é classificado ainda mais em subseções individuais usando <code>pragma omp section</code>.
+Cada bloco <code>pragma omp section</code> está disponível para ser executado por um encadeamento individual. No entanto, as instruções individuais dentro do bloco de seção são sempre executadas em sequência. <a href="#list13">A Listagem 13</a> mostra a saída do código da Listagem 12.	</p><h5 id="list13" class="ibm-h5">Lista 13. Saída do código da Listagem 12</h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">tintin$ ./a.out 
+All threads run this
+All threads run this
+All threads run this
+All threads run this
+All threads run this
+All threads run this
+All threads run this
+All threads run this
+This executes in parallel
+Sequential statement 1
+This also executes in parallel
+This always executes after statement 1</pre></span><p>Na Listagem 13, temos novamente oito encadeamento sendo criados inicialmente. Desses oito encadeamentos, há trabalho suficiente para apenas três deles no bloco <code>pragma omp sections</code>. Na segunda seção, especificamos a ordem na qual as instruções de impressão são executadas. É esse o motivo para usar o pragma <code>sections</code>. Se for necessário, é possível especificar a ordem dos blocos de códigos. 
+		</p><h2 id="directives" class="ibm-h2">Entendendo as diretivas <code>firstprivate</code> e <code>lastprivate</code> em conjunto com loops paralelos</h2><p>Anteriormente, você viu o uso de <code>private</code> para declarar o armazenamento local de encadeamentos. Então como inicializar as variáveis locais de encadeamento? Talvez sincronizá-las com a variável no encadeamento principal antes de continuar com as operações? É nessa situação que a diretiva <code>firstprivate</code> é útil.
+		</p><h3 id="firstprivate" class="ibm-h3">A diretiva firstprivate</h3><p>Ao usar <code>firstprivate(variable)</code>, é possível inicializar a variável em um encadeamento para o valor que ela tinha em main. Considere o código da <a href="#list14">Listagem 14</a>.
+			</p><h5 id="list14" class="ibm-h5">Lista 14. Usando a variável local do encadeamento que não está sincronizada com o encadeamento principal</h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">#include &lt;stdio.h&gt;
+#include &lt;omp.h&gt;
+
+int main()
+{
+  int idx = 100;
+  #pragma omp parallel private(idx)
+  {
+    printf("In thread %d idx = %d\n", omp_get_thread_num(), idx);
+  }
+}</pre></span><p>Aqui está a saída que eu recebi. Seus resultados podem ser diferentes.</p><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">In thread 1 idx = 1
+In thread 5 idx = 1
+In thread 6 idx = 1
+In thread 0 idx = 0
+In thread 4 idx = 1
+In thread 7 idx = 1
+In thread 2 idx = 1
+In thread 3 idx = 1</pre></span><p><a href="#list15">A Listagem 15</a> mostra o código com a diretiva <code>firstprivate</code>. A saída, como era esperado, imprime <code>idx</code>
+inicializado para <code>100</code> em todos os encadeamentos.
+			</p><h5 id="list15" class="ibm-h5">Lista 15. Usando a diretiva <code>firstprivate</code> para inicializar as variáveis locais do encadeamento</h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">#include &lt;stdio.h&gt;
+#include &lt;omp.h&gt;
+
+int main()
+{
+  int idx = 100;
+  #pragma omp parallel firstprivate(idx)
+  {
+    printf("In thread %d idx = %d\n", omp_get_thread_num(), idx);
+  }
+}</pre></span><p>Observe também que usamos o método <code>omp_get_thread_num( )</code> para acessar o ID de um encadeamento. Isso é diferente do ID de encadeamento que o comando <code>top</code> do Linux&#174; mostra. Esse esquema é apenas uma maneira de o OpenMP acompanhar as contagens de encadeamento. Outra nota sobre a diretiva <code>firstprivate</code>, caso você queira usá-la no seu código <code>C++</code>: a variável que a diretiva <code>firstprivate</code> usa é um construtor de cópias para inicializar-se a partir da variável do encadeamento principal. Portanto, ter um construtor de cópias privado em uma classe invariavelmente resulta em coisas ruins. Vamos agora passar para a diretiva <code>lastprivate</code>, que é, de certa forma, o reverso da moeda.
+			</p><h3 id="lalstprivate" class="ibm-h3">A diretiva <code>lastprivate</code></h3><p>Em vez de inicializar uma variável local de encadeamento com os dados do encadeamento principal, agora queremos sincronizar os dados do encadeamento principal com aqueles gerados pelo último loop executado. O código na <a href="#list16">Listagem 16</a> executa um loop <code>for</code> paralelo.
+			</p><h5 id="list16" class="ibm-h5">Lista 16. Usando um loop <code>for</code> paralelo sem sincronização de dados com o encadeamento principal</h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">#include &lt;stdio.h&gt;
+#include &lt;omp.h&gt;
+
+int main()
+{
+  int idx = 100;
+  int main_var = 2120;
+
+  #pragma omp parallel for private(idx) 
+  for (idx = 0; idx &lt; 12; ++idx)
+  {
+    main_var = idx * idx;
+    printf("In thread %d idx = %d main_var = %d\n",
+      omp_get_thread_num(), idx, main_var);
+  }
+  printf("Back in main thread with main_var = %d\n", main_var);
+}</pre></span><p>No meu computador de desenvolvimento, com oito núcleos, o OpenMP cria seis encadeamentos para o bloco <code>parallel for</code>. Cada encadeamento, por sua vez, é responsável por duas iterações do loop. O valor final de <code>main_var</code> depende do último encadeamento executado e, portanto, o valor de <code>idx</code> nesse encadeamento. Em outras palavras, o valor de <code>main_var</code> não depende do último valor de <code>idx</code>, mas no valor de <code>idx</code>
+no encadeamento executado por último. O código na <a href="#list17">Listagem 17</a>
+mostra isso.
+			</p><h5 id="list17" class="ibm-h5">Lista 17. O valor de main_var depende do último encadeamento executado</h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">In thread 4 idx = 8 main_var = 64
+In thread 2 idx = 4 main_var = 16
+In thread 5 idx = 10 main_var = 100
+In thread 3 idx = 6 main_var = 36
+In thread 0 idx = 0 main_var = 0
+In thread 1 idx = 2 main_var = 4
+In thread 4 idx = 9 main_var = 81
+In thread 2 idx = 5 main_var = 25
+In thread 5 idx = 11 main_var = 121
+In thread 3 idx = 7 main_var = 49
+In thread 0 idx = 1 main_var = 1
+In thread 1 idx = 3 main_var = 9
+Back in main thread with main_var = 9</pre></span><p>Execute o código na Listagem 17 algumas vezes para convencer-se de que o valor de <code>main_var</code> no encadeamento principal sempre depende do valor de <code>idx</code> no último encadeamento executado. E se quisermos sincronizar o valor do encadeamento principal com o valor final de <code>idx</code> no loop? É nessa parte que É aqui que entra a diretiva <code>lastprivate</code>, como mostra a <a href="#list18">Listagem 18</a>. Assim como no código da Listagem 17, execute o código da Listagem 18 algumas vezes para convencer-se de que o valor final de <code>main_var</code> no encadeamento principal é <code>121</code>
+				(<code>idx</code> é o valor do final do contador de loop).
+			</p><h5 id="list18" class="ibm-h5">Lista 18. Usando a diretiva <code>lastprivate</code> para sincronização</h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">#include &lt;stdio.h&gt;
+#include &lt;omp.h&gt;
+
+int main()
+{
+  int idx = 100;
+  int main_var = 2120;
+
+  #pragma omp parallel for private(idx) lastprivate(main_var)
+  for (idx = 0; idx &lt; 12; ++idx)
+  {
+    main_var = idx * idx;
+    printf("In thread %d idx = %d main_var = %d\n",
+      omp_get_thread_num(), idx, main_var);
+  }
+  printf("Back in main thread with main_var = %d\n", main_var);
+}</pre></span><p><a href="#list19">A Listagem 19</a> mostra a saída da Listagem 18.</p><h5 id="list19" class="ibm-h5">Lista 19. Saída do código na Listagem 18 (observe que o valor de <code>main_var always</code> é 121 no encadeamento principal)
+	</h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">In thread 3 idx = 6 main_var = 36
+In thread 2 idx = 4 main_var = 16
+In thread 1 idx = 2 main_var = 4
+In thread 4 idx = 8 main_var = 64
+In thread 5 idx = 10 main_var = 100
+In thread 3 idx = 7 main_var = 49
+In thread 0 idx = 0 main_var = 0
+In thread 2 idx = 5 main_var = 25
+In thread 1 idx = 3 main_var = 9
+In thread 4 idx = 9 main_var = 81
+In thread 5 idx = 11 main_var = 121
+In thread 0 idx = 1 main_var = 1
+Back in main thread with main_var = 121</pre></span><p>Uma observação final: para que um objeto <code>C++</code> tenha suporte para o operador <code>lastprivate</code>, é necessário que o método <code>operator=</code> esteja disponível publicamente na classe correspondente.
+			</p><h2 id="merge" class="ibm-h2">Ordenação por intercalação (merge sort) com OpenMP</h2><p>Vamos observar um exemplo prático no qual o conhecimento sobre OpenMP ajuda a economizar tempo de execução. Essa não é uma versão muito otimizada do algoritmo <code>merge sort</code>, mas é o suficiente para mostrar as vantagens de usar OpenMP no código. <a href="#list20">A Listagem 20</a>
+mostra o código de exemplo.
+		</p><h5 id="list20" class="ibm-h5">Lista 20. Ordenação por intercalação usando OpenMP</h5><span class="dw-code-nohighlight"><pre data-widget="syntaxhighlighter" class="brush: js; html-script: true; gutter: true;">#include &lt;omp.h&gt;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+using namespace std;
+
+vector&lt;long&gt; merge(const vector&lt;long&gt;&amp; left, const vector&lt;long&gt;&amp; right)
+{
+    vector&lt;long&gt; result;
+    unsigned left_it = 0, right_it = 0;
+
+    while(left_it &lt; left.size() &amp;&amp; right_it &lt; right.size())
+    {
+        if(left[left_it] &lt; right[right_it])
+        {
+            result.push_back(left[left_it]);
+            left_it++;
+        }
+        else					
+        {
+            result.push_back(right[right_it]);
+            right_it++;
+        }
+    }
+
+    // Push the remaining data from both vectors onto the resultant
+    while(left_it &lt; left.size())
+    {
+        result.push_back(left[left_it]);
+        left_it++;
+    }
+
+    while(right_it &lt; right.size())
+    {
+        result.push_back(right[right_it]);
+        right_it++;
+    }
+
+    return result;
+}
+
+vector&lt;long&gt; mergesort(vector&lt;long&gt;&amp; vec, int threads)
+{
+    // Termination condition: List is completely sorted if it
+    // only contains a single element.
+    if(vec.size() == 1)
+    {
+        return vec;
+    }
+
+    // Determine the location of the middle element in the vector
+    std::vector&lt;long&gt;::iterator middle = vec.begin() + (vec.size() / 2);
+
+    vector&lt;long&gt; left(vec.begin(), middle);
+    vector&lt;long&gt; right(middle, vec.end());
+
+    // Perform a merge sort on the two smaller vectors
+
+    if (threads &gt; 1)
+    {
+      #pragma omp parallel sections
+      {
+        #pragma omp section
+        {
+          left = mergesort(left, threads/2);
+        }
+        #pragma omp section
+        {
+          right = mergesort(right, threads - threads/2);
+        }
+      }
+    }
+    else
+    {
+      left = mergesort(left, 1);
+      right = mergesort(right, 1);
+    }
+
+    return merge(left, right);
+}
+
+int main()
+{
+  vector&lt;long&gt; v(1000000);
+  for (long i=0; i&lt;1000000; ++i)
+    v[i] = (i * i) % 1000000;
+  v = mergesort(v, 1);
+  for (long i=0; i&lt;1000000; ++i)
+    cout &lt;&lt; v[i] &lt;&lt; "\n";
+}</pre></span><p>Usando oito encadeamentos para executar esse <code>merge sort</code>, a duração do tempo de execução que eu obtive foi de 2,1 segundos, enquanto um único encadeamento deu 3,7 segundos. A única coisa que se deve lembrar aqui é que é preciso ter cuidado com o número de encadeamentos. Eu comecei com oito encadeamentos. Sua experiência pode ser diferente, de acordo com a configuração do seu sistema. No entanto, sem a contagem explícita de encadeamentos, você acabaria criando centenas, senão milhares, deles, com altas chances de que o desempenho do sistema decaísse. Além disso, o pragma <code>sections</code>, discutido anteriormente, foi bem utilizado com o código <code>merge sort</code>.	</p><h2 id="conclusion" class="ibm-h2">Conclusão</h2><p>Assim acaba o artigo. Nós avançamos bastante aqui: você conheceu os pragmas paralelos do OpenMP; aprendeu diferentes maneiras de criar encadeamentos; ficou convencido das melhorias em desempenho de tempo, sincronização e controle de baixa granularidade que o OpenMP oferece; e terminou com uma aplicação prática do OpenMP com <code>merge sort</code>.
+Mas ainda há muito para estudar, é o melhor lugar para isso é o site do projeto OpenMP. Não deixe de consultar a seção <a href="#artrelatedtopics">Recursos</a> para mais detalhes.	</p><!--CMA ID: 839212--><!--Site ID: 80--><!--XSLT stylesheet used to transform this file:
+        dw-document-html-8.0.xsl--> 
+                                        <!-- Article Resources -->
+                                        <div class="ibm-alternate-rule"><hr/></div><h4 id="artdownload" class="ibm-h4">Recursos para download</h4><ul class="ibm-link-list"><li><a class="ibm-pdf-link" href="au-aix-openmp-framework-pdf.pdf">PDF desse conteúdo</a></li></ul><div class="ibm-alternate-rule"><hr/></div><h4 id="artrelatedtopics" class="ibm-h4">Temas relacionados</h4><ul><li>
+Não deixe de conferir o <a href="http://www.openmp.org">site do projeto OpenMP</a>.
+	</li><li>
+Para mais informações sobre como melhorar o desempenho da ordenação por intercalação, leia	<a href="http://www1.chapman.edu/~radenski/research/papers/mergesort-pdpta11.pdf">Shared
+Memory, Message Passing, and Hybrid Merge Sorts for Standalone and Clustered SMPs</a>
+de Atanas Radenski.	</li></ul>
+                                        <!-- Commenting -->
+<!-- INLINE_COMMENTS_BEGIN: -->
+<div class="ibm-alternate-rule"><hr/></div>
+<div id="dw-article-cmts-top" class="ibm-columns">
+    <div class="ibm-col-6-2">
+        <h4 id="icomments" class="ibm-h4">Comentários</h4>
+        <div id="dw-article-cmts-login">
+            <p><a onClick="window.location=userLinks[0].url;" tabindex="0" role="link">Acesse</a> ou 
+                <a onClick="window.location=userLinks[1].url;" tabindex="0" role="link">registre-se</a> para adicionar e acompanhar os comentários.</p>
+        </div>
+    </div>    
+    <div class="ibm-col-6-2" id="dw-notify"> 
+        <input type="checkbox" value="1" name="comment_notification" id="comment_notification" disabled="disabled">
+        <label for="comment_notification">Receba notificações dos comentários</label>	   
+    </div>
+</div>
+
+<div class="dw-article-cmts-container">       
+    <div class="ibm-no-print" id="dw-icomments-container">	
+        
+    </div>
+</div>
+<!-- INLINE_COMMENTS_END -->                                        <!-- CENTER_6_4_CONTENT_COLUMN_END -->
+                                    </div>   
+                                </div>
+                        <!--Rating_Meta_BEGIN--><div class="metavalue">static.content.url=http://www.ibm.com/developerworks/js/artrating/</div><div class="metavalue">SITE_ID=80</div><div class="metavalue">Zone=Software livre</div><div class="metavalue">ArticleID=839212</div><div class="metavalue">ArticleTitle=Aprendendo a usar a estrutura OpenMP com GCC</div><div class="metavalue">publish-date=10082012</div><script language="javascript" type="text/javascript">document.write('<div class="metavalue">url='+location.href.replace(/</g,  '%3C')+'</div>');</script><!--Rating_Meta_END-->
+                    </div>
+                    <!-- END_IBM-CONTENT-MAIN -->
+                </div>
+                <!-- END_IBM-CONTENT-BODY -->
+            </div>
+            <!-- END_IBM-CONTENT -->
+        </div>
+        <!-- END_IBM-PCON -->
+    </main>
+    <!-- MAIN_CONTENT_END -->
+    
+    <!-- END_CONTENT-WRAPPER -->	
+</div>
+<!-- FOOTER_BEGIN -->
+<footer role="contentinfo" aria-label="IBM developerWorks">
+    <div id="dw-footer-module" class="dw-footer-home">
+        <section aria-label="Recursos" role="contentinfo">
+            <div class="ibm-columns">
+                <div class="ibm-col-6-1 dw-footer-col-1">
+                    <ul>
+                        <li class="dw-footer-heading" aria-label="developerWorks">developerWorks</li>
+                        <li><a href="//www.ibm.com/developerworks/br/aboutdw/">Sobre</a></li>
+                        <li><a href="//www.ibm.com/developerworks/secure/feedback.jsp?domain=dwbrazil">Ajuda</a></li>
+                        <li class="dw-footer-newline"><a href="//www.ibm.com/developerworks/secure/report/?lang=pt_br">Relatar abuso</a></li>
+                        <li class="dw-footer-newline"><a href="//www.ibm.com/developerworks/br/community/terms/thirdparty/">Aviso de termos legais de terceiros/parceiros</a></li>
+                    </ul>
+                    <ul>
+                        <li class="dw-footer-heading dw-follow-us" aria-label="Nos siga!">Nos siga!</li>
+                    </ul>
+                    <p class="dw-footer-social">
+                        <a href="//twitter.com/developerWorks">
+                            <img width="28" height="27" alt="Twitter" src="//dw1.s81c.com/developerworks/i/mf/dw-footer-icon-twitter.png"/>
+                        </a>
+                    </p>
+                    <p class="dw-footer-social-right">
+                        <a href="//www.facebook.com/developerworks">
+                            <img width="28" height="27" alt="Facebook" src="//dw1.s81c.com/developerworks/i/mf/dw-footer-icon-facebook.png"/>
+                        </a>
+                    </p>
+                    <br/>
+                    <p class="dw-footer-social">
+                        <a href="//www.linkedin.com/grp/home?gid=4515714">
+                            <img width="28" height="27" alt="LinkedIn" src="//dw1.s81c.com/developerworks/i/mf/dw-footer-icon-linkedin.png"/>
+                        </a>
+                    </p>
+                    <p class="dw-footer-social-right">
+                        <a href="//www.youtube.com/ibmbrasil/">
+                            <img width="28" height="27" alt="YouTube" src="//dw1.s81c.com/developerworks/i/mf/dw-footer-icon-youtube.png"/>
+                        </a>
+                    </p>
+                </div>
+                <div class="ibm-col-6-1 dw-footer-col-2">
+                    <ul>
+                        <li class="dw-footer-heading" aria-label="Conheça">Conheça</li>
+                        <li class="dw-footer-newline"><a href="//onthehub.com/ibm/">Programa Acadêmico da IBM (em inglês)</a></li>
+                        <li class="dw-footer-newline"><a href="//developer.ibm.com/startups/">Programa IBM de apoio a startups (em inglês)</a></li>
+                        <li class="dw-footer-newline"><a href="//developer.ibm.com/code/journey/">Jornadas de aprendizado (em inglês)</a></li>
+                    </ul>
+                    <ul class="dw-footer-lang" aria-label="Seleccione un idioma">
+                        <li class="dw-footer-heading dw-footer-newline">Selecione um idioma</li>
+                        <li><a href="//www.ibm.com/developerworks/">English</a></li>
+                        <li><a href="//www.ibm.com/developerworks/cn/" lang="zh">中文</a></li>
+                        <li><a href="//www.ibm.com/developerworks/jp/" lang="ja">日本語</a></li>
+                        <li><a href="//www.ibm.com/developerworks/ru/" lang="ru">Русский</a></li>
+                        <li class="dw-footer-newline"><a href="//www.ibm.com/developerworks/br/" lang="pt">Português (Brasil)</a></li>
+                        <li><a href="//www.ibm.com/developerworks/ssa/" lang="es">Español</a></li>
+                        <li><a href="//developer.ibm.com/kr/" lang="kr">한글</a></li>
+                    </ul>
+                </div>
+                <div class="ibm-col-6-1 dw-footer-col-3"> </div>
+                <div class="ibm-col-6-1 dw-footer-col-4">
+                    <ul class="dw-footer-categories">
+                        <li class="dw-footer-category">
+                            <a href="//www.ibm.com/developerworks/br/downloads/">Downloads e trials</a>  
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="//www.ibm.com/developerworks/br/rss/">Feeds RSS</a>  
+                        </li>
+                    </ul>
+                </div>
+                <div class="ibm-col-6-1 dw-footer-col-5">
+                    <ul class="dw-footer-categories">
+                        <li class="dw-footer-category">
+                            <a href="//www.ibm.com/developerworks/newsletter/">Newsletters (Inglês)</a>  
+                        </li>
+                    </ul>
+                </div>
+                <div class="ibm-col-6-1 dw-footer-col-6">
+                    <ul class="dw-footer-categories">
+                        <li class="dw-footer-category" style="padding: 0 10px 40px 0;">
+                            <a href="//www.ibm.com/developerworks/br/views/global/libraryview.jsp">Tutoriais &amp; treinamentos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="dw-footer" class="ibm-padding-normal ibm-alternate">
+        <div class="ibm-columns">
+            <div class="ibm-col-1-1">
+                <div class="dw-footer-corporate-links">
+                    <ul>
+                        <li><a href="//www.ibm.com/developerworks/br/aboutdw/contacts.html">Contato</a></li>
+                        <li><a href="//www.ibm.com/privacy/br/pt/">Privacidade</a></li>
+                        <li><a href="//www.ibm.com/developerworks/br/community/terms/use/">Termos de uso</a></li>
+                        <li><a href="//www.ibm.com/accessibility/br/pt/">Acessibilidade</a></li>
+                        <li class="ibm-feedbacklink"><a href="#">Feedback</a></li>
+                        <li id="ibm-truste-cp"><a onclick="truste.eu.clickListener();return false;" href="#">Preferências de cookies</a></li>
+                    </ul>                 
+                </div>
+                <div id="ibm-footer-locale-selector"></div>
+            </div>
+        </div>
+    </div>        
+</footer> <!-- FOOTER_END -->
+
+<!-- END_IBM-TOP -->
+</div>
+
+<!-- SCRIPTS_INCLUDE_BEGIN -->
+<!-- Styles -->
+<link rel="stylesheet" type="text/css" href="/developerworks/maverick/css/plugin/comments/jquery-comments.css">
+<link rel="stylesheet" href="/developerworks/maverick/fonts/awesome-4.5.0/css/font-awesome.min.css">
+
+<!-- Libraries -->
+<script type="text/javascript" src="/developerworks/maverick/js/plugin/comments/jquery-comments.min.js"></script>
+<script type="text/javascript" src="/developerworks/maverick/js/plugin/formatter/moment-with-locales.js"></script>
+<script type="text/javascript" src="/developerworks/maverick/js/ContentComments.js"></script>
+<script type="text/javascript" src="/developerworks/js/v18/ContentCommentsFormatter.js"></script>
+<script type="text/javascript" language="JavaScript">
+
+	IBMCore.common.module.masthead.subscribe("ready", "customjs", setupCommentsPlugin).runAsap(setupCommentsPlugin);
+
+	function setupCommentsPlugin(){
+		//debugger;
+			//alert(userLinks);
+			var commentsInitInfo = {
+				contentId : $("div[class=metavalue]:contains('ArticleID=')").text().split("=")[1],
+				siteId :  $("div[class=metavalue]:contains('SITE_ID=')").text().split("=")[1],
+				pluginDivId : '#dw-icomments-container',
+				notifyElementId : "#comment_notification",
+				loginMessageDivId : "#dw-article-cmts-login",
+				totalCommentsDivId : "#nCmts",
+						isIdea:false
+
+			};				
+								
+			ContentComments.Setup(commentsInitInfo);
+	}
+</script>
+<!-- Hotjar Tracking Code for ibm.com -->
+<script>
+    (function(h,o,t,j,a,r){
+    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    h._hjSettings={hjid:42920,hjsv:5};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<!-- SCRIPTS_INCLUDE_END -->
+
+</body>
+</html>

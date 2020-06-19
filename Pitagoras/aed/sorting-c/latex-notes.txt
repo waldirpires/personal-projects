@@ -1,0 +1,202 @@
+
+\subsection{Conclusões}
+
+\subsection*{Apêndice}
+\begin{frame}[fragile, label=ordselfonte]{Ordenação por Seleção: Código Fonte em C}
+\begin{lstlisting}
+void trocarValores(int *a, int i, int j){
+  int aux;	aux = a[i]; a[i] = a[j]; a[j] = aux;
+}
+
+void selectionSort(int * a, int tam){
+	int i, j, menor; // declaração de variáveis
+
+  // percorrer todas as posições do vetor, um a um
+  for (i = 0; i < tam; i++)
+  {
+    menor = i; // assumir que o primeiro no intervalo é menor
+    // percorrer o vetor para buscar alguem menor, caso exista
+    for (j = i+1; j < tam; j++)
+    {   // se for menor que o menor encontrado
+      if (a[j] < a[menor])
+      {   // anote-o
+   menor = j;
+      }
+    }// se alguem menor que o menor for encontrado
+    if (menor != i)
+    {   // trocar as posições dos dois
+      trocarValores(a, menor, i);
+    }
+    if (i % (tam/1000) == 0)
+      printf("%d %\n", i);
+  }
+
+}
+\end{lstlisting}
+\end{frame} 
+
+\begin{frame}[fragile]{Ordenação por Inserção: Código Fonte em C}
+\begin{lstlisting}
+void trocarValores(int *a, int i, int j){
+  int aux;	aux = a[i]; a[i] = a[j]; a[j] = aux;
+}
+
+void insertionSort(int *a, int tam) {
+  int i, iHole, item;
+  // para cada item no vetor a partir do segundo elemento
+  for (i = 1; i < tam; i++) { 
+    item = a[i]; // guardar o item corrente
+    iHole = i; // guardar o ponto de isnerção
+    // enquanto o ponto de inserção for válido (> zero) e
+    // o número anterior for superior que o número atual
+    while (iHole > 0 && a[iHole - 1] > item) {
+      // mover o elemento maior para a posição de inserção
+      a[iHole] = a[iHole - 1]; 
+      // decrementar o ponto de inserção
+      iHole = iHole - 1;
+    }
+    // inserir o item no ponto de inserção
+    a[iHole] = item;
+  }
+}
+
+\end{lstlisting}
+\end{frame} 
+
+\begin{frame}[fragile]{Ordenação por Bolha: Código Fonte em C}
+\begin{lstlisting}
+void trocarValores(int *a, int i, int j){
+  int aux;	aux = a[i]; a[i] = a[j]; a[j] = aux;
+}
+
+void bubbleSort(int *a, int tam)
+{
+  int i, j;
+
+  for(i=0; i<tam; i++){ // para cada um dos elementos
+    for(j=0; j<tam-1; j++){ // para cada um dos elementos
+      // se o elemento for maior que seu elemento a direita
+      if(a[j]>a[j+1]) { 
+   trocarValores(a, j, j+1);  // trocá-lo
+      }
+    }
+  }
+}
+\end{lstlisting}
+\end{frame} 
+
+\begin{frame}[fragile]{Ordenação por Quicksort: Código Fonte em C}
+\begin{lstlisting}
+void trocarValores(int *a, int i, int j){
+  int aux;	aux = a[i]; a[i] = a[j]; a[j] = aux;
+}
+
+void quicksort(int *a, int tam, int left, int right) {
+  int i, j, p;  
+  i = left;
+  j = right;
+  p = a[(left + right) / 2]; // Elemento intermediário como ?pivo? 
+  do {
+    // enquanto houver números para processar a direita
+    while (a[i] < p && i < right)
+      i++;
+    // enquanto houver números para processar a esquerda
+    while (a[j] > p && j > left)
+      j--;
+    // se o número estiver no lugar errado
+    if (i <= j) {      
+      trocarValores(a, i, j); // trocar valores
+      i++;  j--; // continuar as verificações
+    }    
+  } while (i <= j);
+  // quando o vetor estiver particionado
+  if (left < j)
+    quicksort(a, tam, left, j); // realizar trocas a esquerda
+  if (i < right)
+    quicksort(a, tam, i, right); // realizar trocas a direita
+}
+
+\end{lstlisting}
+\end{frame} 
+
+\begin{frame}[fragile]{Ordenação por Mergesort: Código Fonte em C (1/2)}
+\begin{lstlisting}
+long mergesort(int *a, int low, int high) {
+  int i = 0;
+  int length = high - low + 1;
+  int pivot = 0;
+  int * working;
+  unsigned long trocas;
+
+  if (low == high) // caso base: vetor de tamanho 1
+    return;
+  pivot = (low + high) / 2; // cálculo do ponto médio
+
+  mergesort(a, low, pivot); // dividir a esquerda
+  mergesort(a, pivot + 1, high); // dividir a direita
+
+  merge(pivot, low, length, high, trocas, a); // junção das soluções
+  return trocas;
+}
+\end{lstlisting}
+\end{frame} 
+
+\begin{frame}[fragile]{Ordenação por Mergesort: Código Fonte em C (2/2)}
+\begin{lstlisting}
+// função que realiza a junção (merge) das sublistas
+void merge(int pivot, int low, int length, int high, int* a) 
+{ // declaração de variáveis
+  int merge1, merge2, i, *working;
+
+  merge1 = 0; // 1o índice do 1o vetor
+  merge2 = pivot - low + 1; // 1o indice do 2o vetor
+  working = (int*) malloc(length * sizeof(int)); // alocando espaço para um vetor auxiliar
+  for (i = 0; i < length; i++){ // preenchendo o vetor auxiliar para o merge
+    working[i] = a[low + i];
+  }
+  for (i = 0; i < length; i++) {   // iterando sobre o vetor
+    // iterando dentro de cada subvetor
+    if (merge2 <= high - low) { // enquanto os limites de ambos vetores forem respeitados
+      if (merge1 <= pivot - low) {
+       // se o elemento no 1o vetor for maior que o elemento no 2o vetor
+        if (working[merge1] > working[merge2]) {
+          // colocar o menor elemento no indice corrente do vetor final (a) e incrementar o ponteiro merge2          
+          a[i + low] = working[merge2++];
+        } else {
+          // caso contrário, colocar o primeiro elemento no vetor final e incrementar o ponteiro merge1
+          a[i + low] = working[merge1++];
+        }
+      } else { // chegou no final do 1o vetor, colocar os elementos do 2o vetor
+        a[i + low] = working[merge2++];
+      }
+    } else { // chegou no final do 2o vetor, colocar os elementos do 1o vetor
+      a[i + low] = working[merge1++];
+    }
+  }
+}
+\end{lstlisting}
+\end{frame} 
+
+\begin{frame}[fragile]{Ordenação por Mergesort: Passo a passo}
+\begin{Verbatim}
+Passos:
+1) Dividir a lista não ordenada em duas sublistas
+2) Dividir as sublistas até que estas possuam tamanho igual a 1
+3) Unir as sublistas em uma única lista
+======
+[32, 56] => [32], [56]
+  0   1       0     0
+merge(pivot, low, length, high, a);
+merge(1, 0, 2, 1, a)  
+- cálculo do merge1 = 0
+- cálculo do merge2 = 1
+- alocação do working = [ , ]
+- preenchimento do working = [32 , 56]
+                               |   |
+                          merge1   merge2
+- (merge2 > merge 1) => colocar o merge1 -> a = [32,  ]
+- merge1 encerrado   => colocar o merge2 -> a = [32, 56]
+- merge2 encerrado
+- merge encerrado
+\end{Verbatim}
+\end{frame} 

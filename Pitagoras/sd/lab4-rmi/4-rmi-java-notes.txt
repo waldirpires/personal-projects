@@ -1,0 +1,107 @@
+RMI
+http://www.ejbtutorial.com/java-rmi/a-step-by-step-implementation-tutorial-for-java-rmi
+
+
+1. criar a interface remota
+
+import java.rmi.*;
+ 
+public interface AdditionInterface extends Remote {
+   public int add(int a,int b) throws RemoteException;
+}
+
+2. criar a classe remota (implementação)
+
+import java.rmi.*;
+import java.rmi.server.*;
+ 
+public class Addition extends UnicastRemoteObject
+         implements AdditionInterface {
+ 
+      public Addition () throws RemoteException {   }
+ 
+      public int add(int a, int b) throws RemoteException {
+    	  int result=a+b;
+    	  return result;
+      }
+ }
+ 
+3. Criar o servidor RMI
+
+import java.rmi.*;
+import java.rmi.server.*;   
+ 
+public class AdditionServer {
+	   public static void main (String[] argv) {
+		   try {
+			   System.setSecurityManager(new RMISecurityManager());
+ 
+			   Addition Hello = new Addition();			   		   
+			   Naming.rebind("rmi://localhost/ABC", Hello);
+ 
+			   System.out.println("Addition Server is ready.");
+			   }catch (Exception e) {
+				   System.out.println("Addition Server failed: " + e);
+				}
+		   }
+}
+
+4. Definir a politica de segurança (security.policy)
+
+grant {
+     	permission java.security.AllPermission;
+  };
+  
+5. Gerar o stub e o objeto remoto para uso (via linha de comando)
+
+rmic Addition  
+
+6. Iniciar o RMI registry (nova janela)
+
+start rmiregistry
+
+7. Executar o servidor (Eclipse)
+
+VM arguments:
+-Djava.security.policy=file:${workspace_loc}/RMIServerSide/security.policy -Djava.rmi.server.codebase=file:${workspace_loc}/RMIServerSide/bin/
+
+Parte 2: Cliente
+
+1. copiar a interface do servidor para o cliente
+
+import java.rmi.*;
+ 
+   public interface AdditionInterface extends Remote {
+	   public int Add(int a,int b) throws RemoteException;
+   }
+   
+2. Criar a classe cliente
+
+import java.rmi.*;
+ 
+public class AdditionClient {
+	public static void main (String[] args) {
+		AdditionInterface hello;
+		try {
+  		        System.setSecurityManager(new RMISecurityManager());
+			hello = (AdditionInterface)Naming.lookup("rmi://localhost/ABC");
+			int result=hello.add(9,10);
+			System.out.println("Result is :"+result);
+ 
+			}catch (Exception e) {
+				System.out.println("HelloClient exception: " + e);
+				}
+		}
+}   
+
+3. Definir a política de segurança (security.policy)
+
+grant {
+     	permission java.security.AllPermission;
+};
+
+4. Executar o cliente
+
+VM arguments:
+-Djava.security.policy=file:${workspace_loc}/RMIClientSide/security.policy -Djava.rmi.server.codebase=file:${workspace_loc}/RMIServerSide/bin/
+

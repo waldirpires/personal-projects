@@ -1,0 +1,26 @@
+0. Configurar o omniORB
+
+Downloads:
+omniORB: http://omniorb.sourceforge.net/
+Interpretador Python
+MingW GCC 32 bits
+cygwin
+
+export PATH=$PATH:/C/dev/python/omniORB-4.2.1/bin/x86_win32
+
+config/config.mk
+
+platform = x86_win32_mingw
+
+1. definir a interface do serviço CORBA
+
+// echo_example.idl
+module Example {
+  interface Echo {
+    string echoString(in string mesg);
+  };
+};
+
+2. gerar os stubs e skeletons
+
+omniidl -bpython example_echo.idl

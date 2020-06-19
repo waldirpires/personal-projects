@@ -1,0 +1,115 @@
+
+http://tiny.cc/20171-pit-sd-lab2
+http://bit.ly/2nisjgN
+https://goo.gl/7iQIMv
+
+
+
+
+
+
+
+
+
+
+
+
+https://docs.google.com/document/d/1WjCzGAh15M9iYz36GXZuSHYr0EyiCqvGC8qtKJY7fXw/edit?usp=sharing
+
+
+
+
+
+
+
+
+
+
+
+db4free
+
+Banco de dados: pitusers
+Nome de usuário: pitagoras
+Email: pitagoras.tp.submit@gmail.com
+
+create table users{
+  id int,
+  age int,
+  name varchar(255),
+  sex varchar(1)
+}
+
+sql10.freesqldatabase.com	
+sql10166260
+sql10166260
+
+sql10.freesqldatabase.com:
+
+Host: sql10.freesqldatabase.com
+Database name: sql10166260
+Database user: sql10166260
+Database password: KUusaLlZPI
+Port number: 3306
+
+URL: jdbc:mysql://sql10.freesqldatabase.com/sql10166260
+usuário: sql10166260
+senha: KUusaLlZPI
+
+
+
+
+
+import java.sql.*;
+public class JdbcClient {
+   static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+   static final String DB_URL = "jdbc:mysql://localhost/mydb";
+
+   static final String USER = "root";
+   static final String PASS = "root";
+
+   public static void main(String[] args) {
+   Connection conn = null;
+   Statement stmt = null;
+
+   try{
+      Class.forName("com.mysql.jdbc.Driver");
+      System.out.println("Connecting to database...");
+      conn = DriverManager.getConnection(DB_URL,USER,PASS);
+      System.out.println("Creating statement...");
+      stmt = conn.createStatement();
+      String sql;
+      sql = "select * from users";
+      ResultSet rs = stmt.executeQuery(sql);
+      while(rs.next()){
+         int id  = rs.getInt("id");
+         int age = rs.getInt("age");
+         String name = rs.getString("name");
+         String sex = rs.getString("sex");
+
+         System.out.print("ID: " + id);
+         System.out.print(", Name: " + name);
+         System.out.print(", Age: " + age);
+         System.out.println(", Sex: " + sex);
+      }
+      rs.close();
+      stmt.close();
+      conn.close();
+   }catch(SQLException se){
+      se.printStackTrace();
+   }catch(Exception e){
+      e.printStackTrace();
+   }finally{
+      try{
+         if(stmt!=null)
+            stmt.close();
+      }catch(SQLException se2){
+      }// nothing we can do
+      try{
+         if(conn!=null)
+            conn.close();
+      }catch(SQLException se){
+         se.printStackTrace();
+      }//end finally try
+   }//end try
+}
+}

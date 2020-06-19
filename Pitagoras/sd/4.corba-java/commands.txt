@@ -1,0 +1,16 @@
+ 532  cd /d/wrpires/Dropbox/pri6  ls -la
+   537  ls -la HelloApp/
+     538  ls
+       539   javac *.java HelloApp/*.java
+         540  ls -la
+	   541  ls -la HelloApp/
+	     542  start orbd -ORBInitialPort 1050
+	       543  pwd
+	         544  start java HelloServer -ORBInitialPort 1050 -ORBInitialHost localhost
+		   545  java HelloClient -ORBInitialPort 1050 -ORBInitialHost localhost
+		     546  start java HelloServer -ORBInitialPort 1050 -ORBInitialHost localhost
+		       547  java HelloClient -ORBInitialPort 1050 -ORBInitialHost localhost
+		         548  start java HelloServer -ORBInitialPort 1050 -ORBInitialHost localhost
+			   549  java HelloClient -ORBInitialPort 1050 -ORBInitialHost localhost
+			     550  start java HelloServer -ORBInitialPort 1050 -ORBInitialHost localhost
+			       551  java HelloClient -ORBInitialPort 1050 -ORBInitialHost localhost

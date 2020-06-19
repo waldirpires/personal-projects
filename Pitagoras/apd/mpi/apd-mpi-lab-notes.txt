@@ -1,0 +1,35 @@
+gcc.exe -c main-hello.c -o main-hello.o -I "F:/write/apps/dev/CPP/Dev-Cpp/MinGW64/include" -I "F:/write/apps/dev/CPP/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I "F:/write/apps/dev/CPP/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I "F:\write\apps\dev\CPP\Dev-Cpp\MPI\Include" -I "F:\write\apps\dev\CPP\Dev-Cpp\MPI\Include\x86" -fopenmp
+
+error: unknown type name '__int64'
+ typedef __int64 MPI_Aint;
+ 
+ 
+ F:\write\courses\pitagoras\2017-2\apd\labs\3.mpi\main-hello.o	main-hello.c:(.text+0x33): undefined reference to `MPI_Comm_size'
+ 
+
+MS-MPI
+https://msdn.microsoft.com/en-us/library/bb524831(v=vs.85).aspx
+-msmpisdk.msi
+-MSMpiSetup.exe
+
+
+C:\Program Files (x86)\Microsoft SDKs\MPI\
+C:\Program Files\Microsoft MPI\
+
+
+  100  mpicc mpi-hello.c -n 4
+  101  mpicc mpi-hello.c
+  102  mpicc mpi-hello.c -n4
+  103  mpicc -h
+  104  mpicc -help
+  105  mpicc --help
+  106  mpiexec a.out
+  107  mpiexec ./a.out
+  108  mpiexec -n 4./a.out
+  109  mpiexec -n 4 ./a.out
+  110  mpiexec -n 10 ./a.out
+  
+  
+python
+
+http://materials.jeremybejarano.com/MPIwithPython/introMPI.html  

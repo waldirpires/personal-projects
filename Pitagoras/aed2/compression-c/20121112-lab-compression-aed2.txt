@@ -1,0 +1,154 @@
+CODIFICAR
+1) Para cada caractere no vetor
+1.1) iniciare o contador de repetição do caractere
+1.2) enquanto a próxima iteração for menor que o tamanho da cadeia E
+     o caractere corrente for igual ao subsequente
+1.2.1) incrementa o contador de caractere
+1.2.2) incrementa o iterador
+1.3) Se o contador for maior que 3
+1.3.1) colocar o caractere de controle
+1.3.2) colocar o contador de repeticao
+1.3.2) colocar o caractere a ser repetido
+
+DECODIFICAR
+1) para cada caractere lido da cadeia compactada
+1.1) se for um caractere de controle
+1.1.1) ler o contador e o caractere
+1.1.2) para cada valor de 1 até o contador
+1.1.2.1) imprimir o caractere
+1.2) senão
+1.2.1) imprimir o caractere
+
+
+
+
+// biblioteca de compressão
+#include <string.h>
+
+// compressão por DE
+// função que efetua a compressão por delta encoding
+void compressDe(int *a, int tam, int *b){
+  int delta, i;
+  // 1) Definir o ponto inicial em (b)
+  b[0] = a[0];
+  // 2) Para cada valor no vetor a partir do
+  //    segundo elemento em (a)
+  for (i = 1; i < tam; i++){
+    delta = a[i] - a[i-1];  // 2.1) Calcular o delta
+    b[i] = delta;// 2.2) Armazenar o delta em (b)
+  }
+}
+// função que efetua a descompressão por DE
+void decompressDe(int *b, int tam, int *a){
+  int delta, valor, i;
+  a[0] = b[0];  // 1) definir o ponto inicial em (a)
+  // 2) Para cada valor no vetor a partir do segundo
+  //    elemento em (b)
+  for (i = 1; i < tam; i++){      
+  // 2.1) calcular o valor absoluto a partir do delta
+    valor = a[i-1] + b[i];
+  // 2.2) atualizar o vetor com o valor absoluto
+    a[i] = valor;
+  }
+}
+
+void ImprimirArranjo(int *a, int tam){
+  int i;
+  for (i = 0; i < tam; i++){
+    printf("%3d", a[i]);
+  } printf("\n\n");     
+}
+
+void InitArranjo(char *a, int tam){
+  int i;
+  for (i = 0; i < tam; i++){
+      a[i] = '\0';
+  }
+}
+
+void ImprimirArranjoCar(char *a, int tam){
+  int i;
+  for (i = 0; i < tam; i++){
+    printf("%c", a[i]);
+  } printf("\n\n");     
+}
+
+// compressão por RLE
+void encode(char *a, int tam, char *b){
+  int i, j =0, c, m;
+  // 1) para cada caractere lido do original
+  for (i = 0; i < tam; i++){
+    c = 1; // 1.1) inicializar o contador de caracteres repetidos
+    //j = i;
+  // 1.2) enquanto houver caracteres para serem lidos E
+  //      o próximo caracter for igual ao caracter corrente
+    while(i+1<tam && a[i] == a[i+1]){
+      c++;// 1.2.1) incrementar o contador de caracter
+      i++;// 1.2.2) incrementar o próximo
+    }
+    // 1.3) Se a quantidade encontrada for superior a 3
+    if (c > 3){
+      b[j] = '*';// 1.3.1) inserir um caractere de controle na cadeia destino
+      char t[3];
+      InitArranjo(t, 3);
+      sprintf(t, "%d", c);// 1.3.2) inserir a quantidade e o caractere a ser repetido
+      // na cadeia destino
+      //strcat(t, b);
+      j++;
+      for (m = 0; m<strlen(t); m++){
+        b[j] = t[m];
+        j++;
+      }
+      b[j] = a[i];
+      j++;
+    } else {
+    // 1.4) caso contrário
+    // 1.4.1) para cada ocorrência encontrada
+      for (m = 0; m<c; m++){
+    // 1.4.2) inserir o caractere na cadeia destino
+        b[j] = a[i];
+        j++;
+      }
+    }
+  }
+}
+
+void decode();
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "compressao.h"
+
+int main(int argc, char *argv[])
+{
+  // Problema
+  // Entrada: sequência de números inteiros 
+  // Saída: a sequencia comprimida utilizando a
+  // compressão DE
+  
+//  int *b, *a2, tam = 20;
+//  int a[] = {17, 19, 24, 24, 24, 21, 15, 10, 89, 95, 96, 96, 96, 95, 94, 94, 95, 93, 90, 87, 86, 86};
+//  b = (int*) malloc(tam*sizeof(int));
+//  a2 = (int*) malloc(tam*sizeof(int));
+//  compressDe(a, tam, b); // efetua a compressão DE
+//  ImprimirArranjo(a, tam); // imprime o arranjo original
+//  ImprimirArranjo(b, tam); // imprime o arranjo comprimido
+//  decompressDe(b, tam, a2); // descompactação do arranjo
+//  // comprimido
+//  printf("Após descompactação: \n");
+//  ImprimirArranjo(a2, tam); // imprime o arranjo original
+
+  char a[100], b[100];
+  InitArranjo(b, 100);
+  // 1) ler uma frase do usuario
+  printf("Digite uma frase: "); gets(a);
+  // 2) codificar a frase utilizando RLE  
+  encode(a, strlen(a), b);
+  // 3) imprimir o resultado da compressão
+  ImprimirArranjoCar(b, strlen(b));
+  system("PAUSE");	
+  return 0;
+}

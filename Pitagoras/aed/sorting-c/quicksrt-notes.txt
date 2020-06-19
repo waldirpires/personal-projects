@@ -1,0 +1,36 @@
+arr[] = {10, 80, 30, 90, 40, 50, 70}
+Indices:  0   1   2   3   4   5   6 
+
+low = 0, high =  6, pivot = arr[h] = 70
+Inicializar indices do menor elemento, i = -1
+
+Navegar sobre os elementos de j = low até high-1
+j = 0 : já que arr[j] <= pivot, fazer i++ e swap(arr[i], arr[j])
+i = 0 
+arr[] = {10, 80, 30, 90, 40, 50, 70} // sem mudanças, i e j são iguais
+
+j = 1 : já que  arr[j] > pivot, fazer nada
+// sem mudanças no i e arr[]
+
+j = 2 :  já que arr[j] <= pivot, fazer i++ e swap(arr[i], arr[j])
+i = 1
+arr[] = {10, 30, 80, 90, 40, 50, 70} // trocar 80 and 30 
+
+j = 3 :  já que arr[j] > pivot, fazer nada
+// sem mudanças no i e arr[]
+
+j = 4 :  já que arr[j] <= pivot, fazer i++ e swap(arr[i], arr[j])
+i = 2
+arr[] = {10, 30, 40, 90, 80, 50, 70} // trocar 80 e 40
+
+j = 5 :  já que arr[j] <= pivot, fazer i++ e swap arr[i], arr[j] 
+i = 3 
+arr[] = {10, 30, 40, 50, 80, 90, 70} // trocar 90 e 50 
+
+Saída do loop, porque j = high-1
+Pivot na posição correta através da operação de swapping
+arr[i+1] e arr[high] (ou pivot) 
+arr[] = {10, 30, 40, 50, 70, 90, 80} // trocar 80 e 70 
+
+70 no lugar correto. Todos os elementos menores que 70 estão antes
+e todos os maiores que 70 estão depois

@@ -1,0 +1,187 @@
+1. Interface IDL
+
+module HelloApp
+{
+  interface Hello
+  {
+  string sayHello();
+  oneway void shutdown();
+  };
+};
+
+2. Servidor CORBA
+
+-Cria e instancia uma instância do ORB
+-Obtém uma referência do POA (Portable Object Adapter) raiz e ativa o gerenciador de POA
+-Cria uma instância servidora (implementação de um objeto CORBA Hello) e informa o ORB sobre este objeto
+-Obtém uma referência do objeto CORBA para um contexto de nome no qual será registrado o novo objeto CORBA
+-Obtém o contexto raiz de nomes
+-Registra o novo objeto no contexto de nome sob o nome 'Hello'
+-Espera por invocações no novo objeto do cliente
+
+// HelloServer.java
+import HelloApp.*;
+import org.omg.CosNaming.*;
+import org.omg.CosNaming.NamingContextPackage.*;
+import org.omg.CORBA.*;
+import org.omg.PortableServer.*;
+import org.omg.PortableServer.POA;
+
+import java.util.Properties;
+
+class HelloImpl extends HelloPOA {
+  private ORB orb;
+
+  public void setORB(ORB orb_val) {
+    orb = orb_val; 
+  }
+    
+  // implement sayHello() method
+  public String sayHello() {
+    return "\nHello world !!\n";
+  }
+    
+  // implement shutdown() method
+  public void shutdown() {
+    orb.shutdown(false);
+  }
+}
+
+
+public class HelloServer {
+
+  public static void main(String args[]) {
+    try{
+      ORB orb = ORB.init(args, null); // cria e inicializa o ORB
+
+      // obtem a referência do POA raiz e ativa o gerenciador POA
+      POA rootpoa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
+      rootpoa.the_POAManager().activate();
+
+      // create servant and register it with the ORB
+      HelloImpl helloImpl = new HelloImpl();
+      helloImpl.setORB(orb); 
+
+      // get object reference from the servant
+      org.omg.CORBA.Object ref = rootpoa.servant_to_reference(helloImpl);
+      Hello href = HelloHelper.narrow(ref);
+          
+      // get the root naming context
+      // NameService invokes the name service
+      org.omg.CORBA.Object objRef =
+          orb.resolve_initial_references("NameService");
+      // Use NamingContextExt which is part of the Interoperable
+      // Naming Service (INS) specification.
+      NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
+
+      // bind the Object Reference in Naming
+      String name = "Hello";
+      NameComponent path[] = ncRef.to_name( name );
+      ncRef.rebind(path, href);
+
+      System.out.println("HelloServer ready and waiting ...");
+
+      orb.run();
+    } 
+      catch (Exception e) {
+        System.err.println("ERROR: " + e);
+        e.printStackTrace(System.out);
+      }
+      System.out.println("HelloServer Exiting ...");
+  }
+}
+
+3. Cliente CORBA
+
+-Cria e initializa um ORB
+-Obtém uma referência do contexto de nomes raiz
+-Busca por 'Hello' no contexto de nomes e retorna uma referência do objeto CORBA
+-Invoca os métodos do objeto sayHello() e shutdown() e exibe o resultado
+
+HelloClient.java
+
+import HelloApp.*;
+import org.omg.CosNaming.*;
+import org.omg.CosNaming.NamingContextPackage.*;
+import org.omg.CORBA.*;
+
+public class HelloClient
+{
+  static Hello helloImpl;
+  public static void main(String args[])
+    {
+      try{
+        // create and initialize the ORB
+        ORB orb = ORB.init(args, null);
+
+        // get the root naming context
+        org.omg.CORBA.Object objRef = 
+            orb.resolve_initial_references("NameService");
+        // Use NamingContextExt instead of NamingContext. This is 
+        // part of the Interoperable naming Service.  
+        NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
+ 
+        // resolve the Object Reference in Naming
+        String name = "Hello";
+        helloImpl = HelloHelper.narrow(ncRef.resolve_str(name));
+
+        System.out.println("Obtained a handle on server object: " + helloImpl);
+        System.out.println(helloImpl.sayHello());
+        helloImpl.shutdown();
+
+        } catch (Exception e) {
+          System.out.println("ERROR : " + e) ;
+          e.printStackTrace(System.out);
+        }
+    }
+}
+ 
+4. Compilar a interface IDL para criar o stub e skeleton
+
+idlj -fall  Hello.idl
+
+Arquivos gerados pelo idlj:
+
+HelloPOA.java
+- classe skeleton que provê funcionalidades básicas do CORBA para o servidor
+
+_HelloStub.java
+- classe stub no lado do cliente que provê funcionalidades básicas do CORBA no cliente
+- Extende: org.omg.CORBA.portable.ObjectImpl
+- Implementa: interface Hello.java
+
+Hello.java
+- Interface que contém a versão Java da interface IDL
+- Extende: interface org.omg.CORBA.Object (funcionalidades básicas do CORBA), HelloOperations e org.omg.CORBA.portable.IDLEntity
+
+HelloHelper.java
+- Classe utilitária para auxiliar leitura e escrita de dados
+
+HelloHolder.java
+- Fornece operações de fluxos de entrada e saída de dados no CORBA
+- org.omg.CORBA.portable.OutputStream e org.omg.CORBA.portable.InputStream
+- Implementa: interface org.omg.CORBA.portable.Streamable
+
+HelloOperations.java
+- Interface que contém os métodos remotos a serem disponibilizados. 
+- Mapeamento IDL-para-Java define todas as operações definidas na interface IDL neste arquivo
+- Arquivo compartilhado entre stub e skeleton
+
+
+5. Compilar as classes Java
+
+/d/wrpires/Dropbox/private/courses/pitagoras/disciplinas/sd/labs/4.corba-java
+javac *.java HelloApp/*.java
+
+6. Iniciar o orbd
+
+start orbd -ORBInitialPort 1050
+
+7. Iniciar o servidor Hello
+
+start java HelloServer -ORBInitialPort 1050 -ORBInitialHost localhost
+
+8. Iniciar o cliente Hello
+
+ java HelloClient -ORBInitialPort 1050 -ORBInitialHost localhost
+

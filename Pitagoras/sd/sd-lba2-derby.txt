@@ -1,0 +1,41 @@
+set DERBY_HOME="C:\Program Files\Java\jdk1.8.0_51\db"
+set PATH=%PATH%;%DERBY_HOME%\bin
+
+iniciar o servidor derby
+
+cd $DERBY_HOME
+./startNetworkServer
+
+criar novo projeto:
+20171-sd-sgbdd-lab2
+
+criar nova classe:
+br.pit.sd.sgbdd.lab2
+DerbyClient
+
+package br.pit.sd.sgbdd.lab2;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DerbyClient {
+
+	//jdbc:derby://localhost:1527/dbname;create=true
+
+	private String ip;
+	private String port;
+	private String dbName;
+	private String params;
+	private static String DRIVER_NAME = "org.apache.derby.jdbc.ClientDriver";
+	private Connection connect = null;
+	
+	public String getConnectionUrl(){
+		return String.format("jdbc:derby://%s:%s/%s;%s", ip, port, dbName, params);
+	}
+	
+	public Connection startConnection() throws Exception{
+		Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
+        connect = DriverManager.getConnection(getConnectionUrl());
+        return connect;
+	}
+}
